@@ -1,0 +1,927 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>RenJS | @renproject/ren</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@renproject/ren</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="renjs.html">RenJS</a>
+				</li>
+			</ul>
+			<h1>Class RenJS</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>This is the main exported class.</p>
+					</div>
+					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> RenJS <span class="hljs-keyword">from</span> <span class="hljs-string">"@renproject/ren"</span>;</code></pre>
+					<p>It&#39;s initialized with a network, which controls both the RenVM network and
+					Ethereum chain to use:</p>
+					<pre><code class="language-typescript"><span class="hljs-keyword">new</span> RenJS(); <span class="hljs-comment">// Same as `new RenJS("mainnet");`</span>
+<span class="hljs-keyword">new</span> RenJS(<span class="hljs-string">"testnet"</span>);
+<span class="hljs-keyword">new</span> RenJS({ ...NetworkMainnet, lightnodeURL: <span class="hljs-string">"custom lightnode URL"</span> });</code></pre>
+					<p>It then exposes two main functions: <a href="renjs.html#shiftin">shiftIn</a> and <a href="renjs.html#shiftout">shiftOut</a>.</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">RenJS</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="renjs.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="renjs.html#lightnode" class="tsd-kind-icon">lightnode</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="renjs.html#network" class="tsd-kind-icon">network</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="renjs.html#renvm" class="tsd-kind-icon">renVM</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="renjs.html#utils" class="tsd-kind-icon">utils</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="renjs.html#chains" class="tsd-kind-icon">Chains</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="renjs.html#darknode" class="tsd-kind-icon">Darknode</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="renjs.html#darknodegroup" class="tsd-kind-icon">Darknode<wbr>Group</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="renjs.html#networkdetails" class="tsd-kind-icon">Network<wbr>Details</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="renjs.html#networks" class="tsd-kind-icon">Networks</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="renjs.html#rpcmethod" class="tsd-kind-icon">RPCMethod</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="renjs.html#tokens" class="tsd-kind-icon">Tokens</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="renjs.html#txstatus" class="tsd-kind-icon">Tx<wbr>Status</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="renjs.html#utils-1" class="tsd-kind-icon">utils</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="renjs.html#getshifteraddress" class="tsd-kind-icon">get<wbr>Shifter<wbr>Address</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="renjs.html#gettokenaddress" class="tsd-kind-icon">get<wbr>Token<wbr>Address</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="renjs.html#shiftin" class="tsd-kind-icon">shift<wbr>In</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="renjs.html#shiftout" class="tsd-kind-icon">shift<wbr>Out</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>RenJS<span class="tsd-signature-symbol">(</span>network<span class="tsd-signature-symbol">?: </span><a href="../interfaces/networkdetails.html" class="tsd-signature-type">NetworkDetails</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="renjs.html" class="tsd-signature-type">RenJS</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L59">src/index.ts:59</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Takes a Network object that contains relevant addresses.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> network: <a href="../interfaces/networkdetails.html" class="tsd-signature-type">NetworkDetails</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>One of &quot;mainnet&quot; (or empty), &quot;testnet&quot; or a custom
+											Network object.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="renjs.html" class="tsd-signature-type">RenJS</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="lightnode" class="tsd-anchor"></a>
+					<h3>lightnode</h3>
+					<div class="tsd-signature tsd-kind-icon">lightnode<span class="tsd-signature-symbol">:</span> <a href="darknodegroup.html" class="tsd-signature-type">DarknodeGroup</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L58">src/index.ts:58</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="network" class="tsd-anchor"></a>
+					<h3>network</h3>
+					<div class="tsd-signature tsd-kind-icon">network<span class="tsd-signature-symbol">:</span> <a href="../interfaces/networkdetails.html" class="tsd-signature-type">NetworkDetails</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L59">src/index.ts:59</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="renvm" class="tsd-anchor"></a>
+					<h3>renVM</h3>
+					<div class="tsd-signature tsd-kind-icon">renVM<span class="tsd-signature-symbol">:</span> <a href="shifternetwork.html" class="tsd-signature-type">ShifterNetwork</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L57">src/index.ts:57</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="utils" class="tsd-anchor"></a>
+					<h3>utils</h3>
+					<div class="tsd-signature tsd-kind-icon">utils<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>BCH<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">bchAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinCashUTXOs</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>BTC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">btcAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinUTXOs</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>Ox<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>ZEC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">zecAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getZcashUTXOs</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>bch<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">bchAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinCashUTXOs</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>btc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">btcAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinUTXOs</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>randomNonce<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">randomNonce</span><span class="tsd-signature-symbol">; </span>strip0x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span>&lt;Unit&gt;<span class="tsd-signature-symbol">(</span>valueIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BigNumber</span>, unitIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Value</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>zec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">zecAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getZcashUTXOs</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = utils</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L56">src/index.ts:56</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>BCH<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">bchAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinCashUTXOs</span><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>address<wbr>From<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>address<wbr>ToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">bchAddressToHex</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinCashUTXOs</span></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>BTC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">btcAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinUTXOs</span><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>address<wbr>From<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>address<wbr>ToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">btcAddressToHex</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinUTXOs</span></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>Ox<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-siganture">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>hex: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>ZEC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">zecAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getZcashUTXOs</span><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>address<wbr>From<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>address<wbr>ToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">zecAddressToHex</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getZcashUTXOs</span></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>bch<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">bchAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinCashUTXOs</span><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>address<wbr>From<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>address<wbr>ToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">bchAddressToHex</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinCashUTXOs</span></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>btc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">btcAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinUTXOs</span><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>address<wbr>From<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>address<wbr>ToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">btcAddressToHex</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinUTXOs</span></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>random<wbr>Nonce<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">randomNonce</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>strip0x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-siganture">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>hex: <span class="tsd-signature-type">string</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>value<span class="tsd-signature-symbol">: </span>&lt;Unit&gt;<span class="tsd-signature-symbol">(</span>valueIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BigNumber</span>, unitIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Value</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-siganture">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-has-type-parameter">
+											<li class="tsd-signature tsd-kind-icon">&lt;Unit&gt;<span class="tsd-signature-symbol">(</span>valueIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BigNumber</span>, unitIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Value</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">&gt;</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-type-parameters-title">Type parameters</h4>
+												<ul class="tsd-type-parameters">
+													<li>
+														<h4>Unit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Units</span></h4>
+													</li>
+												</ul>
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>valueIn: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BigNumber</span></h5>
+													</li>
+													<li>
+														<h5>unitIn: <span class="tsd-signature-type">Unit</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Value</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">&gt;</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>zec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">zecAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getZcashUTXOs</span><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>address<wbr>From<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>address<wbr>ToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">zecAddressToHex</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getZcashUTXOs</span></h5>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="chains" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Chains</h3>
+					<div class="tsd-signature tsd-kind-icon">Chains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Chain</span><span class="tsd-signature-symbol"> = Chain</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L48">src/index.ts:48</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="darknode" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Darknode</h3>
+					<div class="tsd-signature tsd-kind-icon">Darknode<span class="tsd-signature-symbol">:</span> <a href="darknode.html" class="tsd-signature-type">Darknode</a><span class="tsd-signature-symbol"> = Darknode</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L51">src/index.ts:51</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="darknodegroup" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Darknode<wbr>Group</h3>
+					<div class="tsd-signature tsd-kind-icon">Darknode<wbr>Group<span class="tsd-signature-symbol">:</span> <a href="darknodegroup.html" class="tsd-signature-type">DarknodeGroup</a><span class="tsd-signature-symbol"> = DarknodeGroup</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L52">src/index.ts:52</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="networkdetails" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Network<wbr>Details</h3>
+					<div class="tsd-signature tsd-kind-icon">Network<wbr>Details<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>NetworkChaosnet<span class="tsd-signature-symbol">: </span><a href="../interfaces/networkdetails.html" class="tsd-signature-type">NetworkDetails</a><span class="tsd-signature-symbol">; </span>NetworkTestnet<span class="tsd-signature-symbol">: </span><a href="../interfaces/networkdetails.html" class="tsd-signature-type">NetworkDetails</a><span class="tsd-signature-symbol">; </span>stringToNetwork<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">stringToNetwork</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = NetworkDetails</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L47">src/index.ts:47</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>Network<wbr>Chaosnet<span class="tsd-signature-symbol">: </span><a href="../interfaces/networkdetails.html" class="tsd-signature-type">NetworkDetails</a></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>Network<wbr>Testnet<span class="tsd-signature-symbol">: </span><a href="../interfaces/networkdetails.html" class="tsd-signature-type">NetworkDetails</a></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>string<wbr>ToNetwork<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">stringToNetwork</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="networks" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Networks</h3>
+					<div class="tsd-signature tsd-kind-icon">Networks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RenNetwork</span><span class="tsd-signature-symbol"> = RenNetwork</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L46">src/index.ts:46</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="rpcmethod" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> RPCMethod</h3>
+					<div class="tsd-signature tsd-kind-icon">RPCMethod<span class="tsd-signature-symbol">:</span> <a href="../enums/rpcmethod.html" class="tsd-signature-type">RPCMethod</a><span class="tsd-signature-symbol"> = RPCMethod</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L53">src/index.ts:53</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="tokens" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Tokens</h3>
+					<div class="tsd-signature tsd-kind-icon">Tokens<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>BCH<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">; </span>BTC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">; </span>ZEC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = Tokens</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L45">src/index.ts:45</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>BCH<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>BTC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>ZEC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="txstatus" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Tx<wbr>Status</h3>
+					<div class="tsd-signature tsd-kind-icon">Tx<wbr>Status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">TxStatus</span><span class="tsd-signature-symbol"> = TxStatus</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L49">src/index.ts:49</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="utils-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> utils</h3>
+					<div class="tsd-signature tsd-kind-icon">utils<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>BCH<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">bchAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinCashUTXOs</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>BTC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">btcAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinUTXOs</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>Ox<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>ZEC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">zecAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getZcashUTXOs</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>bch<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">bchAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinCashUTXOs</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>btc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">btcAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinUTXOs</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>randomNonce<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">randomNonce</span><span class="tsd-signature-symbol">; </span>strip0x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span>&lt;Unit&gt;<span class="tsd-signature-symbol">(</span>valueIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BigNumber</span>, unitIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Value</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>zec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">zecAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getZcashUTXOs</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = utils</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L50">src/index.ts:50</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>BCH<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">bchAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinCashUTXOs</span><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>address<wbr>From<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>address<wbr>ToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">bchAddressToHex</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinCashUTXOs</span></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>BTC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">btcAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinUTXOs</span><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>address<wbr>From<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>address<wbr>ToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">btcAddressToHex</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinUTXOs</span></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>Ox<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-siganture">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>hex: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>ZEC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">zecAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getZcashUTXOs</span><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>address<wbr>From<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>address<wbr>ToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">zecAddressToHex</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getZcashUTXOs</span></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>bch<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">bchAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinCashUTXOs</span><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>address<wbr>From<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>address<wbr>ToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">bchAddressToHex</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinCashUTXOs</span></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>btc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">btcAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinUTXOs</span><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>address<wbr>From<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>address<wbr>ToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">btcAddressToHex</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getBitcoinUTXOs</span></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>random<wbr>Nonce<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">randomNonce</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>strip0x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-siganture">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>hex: <span class="tsd-signature-type">string</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>value<span class="tsd-signature-symbol">: </span>&lt;Unit&gt;<span class="tsd-signature-symbol">(</span>valueIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BigNumber</span>, unitIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Value</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-siganture">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-has-type-parameter">
+											<li class="tsd-signature tsd-kind-icon">&lt;Unit&gt;<span class="tsd-signature-symbol">(</span>valueIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BigNumber</span>, unitIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Value</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">&gt;</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-type-parameters-title">Type parameters</h4>
+												<ul class="tsd-type-parameters">
+													<li>
+														<h4>Unit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Units</span></h4>
+													</li>
+												</ul>
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>valueIn: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BigNumber</span></h5>
+													</li>
+													<li>
+														<h5>unitIn: <span class="tsd-signature-type">Unit</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Value</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">&gt;</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>zec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>addressFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>addressToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">zecAddressToHex</span><span class="tsd-signature-symbol">; </span>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getZcashUTXOs</span><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>address<wbr>From<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>address<wbr>ToHex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">zecAddressToHex</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>getUTXOs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">getZcashUTXOs</span></h5>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getshifteraddress" class="tsd-anchor"></a>
+					<h3>get<wbr>Shifter<wbr>Address</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Shifter<wbr>Address<span class="tsd-signature-symbol">(</span>web3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Web3</span>, token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ShiftedToken</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RenContract</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Asset</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">"BTC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ZEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BCH"</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L94">src/index.ts:94</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>web3: <span class="tsd-signature-type">Web3</span></h5>
+								</li>
+								<li>
+									<h5>token: <span class="tsd-signature-type">ShiftedToken</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RenContract</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Asset</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">"BTC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ZEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BCH"</span><span class="tsd-signature-symbol">)</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="gettokenaddress" class="tsd-anchor"></a>
+					<h3>get<wbr>Token<wbr>Address</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<wbr>Address<span class="tsd-signature-symbol">(</span>web3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Web3</span>, token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ShiftedToken</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RenContract</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Asset</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">"BTC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ZEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BCH"</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L93">src/index.ts:93</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>web3: <span class="tsd-signature-type">Web3</span></h5>
+								</li>
+								<li>
+									<h5>token: <span class="tsd-signature-type">ShiftedToken</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RenContract</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Asset</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">"BTC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ZEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BCH"</span><span class="tsd-signature-symbol">)</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="shiftin" class="tsd-anchor"></a>
+					<h3>shift<wbr>In</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">shift<wbr>In<span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ShiftInParams</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="shiftinobject.html" class="tsd-signature-type">ShiftInObject</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L79">src/index.ts:79</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Submits the commitment and transaction to RenVM, and then submits the
+									signature to the adapter address.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>params: <span class="tsd-signature-type">ShiftInParams</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>See [[ShiftInParams]].</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="shiftinobject.html" class="tsd-signature-type">ShiftInObject</a></h4>
+							<p>An instance of <a href="shiftinobject.html">ShiftInObject</a>.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="shiftout" class="tsd-anchor"></a>
+					<h3>shift<wbr>Out</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">shift<wbr>Out<span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ShiftOutParams</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="shiftoutobject.html" class="tsd-signature-type">ShiftOutObject</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/republicprotocol/ren-sdk-ts/blob/b81176c/src/index.ts#L89">src/index.ts:89</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Submits a burn log to RenVM.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>params: <span class="tsd-signature-type">ShiftOutParams</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>See [[ShiftOutParams]].</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="shiftoutobject.html" class="tsd-signature-type">ShiftOutObject</a></h4>
+							<p>An instance of <a href="shiftoutobject.html">ShiftOutObject</a>.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
+						<a href="renjs.html" class="tsd-kind-icon">RenJS</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="renjs.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="renjs.html#lightnode" class="tsd-kind-icon">lightnode</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="renjs.html#network" class="tsd-kind-icon">network</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="renjs.html#renvm" class="tsd-kind-icon">renVM</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="renjs.html#utils" class="tsd-kind-icon">utils</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="renjs.html#chains" class="tsd-kind-icon">Chains</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="renjs.html#darknode" class="tsd-kind-icon">Darknode</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="renjs.html#darknodegroup" class="tsd-kind-icon">Darknode<wbr>Group</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="renjs.html#networkdetails" class="tsd-kind-icon">Network<wbr>Details</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="renjs.html#networks" class="tsd-kind-icon">Networks</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="renjs.html#rpcmethod" class="tsd-kind-icon">RPCMethod</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="renjs.html#tokens" class="tsd-kind-icon">Tokens</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="renjs.html#txstatus" class="tsd-kind-icon">Tx<wbr>Status</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="renjs.html#utils-1" class="tsd-kind-icon">utils</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="renjs.html#getshifteraddress" class="tsd-kind-icon">get<wbr>Shifter<wbr>Address</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="renjs.html#gettokenaddress" class="tsd-kind-icon">get<wbr>Token<wbr>Address</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="renjs.html#shiftin" class="tsd-kind-icon">shift<wbr>In</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="renjs.html#shiftout" class="tsd-kind-icon">shift<wbr>Out</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
