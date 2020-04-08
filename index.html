@@ -115,16 +115,16 @@ npm install --save @renproject/ren</code></pre>
 
 <span class="hljs-keyword">const</span> amount = <span class="hljs-number">0.001</span>;
 
-<span class="hljs-keyword">const</span> shiftIn = renJS.shiftIn({
+<span class="hljs-keyword">const</span> lockAndMint = renJS.lockAndMint({
     sendToken: <span class="hljs-string">"BTC"</span>, <span class="hljs-comment">// Bridge BTC to Ethereum</span>
     sendAmount: RenJS.utils.value(amount, <span class="hljs-string">"btc"</span>).sats(), <span class="hljs-comment">// Amount of BTC</span>
     sendTo: <span class="hljs-string">"0xe520ec7e6C0D2A4f44033E2cC8ab641cb80F5176"</span>, <span class="hljs-comment">// Recipient Ethereum address</span>
 });
 
-<span class="hljs-keyword">const</span> gatewayAddress = shiftIn.addr();
+<span class="hljs-keyword">const</span> gatewayAddress = lockAndMint.addr();
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Deposit <span class="hljs-subst">${amount}</span> BTC to <span class="hljs-subst">${gatewayAddress}</span>`</span>);
 
-shiftIn.waitAndSubmit(web3.currentProvider, <span class="hljs-number">0</span> <span class="hljs-comment">/* confirmations */</span>)
+lockAndMint.waitAndSubmit(web3.currentProvider, <span class="hljs-number">0</span> <span class="hljs-comment">/* confirmations */</span>)
     .then(<span class="hljs-built_in">console</span>.log)
     .catch(<span class="hljs-built_in">console</span>.error);</code></pre>
 				<p>Example of bridging BTC out of Ethereum:</p>
@@ -133,14 +133,14 @@ shiftIn.waitAndSubmit(web3.currentProvider, <span class="hljs-number">0</span> <
 
 <span class="hljs-keyword">const</span> amount = <span class="hljs-number">0.001</span>;
 
-renJS.shiftOut({
+renJS.burnAndRelease({
     sendToken: <span class="hljs-string">"BTC"</span>, <span class="hljs-comment">// Bridge BTC from Ethereum back to Bitcoin's chain</span>
     sendAmount: RenJS.utils.value(amount, <span class="hljs-string">"btc"</span>).sats(), <span class="hljs-comment">// Amount of BTC</span>
     sendTo: <span class="hljs-string">"miMi2VET41YV1j6SDNTeZoPBbmH8B4nEx6"</span>, <span class="hljs-comment">// Recipient Bitcoin address</span>
     web3Provider: web3.currentProvider,
 })
     .readFromEthereum()
-    .then(<span class="hljs-function"><span class="hljs-params">tx</span> =&gt;</span> tx.submitToRenVM())
+    .then(<span class="hljs-function"><span class="hljs-params">tx</span> =&gt;</span> tx.submit())
     .then(<span class="hljs-built_in">console</span>.log)
     .catch(<span class="hljs-built_in">console</span>.error);</code></pre>
 				<br />
