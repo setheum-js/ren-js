@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@renproject/ren</title>
-	<meta name="description" content="Documentation for @renproject/ren">
+	<title>RenJS Types Documentation</title>
+	<meta name="description" content="Documentation for RenJS Types Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">@renproject/ren</a>
+					<a href="index.html" class="title">RenJS Types Documentation</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -38,8 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
 							<input type="checkbox" id="tsd-filter-only-exported" />
 							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
@@ -56,7 +54,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1>@renproject/ren</h1>
+			<h1>RenJS Types Documentation</h1>
 		</div>
 	</div>
 </header>
@@ -64,115 +62,26 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<a href="#🛠️-renjs" id="🛠️-renjs" style="color: inherit; text-decoration: none;">
-					<h1><code>🛠️ RenJS</code></h1>
+				<a href="#renjs-and-gatewayjs-types" id="renjs-and-gatewayjs-types" style="color: inherit; text-decoration: none;">
+					<h1>RenJS and GatewayJS Types</h1>
 				</a>
-				<p>There&#39;s two official Javascript SDKs for interacting with <a href="https://renproject.io">RenVM</a>:</p>
-				<ol>
-					<li><strong>GatewayJS</strong> (<a href="https://github.com/renproject/gateway-js"><code>gateway-js</code> repository</a>): The simplest way to get started, providing a full user experience.</li>
-					<li><strong>RenJS</strong> (this repository): A lower-level SDK which can be integrated into your existing user interface.</li>
-				</ol>
-				<p>See the <a href="https://docs.renproject.io/developers/tutorial/getting-started">Getting Started Tutorial</a> to start using RenJS.</p>
-				<a href="#changelog" id="changelog" style="color: inherit; text-decoration: none;">
-					<h2>Changelog</h2>
+				<p>These are automatically generated docs for RenJS&#39;s and GatewayJS&#39;s interfaces, hosted at <a href="https://renproject.github.io/ren-js/">renproject.github.io/ren-js</a>.</p>
+				<p>See <a href="https://docs.renproject.io/developers">docs.renproject.io/developers</a> for more docs and tutorials.</p>
+				<a href="#main-classes-and-functions" id="main-classes-and-functions" style="color: inherit; text-decoration: none;">
+					<h3>Main classes and functions</h3>
 				</a>
-				<p>See the <a href="https://github.com/renproject/ren-js/releases">Releases</a> page.</p>
-				<a href="#about" id="about" style="color: inherit; text-decoration: none;">
-					<h2>About</h2>
-				</a>
-				<p>RenJS is a Node.js and browser SDK for bridging BTC, BCH and ZEC to your project. See the following examples:</p>
 				<ul>
-					<li><strong>Decentralized <em>dApp</em></strong>:<ul>
-							<li><a href="https://github.com/renproject/chaosdex">ChaosDEX</a>: A decentralized exchange that uses RenJS to enable depositing and withdrawing BTC, BCH and ZEC.</li>
+					<li><a href="classes/renjs.html">RenJS</a><ul>
+							<li><a href="classes/renjs.html#lockandmint">RenJS.lockAndMint</a></li>
+							<li><a href="classes/renjs.html#burnandrelease">RenJS.burnAndRelease</a></li>
 						</ul>
 					</li>
-					<li><strong>Node.js server</strong>:<ul>
-							<li><a href="https://github.com/renproject/interoperability-examples">Interoperability Examples</a>: Examples on speeding up BTC deposits for users and providing gas</li>
-						</ul>
-					</li>
-					<li><strong>Command-line application</strong>:<ul>
-							<li><a href="https://github.com/renproject/chaosdex-trading-bot">ChaosDEX Trading Bot</a>: A trading bot that automatically trades between BTC, BCH, ZEC and DAI (currently still SAI).</li>
+					<li><a href="classes/gatewayjs.html">GatewayJS</a><ul>
+							<li><a href="classes/gatewayjs.html#lockandmint">GatewayJS.lockAndMint</a></li>
+							<li><a href="classes/gatewayjs.html#burnandrelease">GatewayJS.burnAndRelease</a></li>
 						</ul>
 					</li>
 				</ul>
-				<br />
-				<hr />
-				<br />
-				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
-					<h2>Installation</h2>
-				</a>
-				<p>Install RenJS:</p>
-				<pre><code class="language-sh">yarn add @renproject/ren
-<span class="hljs-comment"># Or</span>
-npm install --save @renproject/ren</code></pre>
-				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
-					<h2>Usage</h2>
-				</a>
-				<p>Usage is described in the <a href="https://docs.renproject.io/developers/tutorial/getting-started">getting started tutorial</a>.</p>
-				<p>Example of bridging BTC into Ethereum (see <a href="https://infura.io/">Infura</a> for initializing Web3):</p>
-				<pre><code class="language-typescript"><span class="hljs-keyword">const</span> renJS = <span class="hljs-keyword">new</span> RenJS(<span class="hljs-string">"testnet"</span>); <span class="hljs-comment">// or "chaosnet"</span>
-<span class="hljs-keyword">const</span> web3 = <span class="hljs-keyword">new</span> Web3(<span class="hljs-string">"... Ethereum Kovan node or Infura ..."</span>);
-
-<span class="hljs-keyword">const</span> amount = <span class="hljs-number">0.001</span>;
-
-<span class="hljs-keyword">const</span> lockAndMint = renJS.lockAndMint({
-    sendToken: <span class="hljs-string">"BTC"</span>, <span class="hljs-comment">// Bridge BTC to Ethereum</span>
-    sendAmount: RenJS.utils.value(amount, <span class="hljs-string">"btc"</span>).sats(), <span class="hljs-comment">// Amount of BTC</span>
-    sendTo: <span class="hljs-string">"0xe520ec7e6C0D2A4f44033E2cC8ab641cb80F5176"</span>, <span class="hljs-comment">// Recipient Ethereum address</span>
-});
-
-<span class="hljs-keyword">const</span> gatewayAddress = lockAndMint.addr();
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Deposit <span class="hljs-subst">${amount}</span> BTC to <span class="hljs-subst">${gatewayAddress}</span>`</span>);
-
-lockAndMint.waitAndSubmit(web3.currentProvider, <span class="hljs-number">0</span> <span class="hljs-comment">/* confirmations */</span>)
-    .then(<span class="hljs-built_in">console</span>.log)
-    .catch(<span class="hljs-built_in">console</span>.error);</code></pre>
-				<p>Example of bridging BTC out of Ethereum:</p>
-				<pre><code class="language-typescript"><span class="hljs-keyword">const</span> renJS = <span class="hljs-keyword">new</span> RenJS(<span class="hljs-string">"testnet"</span>); <span class="hljs-comment">// or "chaosnet"</span>
-<span class="hljs-keyword">const</span> web3 = <span class="hljs-keyword">new</span> Web3(<span class="hljs-string">"... Ethereum Kovan node or Infura ..."</span>);
-
-<span class="hljs-keyword">const</span> amount = <span class="hljs-number">0.001</span>;
-
-renJS.burnAndRelease({
-    sendToken: <span class="hljs-string">"BTC"</span>, <span class="hljs-comment">// Bridge BTC from Ethereum back to Bitcoin's chain</span>
-    sendAmount: RenJS.utils.value(amount, <span class="hljs-string">"btc"</span>).sats(), <span class="hljs-comment">// Amount of BTC</span>
-    sendTo: <span class="hljs-string">"miMi2VET41YV1j6SDNTeZoPBbmH8B4nEx6"</span>, <span class="hljs-comment">// Recipient Bitcoin address</span>
-    web3Provider: web3.currentProvider,
-})
-    .readFromEthereum()
-    .then(<span class="hljs-function"><span class="hljs-params">tx</span> =&gt;</span> tx.submit())
-    .then(<span class="hljs-built_in">console</span>.log)
-    .catch(<span class="hljs-built_in">console</span>.error);</code></pre>
-				<br />
-				<br />
-				<hr />
-				<br />
-				<a href="#developer-notes" id="developer-notes" style="color: inherit; text-decoration: none;">
-					<h2>Developer notes</h2>
-				</a>
-				<a href="#building" id="building" style="color: inherit; text-decoration: none;">
-					<h3>Building</h3>
-				</a>
-				<pre><code class="language-sh">yarn run build
-<span class="hljs-comment"># or watch, to rebuild on new changes:</span>
-yarn run watch
-</code></pre>
-				<a href="#running-tests" id="running-tests" style="color: inherit; text-decoration: none;">
-					<h3>Running tests</h3>
-				</a>
-				<p>You&#39;ll need to:</p>
-				<ol>
-					<li>Generate a mnemonic and send ETH (kovan for testnet) (path: <code>m/44&#39;/60&#39;/0&#39;/0/</code>)</li>
-					<li>Generate a private key and send BTC and ZEC (tBTC and TAZ for testnet)</li>
-					<li>Generate an Infura API key</li>
-				</ol>
-				<p>Create a <code>.env</code> file which contains the following exported variables:</p>
-				<pre><code class="language-sh"><span class="hljs-built_in">export</span> MNEMONIC=<span class="hljs-string">"your mnemonic here"</span>
-<span class="hljs-built_in">export</span> TESTNET_BITCOIN_KEY=<span class="hljs-string">"your bitcoin private key (encoded in WIF)"</span>
-<span class="hljs-built_in">export</span> INFURA_KEY=<span class="hljs-string">"your infura key (for it's v3 endpoint)"</span>
-<span class="hljs-built_in">export</span> NETWORK=<span class="hljs-string">"mainnet or testnet"</span></code></pre>
-				<p>Then just run the following command to execute the tests. Make sure there is sufficient Kovan ETH in the linked account before running tests.</p>
-				<pre><code class="language-sh">yarn run <span class="hljs-built_in">test</span></code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -181,15 +90,96 @@ yarn run watch
 					<li class="globals  ">
 						<a href="globals.html"><em>Globals</em></a>
 					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="modules/_bitcore_lib_.html">&quot;bitcore-<wbr>lib&quot;</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="modules/_bitcore_lib_cash_.html">&quot;bitcore-<wbr>lib-<wbr>cash&quot;</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="modules/_bitcore_lib_zcash_.html">&quot;bitcore-<wbr>lib-<wbr>zcash&quot;</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="modules/_bitcore_lib_zcash_lib_encoding_base58check_.html">&quot;bitcore-<wbr>lib-<wbr>zcash/lib/encoding/base58check&quot;</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="modules/_bitcore_lib_lib_encoding_base58check_.html">&quot;bitcore-<wbr>lib/lib/encoding/base58check&quot;</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="modules/_wallet_address_validator_.html">&quot;wallet-<wbr>address-<wbr>validator&quot;</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="enums/asset.html" class="tsd-kind-icon">Asset</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/burnandreleasestatus.html" class="tsd-kind-icon">Burn<wbr>And<wbr>Release<wbr>Status</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/chain.html" class="tsd-kind-icon">Chain</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/eventtype.html" class="tsd-kind-icon">Event<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/gatewaymessagetype.html" class="tsd-kind-icon">Gateway<wbr>Message<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/lockandmintstatus.html" class="tsd-kind-icon">Lock<wbr>And<wbr>Mint<wbr>Status</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/rpcmethod.html" class="tsd-kind-icon">RPCMethod</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/rencontract.html" class="tsd-kind-icon">Ren<wbr>Contract</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/rennetwork.html" class="tsd-kind-icon">Ren<wbr>Network</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/rentokens.html" class="tsd-kind-icon">Ren<wbr>Tokens</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/renvmtype.html" class="tsd-kind-icon">RenVMType</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/txstatus.html" class="tsd-kind-icon">Tx<wbr>Status</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/bchvalue.html" class="tsd-kind-icon">BCHValue</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/btcvalue.html" class="tsd-kind-icon">BTCValue</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/basevalue.html" class="tsd-kind-icon">Base<wbr>Value</a>
+					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/burnandrelease.html" class="tsd-kind-icon">Burn<wbr>And<wbr>Release</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/ethvalue.html" class="tsd-kind-icon">ETHValue</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/gateway.html" class="tsd-kind-icon">Gateway</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/gatewayjs.html" class="tsd-kind-icon">GatewayJS</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/httpprovider.html" class="tsd-kind-icon">Http<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/internalpromievent.html" class="tsd-kind-icon">Internal<wbr>Promi<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/lockandmint.html" class="tsd-kind-icon">Lock<wbr>And<wbr>Mint</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/multiprovider.html" class="tsd-kind-icon">Multi<wbr>Provider</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/renjs.html" class="tsd-kind-icon">RenJS</a>
@@ -197,8 +187,566 @@ yarn run watch
 					<li class=" tsd-kind-class">
 						<a href="classes/renvmnetwork.html" class="tsd-kind-icon">RenVMNetwork</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/renvmprovider.html" class="tsd-kind-icon">RenVMProvider</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/satsvalue.html" class="tsd-kind-icon">Sats<wbr>Value</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/zecvalue.html" class="tsd-kind-icon">ZECValue</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/abiinput.html" class="tsd-kind-icon">Abi<wbr>Input</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/abiitem.html" class="tsd-kind-icon">Abi<wbr>Item</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/abioutput.html" class="tsd-kind-icon">Abi<wbr>Output</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/burnandreleaseevent.html" class="tsd-kind-icon">Burn<wbr>And<wbr>Release<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/burnandreleaseparams.html" class="tsd-kind-icon">Burn<wbr>And<wbr>Release<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/burnandreleaseparamssimple.html" class="tsd-kind-icon">Burn<wbr>And<wbr>Release<wbr>Params<wbr>Simple</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/contractcall.html" class="tsd-kind-icon">Contract<wbr>Call</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/etharg.html" class="tsd-kind-icon">Eth<wbr>Arg</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/extethcompatpayload.html" class="tsd-kind-icon">Ext<wbr>Eth<wbr>Compat<wbr>Payload</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/gatewaymessage.html" class="tsd-kind-icon">Gateway<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/historyeventcommon.html" class="tsd-kind-icon">History<wbr>Event<wbr>Common</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/lockandmintevent.html" class="tsd-kind-icon">Lock<wbr>And<wbr>Mint<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/lockandmintparams.html" class="tsd-kind-icon">Lock<wbr>And<wbr>Mint<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/lockandmintparamssimple.html" class="tsd-kind-icon">Lock<wbr>And<wbr>Mint<wbr>Params<wbr>Simple</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/networkdetails.html" class="tsd-kind-icon">Network<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/paramsqueryblock.html" class="tsd-kind-icon">Params<wbr>Query<wbr>Block</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/paramsqueryblocks.html" class="tsd-kind-icon">Params<wbr>Query<wbr>Blocks</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/paramsqueryepoch.html" class="tsd-kind-icon">Params<wbr>Query<wbr>Epoch</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/paramsquerynumpeers.html" class="tsd-kind-icon">Params<wbr>Query<wbr>Num<wbr>Peers</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/paramsquerypeers.html" class="tsd-kind-icon">Params<wbr>Query<wbr>Peers</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/paramsquerystat.html" class="tsd-kind-icon">Params<wbr>Query<wbr>Stat</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/paramsquerytx.html" class="tsd-kind-icon">Params<wbr>Query<wbr>Tx</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/paramssubmittx.html" class="tsd-kind-icon">Params<wbr>Submit<wbr>Tx</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/provider.html" class="tsd-kind-icon">Provider</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/rencontractdetails.html" class="tsd-kind-icon">Ren<wbr>Contract<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/renvmarg.html" class="tsd-kind-icon">RenVMArg</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/renvminpututxo.html" class="tsd-kind-icon">RenVMInputUTXO</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/renvmoutpututxo.html" class="tsd-kind-icon">RenVMOutputUTXO</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/responsequeryblock.html" class="tsd-kind-icon">Response<wbr>Query<wbr>Block</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/responsequeryblocks.html" class="tsd-kind-icon">Response<wbr>Query<wbr>Blocks</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/responsequeryburntx.html" class="tsd-kind-icon">Response<wbr>Query<wbr>Burn<wbr>Tx</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/responsequeryepoch.html" class="tsd-kind-icon">Response<wbr>Query<wbr>Epoch</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/responsequeryminttx.html" class="tsd-kind-icon">Response<wbr>Query<wbr>Mint<wbr>Tx</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/responsequerynumpeers.html" class="tsd-kind-icon">Response<wbr>Query<wbr>Num<wbr>Peers</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/responsequerypeers.html" class="tsd-kind-icon">Response<wbr>Query<wbr>Peers</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/responsequerystat.html" class="tsd-kind-icon">Response<wbr>Query<wbr>Stat</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/responsequerytx.html" class="tsd-kind-icon">Response<wbr>Query<wbr>Tx</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/responsesubmittx.html" class="tsd-kind-icon">Response<wbr>Submit<wbr>Tx</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/sendparams.html" class="tsd-kind-icon">Send<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/sendtokeninterface.html" class="tsd-kind-icon">Send<wbr>Token<wbr>Interface</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/signature.html" class="tsd-kind-icon">Signature</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/tactics.html" class="tsd-kind-icon">Tactics</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/transferparamscommon.html" class="tsd-kind-icon">Transfer<wbr>Params<wbr>Common</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/utxo.html" class="tsd-kind-icon">UTXO</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/utxoindex.html" class="tsd-kind-icon">UTXOIndex</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/unmarshalledburntx.html" class="tsd-kind-icon">Unmarshalled<wbr>Burn<wbr>Tx</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/unmarshalledminttx.html" class="tsd-kind-icon">Unmarshalled<wbr>Mint<wbr>Tx</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#abitype" class="tsd-kind-icon">Abi<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#bn" class="tsd-kind-icon">BN</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#base64string" class="tsd-kind-icon">Base64<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#burnargsarray" class="tsd-kind-icon">Burn<wbr>Args<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#decimalstring" class="tsd-kind-icon">Decimal<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#ethargs" class="tsd-kind-icon">Eth<wbr>Args</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#ethbyte" class="tsd-kind-icon">Eth<wbr>Byte</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#ethint" class="tsd-kind-icon">Eth<wbr>Int</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#ethtype" class="tsd-kind-icon">Eth<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#ethuint" class="tsd-kind-icon">Eth<wbr>Uint</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#gatewaymessagepayload" class="tsd-kind-icon">Gateway<wbr>Message<wbr>Payload</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#gatewaymessageresponse" class="tsd-kind-icon">Gateway<wbr>Message<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#hexstring" class="tsd-kind-icon">Hex<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#historyevent" class="tsd-kind-icon">History<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#jsonrpcresponse" class="tsd-kind-icon">JSONRPCResponse</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#mintargsarray" class="tsd-kind-icon">Mint<wbr>Args<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#numbervalue" class="tsd-kind-icon">Number<wbr>Value</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#paramssubmitburn" class="tsd-kind-icon">Params<wbr>Submit<wbr>Burn</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#paramssubmitmint" class="tsd-kind-icon">Params<wbr>Submit<wbr>Mint</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#promievent" class="tsd-kind-icon">Promi<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#rpcparams" class="tsd-kind-icon">RPCParams</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#rpcresponse" class="tsd-kind-icon">RPCResponse</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#renvmargs" class="tsd-kind-icon">RenVMArgs</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#renvmparametervalue" class="tsd-kind-icon">RenVMParameter<wbr>Value</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#renvmparams" class="tsd-kind-icon">RenVMParams</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#renvmresponses" class="tsd-kind-icon">RenVMResponses</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#renvmutxo" class="tsd-kind-icon">RenVMUTXO</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#renweb3events" class="tsd-kind-icon">Ren<wbr>Web3<wbr>Events</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#serializableburnandreleaseparams" class="tsd-kind-icon">Serializable<wbr>Burn<wbr>And<wbr>Release<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#serializablelockandmintparams" class="tsd-kind-icon">Serializable<wbr>Lock<wbr>And<wbr>Mint<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#serializabletransferparams" class="tsd-kind-icon">Serializable<wbr>Transfer<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#statemutabilitytype" class="tsd-kind-icon">State<wbr>Mutability<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#transferparams" class="tsd-kind-icon">Transfer<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#tx" class="tsd-kind-icon">Tx</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#txautogen" class="tsd-kind-icon">Tx<wbr>Autogen</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#txburnreturnedinputs" class="tsd-kind-icon">Tx<wbr>Burn<wbr>Returned<wbr>Inputs</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#txresponseoutputs" class="tsd-kind-icon">Tx<wbr>Response<wbr>Outputs</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#utxowithchain" class="tsd-kind-icon">UTXOWith<wbr>Chain</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#units" class="tsd-kind-icon">Units</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#unmarshalledtx" class="tsd-kind-icon">Unmarshalled<wbr>Tx</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#value" class="tsd-kind-icon">Value</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#web3events" class="tsd-kind-icon">Web3<wbr>Events</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#provider" class="tsd-kind-icon">provider</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#bchunits" class="tsd-kind-icon">BCHUnits</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#btcunits" class="tsd-kind-icon">BTCUnits</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#burn_topic" class="tsd-kind-icon">BURN_<wbr>TOPIC</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#ethunits" class="tsd-kind-icon">ETHUnits</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#gateway_endpoint_production" class="tsd-kind-icon">GATEWAY_<wbr>ENDPOINT_<wbr>PRODUCTION</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#gateway_endpoint_staging" class="tsd-kind-icon">GATEWAY_<wbr>ENDPOINT_<wbr>STAGING</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#null" class="tsd-kind-icon">NULL</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#networkchaosnet" class="tsd-kind-icon">Network<wbr>Chaosnet</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#networkdevnet" class="tsd-kind-icon">Network<wbr>Devnet</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#networklocalnet" class="tsd-kind-icon">Network<wbr>Localnet</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#networkmainnet" class="tsd-kind-icon">Network<wbr>Mainnet</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#networktestnet" class="tsd-kind-icon">Network<wbr>Testnet</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#ox" class="tsd-kind-icon">Ox</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#renelementhtml" class="tsd-kind-icon">Ren<wbr>ElementHTML</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#rengatewaycontainerhtml" class="tsd-kind-icon">Ren<wbr>Gateway<wbr>ContainerHTML</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#reniframe" class="tsd-kind-icon">RenIFrame</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#seconds" class="tsd-kind-icon">SECONDS</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#satsunits" class="tsd-kind-icon">Sats<wbr>Units</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#tokens" class="tsd-kind-icon">Tokens</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#zecunits" class="tsd-kind-icon">ZECUnits</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#abitoparams" class="tsd-kind-icon">abi<wbr>ToParams</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#anyaddressfrom" class="tsd-kind-icon">any<wbr>Address<wbr>From</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#assert" class="tsd-kind-icon">assert</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#bchaddressfrom" class="tsd-kind-icon">bch<wbr>Address<wbr>From</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#bchaddresstohex" class="tsd-kind-icon">bch<wbr>Address<wbr>ToHex</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#bchutils" class="tsd-kind-icon">bch<wbr>Utils</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#btcaddressfrom" class="tsd-kind-icon">btc<wbr>Address<wbr>From</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#btcaddresstohex" class="tsd-kind-icon">btc<wbr>Address<wbr>ToHex</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#btcutils" class="tsd-kind-icon">btc<wbr>Utils</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#createaddress" class="tsd-kind-icon">create<wbr>Address</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#createbchaddress" class="tsd-kind-icon">createBCHAddress</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#createbtcaddress" class="tsd-kind-icon">createBTCAddress</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#createelementfromhtml" class="tsd-kind-icon">create<wbr>Element<wbr>FromHTML</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#createzecaddress" class="tsd-kind-icon">createZECAddress</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#errors" class="tsd-kind-icon">errors</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#extractburnreference" class="tsd-kind-icon">extract<wbr>Burn<wbr>Reference</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#extracterror" class="tsd-kind-icon">extract<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#fixsignature" class="tsd-kind-icon">fix<wbr>Signature</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#forwardweb3events" class="tsd-kind-icon">forward<wbr>Web3<wbr>Events</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#generateaddress" class="tsd-kind-icon">generate<wbr>Address</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#generateburntxhash" class="tsd-kind-icon">generate<wbr>Burn<wbr>TxHash</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#generateghash" class="tsd-kind-icon">generateGHash</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#generateminttxhash" class="tsd-kind-icon">generate<wbr>Mint<wbr>TxHash</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#generatephash" class="tsd-kind-icon">generatePHash</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#generatesighash" class="tsd-kind-icon">generate<wbr>Sighash</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getbitcoincashconfirmations" class="tsd-kind-icon">get<wbr>Bitcoin<wbr>Cash<wbr>Confirmations</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getbitcoincashutxos" class="tsd-kind-icon">get<wbr>Bitcoin<wbr>CashUTXOs</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getbitcoinconfirmations" class="tsd-kind-icon">get<wbr>Bitcoin<wbr>Confirmations</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getbitcoinutxos" class="tsd-kind-icon">get<wbr>BitcoinUTXOs</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getelement" class="tsd-kind-icon">get<wbr>Element</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getgatewayaddress" class="tsd-kind-icon">get<wbr>Gateway<wbr>Address</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#gettokenaddress" class="tsd-kind-icon">get<wbr>Token<wbr>Address</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#gettokenname" class="tsd-kind-icon">get<wbr>Token<wbr>Name</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getzcashconfirmations" class="tsd-kind-icon">get<wbr>Zcash<wbr>Confirmations</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getzcashutxos" class="tsd-kind-icon">get<wbr>ZcashUTXOs</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#ignorepromieventerror" class="tsd-kind-icon">ignore<wbr>Promi<wbr>Event<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#newpromievent" class="tsd-kind-icon">new<wbr>Promi<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#parserencontract" class="tsd-kind-icon">parse<wbr>Ren<wbr>Contract</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#payloadtoabi" class="tsd-kind-icon">payload<wbr>ToABI</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#payloadtomintabi" class="tsd-kind-icon">payload<wbr>ToMintABI</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#prepareparamsforsendmessage" class="tsd-kind-icon">prepare<wbr>Params<wbr>For<wbr>Send<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#processburnandreleaseparams" class="tsd-kind-icon">process<wbr>Burn<wbr>And<wbr>Release<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#processlockandmintparams" class="tsd-kind-icon">process<wbr>Lock<wbr>And<wbr>Mint<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#randombytes" class="tsd-kind-icon">random<wbr>Bytes</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#randomnonce" class="tsd-kind-icon">random<wbr>Nonce</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#rawencode" class="tsd-kind-icon">raw<wbr>Encode</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#resolveendpoint" class="tsd-kind-icon">resolve<wbr>Endpoint</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#resolveintoken" class="tsd-kind-icon">resolve<wbr>InToken</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#resolveouttoken" class="tsd-kind-icon">resolve<wbr>Out<wbr>Token</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#resolvesendcall" class="tsd-kind-icon">resolve<wbr>Send<wbr>Call</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#resolvesendto" class="tsd-kind-icon">resolve<wbr>Send<wbr>To</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#retrieveconfirmations" class="tsd-kind-icon">retrieve<wbr>Confirmations</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#retrievedeposits" class="tsd-kind-icon">retrieve<wbr>Deposits</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#retryntimes" class="tsd-kind-icon">retryNTimes</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#signaturetostring" class="tsd-kind-icon">signature<wbr>ToString</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#sleep" class="tsd-kind-icon">sleep</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#stringtonetwork" class="tsd-kind-icon">string<wbr>ToNetwork</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#strip0x" class="tsd-kind-icon">strip0x</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#syncgettokenaddress" class="tsd-kind-icon">sync<wbr>Get<wbr>Token<wbr>Address</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#tobase64" class="tsd-kind-icon">to<wbr>Base64</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#tobignumber" class="tsd-kind-icon">to<wbr>Big<wbr>Number</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#tofixed" class="tsd-kind-icon">to<wbr>Fixed</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#txhashtobase64" class="tsd-kind-icon">tx<wbr>Hash<wbr>ToBase64</a>
+					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#unmarshaltx" class="tsd-kind-icon">unmarshal<wbr>Tx</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#unzip" class="tsd-kind-icon">unzip</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#usebrowserweb3" class="tsd-kind-icon">use<wbr>Browser<wbr>Web3</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#utils" class="tsd-kind-icon">utils</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#validatestring" class="tsd-kind-icon">validate<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#value" class="tsd-kind-icon">value</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#waitforreceipt" class="tsd-kind-icon">wait<wbr>For<wbr>Receipt</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#withdefaultaccount" class="tsd-kind-icon">with<wbr>Default<wbr>Account</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#zecaddressfrom" class="tsd-kind-icon">zec<wbr>Address<wbr>From</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#zecaddresstohex" class="tsd-kind-icon">zec<wbr>Address<wbr>ToHex</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#zecutils" class="tsd-kind-icon">zec<wbr>Utils</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#assertanddecodeaddress" class="tsd-kind-icon">assert<wbr>And<wbr>Decode<wbr>Address</a>
@@ -252,6 +800,12 @@ yarn run watch
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>

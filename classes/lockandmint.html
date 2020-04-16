@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>LockAndMint | @renproject/ren</title>
-	<meta name="description" content="Documentation for @renproject/ren">
+	<title>LockAndMint | RenJS Types Documentation</title>
+	<meta name="description" content="Documentation for RenJS Types Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@renproject/ren</a>
+					<a href="../index.html" class="title">RenJS Types Documentation</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -38,8 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
 							<input type="checkbox" id="tsd-filter-only-exported" />
 							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
@@ -87,7 +85,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lockandmint.html#gatewayaddress" class="tsd-kind-icon">gateway<wbr>Address</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="lockandmint.html#generatedgatewayaddress" class="tsd-kind-icon">generated<wbr>Gateway<wbr>Address</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="lockandmint.html#network" class="tsd-kind-icon">network</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="lockandmint.html#params" class="tsd-kind-icon">params</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="lockandmint.html#renvmnetwork" class="tsd-kind-icon">renVMNetwork</a></li>
@@ -100,12 +98,12 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="lockandmint.html#addr" class="tsd-kind-icon">addr</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="lockandmint.html#createtransactions" class="tsd-kind-icon">create<wbr>Transactions</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="lockandmint.html#gatewayaddress" class="tsd-kind-icon">gateway<wbr>Address</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="lockandmint.html#querytx" class="tsd-kind-icon">query<wbr>Tx</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="lockandmint.html#rentxhash" class="tsd-kind-icon">ren<wbr>TxHash</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="lockandmint.html#submit" class="tsd-kind-icon">submit</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="lockandmint.html#submittoethereum" class="tsd-kind-icon">submit<wbr>ToEthereum</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="lockandmint.html#txhash" class="tsd-kind-icon">tx<wbr>Hash</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="lockandmint.html#wait" class="tsd-kind-icon">wait</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="lockandmint.html#waitandsubmit" class="tsd-kind-icon">wait<wbr>And<wbr>Submit</a></li>
 							</ul>
@@ -119,13 +117,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Lock<wbr>And<wbr>Mint<span class="tsd-signature-symbol">(</span>_renVMNetwork<span class="tsd-signature-symbol">: </span><a href="renvmnetwork.html" class="tsd-signature-type">RenVMNetwork</a>, _network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NetworkDetails</span>, _params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LockAndMintParams</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lockandmint.html" class="tsd-signature-type">LockAndMint</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Lock<wbr>And<wbr>Mint<span class="tsd-signature-symbol">(</span>_renVMNetwork<span class="tsd-signature-symbol">: </span><a href="renvmnetwork.html" class="tsd-signature-type">RenVMNetwork</a>, _network<span class="tsd-signature-symbol">: </span><a href="../interfaces/networkdetails.html" class="tsd-signature-type">NetworkDetails</a>, _params<span class="tsd-signature-symbol">: </span><a href="../interfaces/lockandmintparams.html" class="tsd-signature-type">LockAndMintParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lockandmint.html" class="tsd-signature-type">LockAndMint</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L33">ren/src/lockAndMint.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L31">ren/src/lockAndMint.ts:31</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -134,10 +132,10 @@
 									<h5>_renVMNetwork: <a href="renvmnetwork.html" class="tsd-signature-type">RenVMNetwork</a></h5>
 								</li>
 								<li>
-									<h5>_network: <span class="tsd-signature-type">NetworkDetails</span></h5>
+									<h5>_network: <a href="../interfaces/networkdetails.html" class="tsd-signature-type">NetworkDetails</a></h5>
 								</li>
 								<li>
-									<h5>_params: <span class="tsd-signature-type">LockAndMintParams</span></h5>
+									<h5>_params: <a href="../interfaces/lockandmintparams.html" class="tsd-signature-type">LockAndMintParams</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="lockandmint.html" class="tsd-signature-type">LockAndMint</a></h4>
@@ -147,33 +145,33 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="gatewayaddress" class="tsd-anchor"></a>
-					<h3>gateway<wbr>Address</h3>
-					<div class="tsd-signature tsd-kind-icon">gateway<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="generatedgatewayaddress" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> generated<wbr>Gateway<wbr>Address</h3>
+					<div class="tsd-signature tsd-kind-icon">generated<wbr>Gateway<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L26">ren/src/lockAndMint.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L25">ren/src/lockAndMint.ts:25</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="network" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> network</h3>
-					<div class="tsd-signature tsd-kind-icon">network<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">NetworkDetails</span></div>
+					<div class="tsd-signature tsd-kind-icon">network<span class="tsd-signature-symbol">:</span> <a href="../interfaces/networkdetails.html" class="tsd-signature-type">NetworkDetails</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L28">ren/src/lockAndMint.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L26">ren/src/lockAndMint.ts:26</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="params" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> params</h3>
-					<div class="tsd-signature tsd-kind-icon">params<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">LockAndMintParams</span></div>
+					<div class="tsd-signature tsd-kind-icon">params<span class="tsd-signature-symbol">:</span> <a href="../interfaces/lockandmintparams.html" class="tsd-signature-type">LockAndMintParams</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L30">ren/src/lockAndMint.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L28">ren/src/lockAndMint.ts:28</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -183,17 +181,17 @@
 					<div class="tsd-signature tsd-kind-icon">renVMNetwork<span class="tsd-signature-symbol">:</span> <a href="renvmnetwork.html" class="tsd-signature-type">RenVMNetwork</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L29">ren/src/lockAndMint.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L27">ren/src/lockAndMint.ts:27</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="renvmresponse" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> renVMResponse</h3>
-					<div class="tsd-signature tsd-kind-icon">renVMResponse<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">UnmarshalledMintTx</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<div class="tsd-signature tsd-kind-icon">renVMResponse<span class="tsd-signature-symbol">:</span> <a href="../interfaces/unmarshalledminttx.html" class="tsd-signature-type">UnmarshalledMintTx</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L31">ren/src/lockAndMint.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L29">ren/src/lockAndMint.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -203,7 +201,7 @@
 					<div class="tsd-signature tsd-kind-icon">signature<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L27">ren/src/lockAndMint.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L24">ren/src/lockAndMint.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -213,40 +211,23 @@
 					<div class="tsd-signature tsd-kind-icon">third<wbr>Party<wbr>Transaction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L33">ren/src/lockAndMint.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L31">ren/src/lockAndMint.ts:31</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="utxo" class="tsd-anchor"></a>
 					<h3>utxo</h3>
-					<div class="tsd-signature tsd-kind-icon">utxo<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">UTXOIndex</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<div class="tsd-signature tsd-kind-icon">utxo<span class="tsd-signature-symbol">:</span> <a href="../interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L25">ren/src/lockAndMint.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L23">ren/src/lockAndMint.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="addr" class="tsd-anchor"></a>
-					<h3>addr</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">addr<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L67">ren/src/lockAndMint.ts:67</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="createtransactions" class="tsd-anchor"></a>
 					<h3>create<wbr>Transactions</h3>
@@ -257,7 +238,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L529">ren/src/lockAndMint.ts:529</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L530">ren/src/lockAndMint.ts:530</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -276,48 +257,47 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="querytx" class="tsd-anchor"></a>
-					<h3>query<wbr>Tx</h3>
+					<a name="gatewayaddress" class="tsd-anchor"></a>
+					<h3>gateway<wbr>Address</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">query<wbr>Tx<span class="tsd-signature-symbol">(</span>specifyUTXO<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">UTXOIndex</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UnmarshalledMintTx</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">gateway<wbr>Address<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L219">ren/src/lockAndMint.ts:219</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L65">ren/src/lockAndMint.ts:65</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> specifyUTXO: <span class="tsd-signature-type">UTXOIndex</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UnmarshalledMintTx</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="rentxhash" class="tsd-anchor"></a>
-					<h3>ren<wbr>TxHash</h3>
+					<a name="querytx" class="tsd-anchor"></a>
+					<h3>query<wbr>Tx</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">ren<wbr>TxHash<span class="tsd-signature-symbol">(</span>specifyUTXO<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">UTXOIndex</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">query<wbr>Tx<span class="tsd-signature-symbol">(</span>specifyUTXO<span class="tsd-signature-symbol">?: </span><a href="../interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/unmarshalledminttx.html" class="tsd-signature-type">UnmarshalledMintTx</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L186">ren/src/lockAndMint.ts:186</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L220">ren/src/lockAndMint.ts:220</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>queryTx requests the status of the mint from RenVM.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> specifyUTXO: <span class="tsd-signature-type">UTXOIndex</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> specifyUTXO: <a href="../interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/unmarshalledminttx.html" class="tsd-signature-type">UnmarshalledMintTx</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -325,22 +305,31 @@
 					<a name="submit" class="tsd-anchor"></a>
 					<h3>submit</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">submit<span class="tsd-signature-symbol">(</span>specifyUTXO<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">UTXOIndex</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PromiEvent</span><span class="tsd-signature-symbol">&lt;</span><a href="lockandmint.html" class="tsd-signature-type">LockAndMint</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>renTxHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>status<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">TxStatus</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">submit<span class="tsd-signature-symbol">(</span>specifyUTXO<span class="tsd-signature-symbol">?: </span><a href="../interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#promievent" class="tsd-signature-type">PromiEvent</a><span class="tsd-signature-symbol">&lt;</span><a href="lockandmint.html" class="tsd-signature-type">LockAndMint</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>status<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../enums/txstatus.html" class="tsd-signature-type">TxStatus</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L222">ren/src/lockAndMint.ts:222</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L231">ren/src/lockAndMint.ts:231</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>submit sends the mint details to RenVM and waits for the signature to be
+									available.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> specifyUTXO: <span class="tsd-signature-type">UTXOIndex</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> specifyUTXO: <a href="../interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">PromiEvent</span><span class="tsd-signature-symbol">&lt;</span><a href="lockandmint.html" class="tsd-signature-type">LockAndMint</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>renTxHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>status<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">TxStatus</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#promievent" class="tsd-signature-type">PromiEvent</a><span class="tsd-signature-symbol">&lt;</span><a href="lockandmint.html" class="tsd-signature-type">LockAndMint</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>status<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../enums/txstatus.html" class="tsd-signature-type">TxStatus</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<blockquote>
+								<p>}</p>
+							</blockquote>
 						</li>
 					</ul>
 				</section>
@@ -348,25 +337,48 @@
 					<a name="submittoethereum" class="tsd-anchor"></a>
 					<h3>submit<wbr>ToEthereum</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">submit<wbr>ToEthereum<span class="tsd-signature-symbol">(</span>web3Provider<span class="tsd-signature-symbol">: </span><a href="" class="tsd-signature-type">provider</a>, txConfig<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TransactionConfig</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PromiEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionReceipt</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Web3Events</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">RenWeb3Events</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">submit<wbr>ToEthereum<span class="tsd-signature-symbol">(</span>web3Provider<span class="tsd-signature-symbol">: </span><a href="../globals.html#provider" class="tsd-signature-type">provider</a>, txConfig<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TransactionConfig</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#promievent" class="tsd-signature-type">PromiEvent</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionReceipt</span><span class="tsd-signature-symbol">, </span><a href="../globals.html#web3events" class="tsd-signature-type">Web3Events</a><span class="tsd-signature-symbol"> &amp; </span><a href="../globals.html#renweb3events" class="tsd-signature-type">RenWeb3Events</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L361">ren/src/lockAndMint.ts:361</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L370">ren/src/lockAndMint.ts:370</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>web3Provider: <a href="" class="tsd-signature-type">provider</a></h5>
+									<h5>web3Provider: <a href="../globals.html#provider" class="tsd-signature-type">provider</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> txConfig: <span class="tsd-signature-type">TransactionConfig</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">PromiEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionReceipt</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Web3Events</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">RenWeb3Events</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#promievent" class="tsd-signature-type">PromiEvent</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionReceipt</span><span class="tsd-signature-symbol">, </span><a href="../globals.html#web3events" class="tsd-signature-type">Web3Events</a><span class="tsd-signature-symbol"> &amp; </span><a href="../globals.html#renweb3events" class="tsd-signature-type">RenWeb3Events</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="txhash" class="tsd-anchor"></a>
+					<h3>tx<wbr>Hash</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">tx<wbr>Hash<span class="tsd-signature-symbol">(</span>specifyUTXO<span class="tsd-signature-symbol">?: </span><a href="../interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L184">ren/src/lockAndMint.ts:184</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> specifyUTXO: <a href="../interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -374,13 +386,13 @@
 					<a name="wait" class="tsd-anchor"></a>
 					<h3>wait</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">wait<span class="tsd-signature-symbol">(</span>confirmations<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, specifyUTXO<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">UTXOIndex</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PromiEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>deposit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">UTXOWithChain</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">wait<span class="tsd-signature-symbol">(</span>confirmations<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, specifyUTXO<span class="tsd-signature-symbol">?: </span><a href="../interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#promievent" class="tsd-signature-type">PromiEvent</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>deposit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../globals.html#utxowithchain" class="tsd-signature-type">UTXOWithChain</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L69">ren/src/lockAndMint.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L67">ren/src/lockAndMint.ts:67</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -389,10 +401,10 @@
 									<h5>confirmations: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> specifyUTXO: <span class="tsd-signature-type">UTXOIndex</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> specifyUTXO: <a href="../interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">PromiEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>deposit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">UTXOWithChain</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#promievent" class="tsd-signature-type">PromiEvent</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>deposit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../globals.html#utxowithchain" class="tsd-signature-type">UTXOWithChain</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -400,19 +412,19 @@
 					<a name="waitandsubmit" class="tsd-anchor"></a>
 					<h3>wait<wbr>And<wbr>Submit</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">wait<wbr>And<wbr>Submit<span class="tsd-signature-symbol">(</span>web3Provider<span class="tsd-signature-symbol">: </span><a href="" class="tsd-signature-type">provider</a>, confirmations<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, txConfig<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TransactionConfig</span>, specifyUTXO<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">UTXOIndex</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionReceipt</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">wait<wbr>And<wbr>Submit<span class="tsd-signature-symbol">(</span>web3Provider<span class="tsd-signature-symbol">: </span><a href="../globals.html#provider" class="tsd-signature-type">provider</a>, confirmations<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, txConfig<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TransactionConfig</span>, specifyUTXO<span class="tsd-signature-symbol">?: </span><a href="../interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionReceipt</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/c9f0149/packages/lib/ren/src/lockAndMint.ts#L354">ren/src/lockAndMint.ts:354</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/040e6e0/packages/lib/ren/src/lockAndMint.ts#L363">ren/src/lockAndMint.ts:363</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>web3Provider: <a href="" class="tsd-signature-type">provider</a></h5>
+									<h5>web3Provider: <a href="../globals.html#provider" class="tsd-signature-type">provider</a></h5>
 								</li>
 								<li>
 									<h5>confirmations: <span class="tsd-signature-type">number</span></h5>
@@ -421,7 +433,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> txConfig: <span class="tsd-signature-type">TransactionConfig</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> specifyUTXO: <span class="tsd-signature-type">UTXOIndex</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> specifyUTXO: <a href="../interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionReceipt</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -440,9 +452,6 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class">
-						<a href="burnandrelease.html" class="tsd-kind-icon">Burn<wbr>And<wbr>Release</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
@@ -451,8 +460,8 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="lockandmint.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="lockandmint.html#gatewayaddress" class="tsd-kind-icon">gateway<wbr>Address</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="lockandmint.html#generatedgatewayaddress" class="tsd-kind-icon">generated<wbr>Gateway<wbr>Address</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="lockandmint.html#network" class="tsd-kind-icon">network</a>
@@ -476,22 +485,22 @@
 								<a href="lockandmint.html#utxo" class="tsd-kind-icon">utxo</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="lockandmint.html#addr" class="tsd-kind-icon">addr</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="lockandmint.html#createtransactions" class="tsd-kind-icon">create<wbr>Transactions</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="lockandmint.html#querytx" class="tsd-kind-icon">query<wbr>Tx</a>
+								<a href="lockandmint.html#gatewayaddress" class="tsd-kind-icon">gateway<wbr>Address</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="lockandmint.html#rentxhash" class="tsd-kind-icon">ren<wbr>TxHash</a>
+								<a href="lockandmint.html#querytx" class="tsd-kind-icon">query<wbr>Tx</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="lockandmint.html#submit" class="tsd-kind-icon">submit</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="lockandmint.html#submittoethereum" class="tsd-kind-icon">submit<wbr>ToEthereum</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="lockandmint.html#txhash" class="tsd-kind-icon">tx<wbr>Hash</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="lockandmint.html#wait" class="tsd-kind-icon">wait</a>
@@ -503,54 +512,6 @@
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="renjs.html" class="tsd-kind-icon">RenJS</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="renvmnetwork.html" class="tsd-kind-icon">RenVMNetwork</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="../globals.html#unmarshaltx" class="tsd-kind-icon">unmarshal<wbr>Tx</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="../globals.html#assertanddecodeaddress" class="tsd-kind-icon">assert<wbr>And<wbr>Decode<wbr>Address</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="../globals.html#assertanddecodebytes" class="tsd-kind-icon">assert<wbr>And<wbr>Decode<wbr>Bytes</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="../globals.html#assertanddecodenumber" class="tsd-kind-icon">assert<wbr>And<wbr>Decode<wbr>Number</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="../globals.html#assertargumenttype" class="tsd-kind-icon">assert<wbr>Argument<wbr>Type</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="../globals.html#decodebytes" class="tsd-kind-icon">decode<wbr>Bytes</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="../globals.html#decodenumber" class="tsd-kind-icon">decode<wbr>Number</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="../globals.html#decodestring" class="tsd-kind-icon">decode<wbr>String</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="../globals.html#findfield" class="tsd-kind-icon">find<wbr>Field</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="../globals.html#onerror" class="tsd-kind-icon">on<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="../globals.html#unmarshalburntx" class="tsd-kind-icon">unmarshal<wbr>Burn<wbr>Tx</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="../globals.html#unmarshalminttx" class="tsd-kind-icon">unmarshal<wbr>Mint<wbr>Tx</a>
-					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="../globals.html#networkdetails" class="tsd-kind-icon">Network<wbr>Details</a>
-					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="../globals.html#defaultpayload" class="tsd-kind-icon">default<wbr>Payload</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
@@ -564,6 +525,12 @@
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
