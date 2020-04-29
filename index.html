@@ -185,9 +185,6 @@
 						<a href="classes/renjs.html" class="tsd-kind-icon">RenJS</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/renvmnetwork.html" class="tsd-kind-icon">RenVMNetwork</a>
-					</li>
-					<li class=" tsd-kind-class">
 						<a href="classes/renvmprovider.html" class="tsd-kind-icon">RenVMProvider</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -204,6 +201,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/abioutput.html" class="tsd-kind-icon">Abi<wbr>Output</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/assetutils.html" class="tsd-kind-icon">Asset<wbr>Utils</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/burnandreleaseevent.html" class="tsd-kind-icon">Burn<wbr>And<wbr>Release<wbr>Event</a>
@@ -248,13 +248,13 @@
 						<a href="interfaces/paramsqueryblocks.html" class="tsd-kind-icon">Params<wbr>Query<wbr>Blocks</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/paramsqueryepoch.html" class="tsd-kind-icon">Params<wbr>Query<wbr>Epoch</a>
-					</li>
-					<li class=" tsd-kind-interface">
 						<a href="interfaces/paramsquerynumpeers.html" class="tsd-kind-icon">Params<wbr>Query<wbr>Num<wbr>Peers</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/paramsquerypeers.html" class="tsd-kind-icon">Params<wbr>Query<wbr>Peers</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/paramsqueryshards.html" class="tsd-kind-icon">Params<wbr>Query<wbr>Shards</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/paramsquerystat.html" class="tsd-kind-icon">Params<wbr>Query<wbr>Stat</a>
@@ -302,6 +302,9 @@
 						<a href="interfaces/responsequerypeers.html" class="tsd-kind-icon">Response<wbr>Query<wbr>Peers</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/responsequeryshards.html" class="tsd-kind-icon">Response<wbr>Query<wbr>Shards</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/responsequerystat.html" class="tsd-kind-icon">Response<wbr>Query<wbr>Stat</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -315,6 +318,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/sendtokeninterface.html" class="tsd-kind-icon">Send<wbr>Token<wbr>Interface</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/shard.html" class="tsd-kind-icon">Shard</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/signature.html" class="tsd-kind-icon">Signature</a>
@@ -374,6 +380,9 @@
 						<a href="globals.html#gatewaymessageresponse" class="tsd-kind-icon">Gateway<wbr>Message<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#hash" class="tsd-kind-icon">Hash</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#hexstring" class="tsd-kind-icon">Hex<wbr>String</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
@@ -406,9 +415,6 @@
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#renvmargs" class="tsd-kind-icon">RenVMArgs</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="globals.html#renvmparametervalue" class="tsd-kind-icon">RenVMParameter<wbr>Value</a>
-					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#renvmparams" class="tsd-kind-icon">RenVMParams</a>
 					</li>
@@ -417,6 +423,9 @@
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#renvmutxo" class="tsd-kind-icon">RenVMUTXO</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#renvmvalue" class="tsd-kind-icon">RenVMValue</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#renweb3events" class="tsd-kind-icon">Ren<wbr>Web3<wbr>Events</a>
@@ -431,7 +440,13 @@
 						<a href="globals.html#serializabletransferparams" class="tsd-kind-icon">Serializable<wbr>Transfer<wbr>Params</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#signatory" class="tsd-kind-icon">Signatory</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#statemutabilitytype" class="tsd-kind-icon">State<wbr>Mutability<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#tokenprices" class="tsd-kind-icon">Token<wbr>Prices</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#transferparams" class="tsd-kind-icon">Transfer<wbr>Params</a>
@@ -626,16 +641,25 @@
 						<a href="globals.html#gettokenname" class="tsd-kind-icon">get<wbr>Token<wbr>Name</a>
 					</li>
 					<li class=" tsd-kind-variable">
+						<a href="globals.html#gettokenprices" class="tsd-kind-icon">get<wbr>Token<wbr>Prices</a>
+					</li>
+					<li class=" tsd-kind-variable">
 						<a href="globals.html#getzcashconfirmations" class="tsd-kind-icon">get<wbr>Zcash<wbr>Confirmations</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#getzcashutxos" class="tsd-kind-icon">get<wbr>ZcashUTXOs</a>
 					</li>
 					<li class=" tsd-kind-variable">
+						<a href="globals.html#hash160" class="tsd-kind-icon">hash160</a>
+					</li>
+					<li class=" tsd-kind-variable">
 						<a href="globals.html#ignorepromieventerror" class="tsd-kind-icon">ignore<wbr>Promi<wbr>Event<wbr>Error</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#newpromievent" class="tsd-kind-icon">new<wbr>Promi<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#normalizevalue" class="tsd-kind-icon">normalize<wbr>Value</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#parserencontract" class="tsd-kind-icon">parse<wbr>Ren<wbr>Contract</a>
@@ -716,6 +740,12 @@
 						<a href="globals.html#txhashtobase64" class="tsd-kind-icon">tx<wbr>Hash<wbr>ToBase64</a>
 					</li>
 					<li class=" tsd-kind-variable">
+						<a href="globals.html#unmarshalburntx" class="tsd-kind-icon">unmarshal<wbr>Burn<wbr>Tx</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#unmarshalminttx" class="tsd-kind-icon">unmarshal<wbr>Mint<wbr>Tx</a>
+					</li>
+					<li class=" tsd-kind-variable">
 						<a href="globals.html#unmarshaltx" class="tsd-kind-icon">unmarshal<wbr>Tx</a>
 					</li>
 					<li class=" tsd-kind-variable">
@@ -748,44 +778,8 @@
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#zecutils" class="tsd-kind-icon">zec<wbr>Utils</a>
 					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#assertanddecodeaddress" class="tsd-kind-icon">assert<wbr>And<wbr>Decode<wbr>Address</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#assertanddecodebytes" class="tsd-kind-icon">assert<wbr>And<wbr>Decode<wbr>Bytes</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#assertanddecodenumber" class="tsd-kind-icon">assert<wbr>And<wbr>Decode<wbr>Number</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#assertargumenttype" class="tsd-kind-icon">assert<wbr>Argument<wbr>Type</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#decodebytes" class="tsd-kind-icon">decode<wbr>Bytes</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#decodenumber" class="tsd-kind-icon">decode<wbr>Number</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#decodestring" class="tsd-kind-icon">decode<wbr>String</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#findfield" class="tsd-kind-icon">find<wbr>Field</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#onerror" class="tsd-kind-icon">on<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#unmarshalburntx" class="tsd-kind-icon">unmarshal<wbr>Burn<wbr>Tx</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#unmarshalminttx" class="tsd-kind-icon">unmarshal<wbr>Mint<wbr>Tx</a>
-					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#networkdetails" class="tsd-kind-icon">Network<wbr>Details</a>
-					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#defaultpayload" class="tsd-kind-icon">default<wbr>Payload</a>
 					</li>
 				</ul>
 			</nav>
@@ -802,13 +796,14 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+			</ul>
+			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>

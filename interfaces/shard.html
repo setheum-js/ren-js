@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ResponseQueryBlocks | RenJS Types Documentation</title>
+	<title>Shard | RenJS Types Documentation</title>
 	<meta name="description" content="Documentation for RenJS Types Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="responsequeryblocks.html">ResponseQueryBlocks</a>
+					<a href="shard.html">Shard</a>
 				</li>
 			</ul>
-			<h1>Interface ResponseQueryBlocks</h1>
+			<h1>Interface Shard</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ResponseQueryBlocks</span>
+						<span class="target">Shard</span>
 					</li>
 				</ul>
 			</section>
@@ -79,7 +79,12 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="responsequeryblocks.html#blocks" class="tsd-kind-icon">blocks</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="shard.html#darknodes" class="tsd-kind-icon">darknodes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="shard.html#darknodesroothash" class="tsd-kind-icon">darknodes<wbr>Root<wbr>Hash</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="shard.html#gateways" class="tsd-kind-icon">gateways</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="shard.html#gatewaysroothash" class="tsd-kind-icon">gateways<wbr>Root<wbr>Hash</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="shard.html#primary" class="tsd-kind-icon">primary</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="shard.html#pubkey" class="tsd-kind-icon">pub<wbr>Key</a></li>
 							</ul>
 						</section>
 					</div>
@@ -88,12 +93,62 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="blocks" class="tsd-anchor"></a>
-					<h3>blocks</h3>
-					<div class="tsd-signature tsd-kind-icon">blocks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<a name="darknodes" class="tsd-anchor"></a>
+					<h3>darknodes</h3>
+					<div class="tsd-signature tsd-kind-icon">darknodes<span class="tsd-signature-symbol">:</span> <a href="../globals.html#signatory" class="tsd-signature-type">Signatory</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-rpc/build/main/renVMTypes.d.ts:43</li>
+							<li>Defined in ren-interfaces/build/main/shard.d.ts:15</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="darknodesroothash" class="tsd-anchor"></a>
+					<h3>darknodes<wbr>Root<wbr>Hash</h3>
+					<div class="tsd-signature tsd-kind-icon">darknodes<wbr>Root<wbr>Hash<span class="tsd-signature-symbol">:</span> <a href="../globals.html#hash" class="tsd-signature-type">Hash</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-interfaces/build/main/shard.d.ts:14</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="gateways" class="tsd-anchor"></a>
+					<h3>gateways</h3>
+					<div class="tsd-signature tsd-kind-icon">gateways<span class="tsd-signature-symbol">:</span> <a href="../classes/gateway.html" class="tsd-signature-type">Gateway</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-interfaces/build/main/shard.d.ts:17</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="gatewaysroothash" class="tsd-anchor"></a>
+					<h3>gateways<wbr>Root<wbr>Hash</h3>
+					<div class="tsd-signature tsd-kind-icon">gateways<wbr>Root<wbr>Hash<span class="tsd-signature-symbol">:</span> <a href="../globals.html#hash" class="tsd-signature-type">Hash</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-interfaces/build/main/shard.d.ts:16</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="primary" class="tsd-anchor"></a>
+					<h3>primary</h3>
+					<div class="tsd-signature tsd-kind-icon">primary<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-interfaces/build/main/shard.d.ts:13</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="pubkey" class="tsd-anchor"></a>
+					<h3>pub<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">pub<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-interfaces/build/main/shard.d.ts:12</li>
 						</ul>
 					</aside>
 				</section>
@@ -112,10 +167,25 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="responsequeryblocks.html" class="tsd-kind-icon">Response<wbr>Query<wbr>Blocks</a>
+						<a href="shard.html" class="tsd-kind-icon">Shard</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="responsequeryblocks.html#blocks" class="tsd-kind-icon">blocks</a>
+								<a href="shard.html#darknodes" class="tsd-kind-icon">darknodes</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="shard.html#darknodesroothash" class="tsd-kind-icon">darknodes<wbr>Root<wbr>Hash</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="shard.html#gateways" class="tsd-kind-icon">gateways</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="shard.html#gatewaysroothash" class="tsd-kind-icon">gateways<wbr>Root<wbr>Hash</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="shard.html#primary" class="tsd-kind-icon">primary</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="shard.html#pubkey" class="tsd-kind-icon">pub<wbr>Key</a>
 							</li>
 						</ul>
 					</li>
