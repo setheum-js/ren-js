@@ -220,19 +220,23 @@
 						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable"><a href="globals.html#assets" class="tsd-kind-icon">Assets</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#bchunits" class="tsd-kind-icon">BCHUnits</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#bn" class="tsd-kind-icon">BN</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#btcunits" class="tsd-kind-icon">BTCUnits</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#burn_topic" class="tsd-kind-icon">BURN_<wbr>TOPIC</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#chains" class="tsd-kind-icon">Chains</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#ethunits" class="tsd-kind-icon">ETHUnits</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#gateway_endpoint_production" class="tsd-kind-icon">GATEWAY_<wbr>ENDPOINT_<wbr>PRODUCTION</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#gateway_endpoint_staging" class="tsd-kind-icon">GATEWAY_<wbr>ENDPOINT_<wbr>STAGING</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#null" class="tsd-kind-icon">NULL</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#networkdetails" class="tsd-kind-icon">Network<wbr>Details</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#ox" class="tsd-kind-icon">Ox</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#rencontracts" class="tsd-kind-icon">Ren<wbr>Contracts</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#renelementhtml" class="tsd-kind-icon">Ren<wbr>ElementHTML</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#rengatewaycontainerhtml" class="tsd-kind-icon">Ren<wbr>Gateway<wbr>ContainerHTML</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#reniframe" class="tsd-kind-icon">RenIFrame</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#rennetworks" class="tsd-kind-icon">Ren<wbr>Networks</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#seconds" class="tsd-kind-icon">SECONDS</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#satsunits" class="tsd-kind-icon">Sats<wbr>Units</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#tokens" class="tsd-kind-icon">Tokens</a></li>
@@ -277,6 +281,10 @@
 								<li class="tsd-kind-variable"><a href="globals.html#getzcashutxos" class="tsd-kind-icon">get<wbr>ZcashUTXOs</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#hash160" class="tsd-kind-icon">hash160</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#ignorepromieventerror" class="tsd-kind-icon">ignore<wbr>Promi<wbr>Event<wbr>Error</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#isasset" class="tsd-kind-icon">is<wbr>Asset</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#ischain" class="tsd-kind-icon">is<wbr>Chain</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#isrencontract" class="tsd-kind-icon">is<wbr>Ren<wbr>Contract</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#isrennetwork" class="tsd-kind-icon">is<wbr>Ren<wbr>Network</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#manualpromievent" class="tsd-kind-icon">manual<wbr>Promi<wbr>Event</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#newpromievent" class="tsd-kind-icon">new<wbr>Promi<wbr>Event</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#normalizevalue" class="tsd-kind-icon">normalize<wbr>Value</a></li>
@@ -393,7 +401,7 @@
 					<div class="tsd-signature tsd-kind-icon">Base64<wbr>String<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-interfaces/build/main/renVM.d.ts:86</li>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:94</li>
 						</ul>
 					</aside>
 				</section>
@@ -413,7 +421,7 @@
 					<div class="tsd-signature tsd-kind-icon">Decimal<wbr>String<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-interfaces/build/main/renVM.d.ts:88</li>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:96</li>
 						</ul>
 					</aside>
 				</section>
@@ -470,10 +478,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
 					<a name="gatewaymessagepayload" class="tsd-anchor"></a>
 					<h3>Gateway<wbr>Message<wbr>Payload</h3>
-					<div class="tsd-signature tsd-kind-icon">Gateway<wbr>Message<wbr>Payload&lt;Type&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">ToggleSettings</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Pause</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Resume</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Ready</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TransferDetails</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>cancelled<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>paused<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>transferDetails<span class="tsd-signature-symbol">: </span><a href="globals.html#serializabletransferparams" class="tsd-signature-type">SerializableTransferParams</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/lockandmintevent.html" class="tsd-signature-type">LockAndMintEvent</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/burnandreleaseevent.html" class="tsd-signature-type">BurnAndReleaseEvent</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">GetTransfers</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Transfers</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">HistoryEvent</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Status</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>details<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">; </span>status<span class="tsd-signature-symbol">: </span><a href="enums/lockandmintstatus.html" class="tsd-signature-type">LockAndMintStatus</a><span class="tsd-signature-symbol"> | </span><a href="enums/burnandreleasestatus.html" class="tsd-signature-type">BurnAndReleaseStatus</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">GetStatus</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Cancel</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Done</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">UnmarshalledTx</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">SendEthereumTx</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>transactionConfig<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TransactionConfig</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">GetEthereumTxStatus</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">GetEthereumTxBurn</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">FindMintTransaction</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>sigHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>token<span class="tsd-signature-symbol">: </span><a href="enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">RequestNotificationPermission</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">ShowNotification</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Acknowledgement</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">never</span></div>
+					<div class="tsd-signature tsd-kind-icon">Gateway<wbr>Message<wbr>Payload&lt;Type&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">ToggleSettings</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Pause</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Resume</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Ready</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TransferDetails</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>cancelled<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>paused<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>transferDetails<span class="tsd-signature-symbol">: </span><a href="globals.html#serializabletransferparams" class="tsd-signature-type">SerializableTransferParams</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/lockandmintevent.html" class="tsd-signature-type">LockAndMintEvent</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/burnandreleaseevent.html" class="tsd-signature-type">BurnAndReleaseEvent</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">GetTransfers</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Transfers</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">HistoryEvent</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Status</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>details<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">; </span>status<span class="tsd-signature-symbol">: </span><a href="enums/lockandmintstatus.html" class="tsd-signature-type">LockAndMintStatus</a><span class="tsd-signature-symbol"> | </span><a href="enums/burnandreleasestatus.html" class="tsd-signature-type">BurnAndReleaseStatus</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">GetStatus</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Cancel</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Done</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">UnmarshalledTx</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">SendEthereumTx</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>transactionConfig<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TransactionConfig</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">GetEthereumTxStatus</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">SendEthereumTxConfirmations</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>confirmations<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">GetEthereumTxBurn</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">FindMintTransaction</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>sigHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>token<span class="tsd-signature-symbol">: </span><a href="enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">RequestNotificationPermission</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">ShowNotification</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Acknowledgement</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">never</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-interfaces/build/main/messages.d.ts:34</li>
+							<li>Defined in ren-interfaces/build/main/messages.d.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -492,10 +500,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
 					<a name="gatewaymessageresponse" class="tsd-anchor"></a>
 					<h3>Gateway<wbr>Message<wbr>Response</h3>
-					<div class="tsd-signature tsd-kind-icon">Gateway<wbr>Message<wbr>Response&lt;Type&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">GetStatus</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>details<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">; </span>status<span class="tsd-signature-symbol">: </span><a href="enums/lockandmintstatus.html" class="tsd-signature-type">LockAndMintStatus</a><span class="tsd-signature-symbol"> | </span><a href="enums/burnandreleasestatus.html" class="tsd-signature-type">BurnAndReleaseStatus</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">SendEthereumTx</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>txHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">GetEthereumTxStatus</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>confirmations<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">GetEthereumTxBurn</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>burnReference<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">FindMintTransaction</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>txHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">RequestNotificationPermission</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">never</span></div>
+					<div class="tsd-signature tsd-kind-icon">Gateway<wbr>Message<wbr>Response&lt;Type&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">GetStatus</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>details<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">; </span>status<span class="tsd-signature-symbol">: </span><a href="enums/lockandmintstatus.html" class="tsd-signature-type">LockAndMintStatus</a><span class="tsd-signature-symbol"> | </span><a href="enums/burnandreleasestatus.html" class="tsd-signature-type">BurnAndReleaseStatus</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">SendEthereumTx</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>txHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">GetEthereumTxStatus</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>confirmations<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>reverted<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">GetEthereumTxBurn</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>burnReference<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">FindMintTransaction</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>txHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">RequestNotificationPermission</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">never</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-interfaces/build/main/messages.d.ts:60</li>
+							<li>Defined in ren-interfaces/build/main/messages.d.ts:64</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -527,7 +535,7 @@
 					<div class="tsd-signature tsd-kind-icon">Hex<wbr>String<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-interfaces/build/main/renVM.d.ts:87</li>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:95</li>
 						</ul>
 					</aside>
 				</section>
@@ -537,7 +545,7 @@
 					<div class="tsd-signature tsd-kind-icon">History<wbr>Event<span class="tsd-signature-symbol">:</span> <a href="interfaces/lockandmintevent.html" class="tsd-signature-type">LockAndMintEvent</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/burnandreleaseevent.html" class="tsd-signature-type">BurnAndReleaseEvent</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-interfaces/build/main/types.d.ts:60</li>
+							<li>Defined in ren-interfaces/build/main/types.d.ts:61</li>
 						</ul>
 					</aside>
 				</section>
@@ -654,7 +662,7 @@
 					<div class="tsd-signature tsd-kind-icon">RenVMArgs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="enums/renvmtype.html" class="tsd-signature-type">RenVMType</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-interfaces/build/main/renVM.d.ts:100</li>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:108</li>
 						</ul>
 					</aside>
 				</section>
@@ -742,7 +750,7 @@
 					<div class="tsd-signature tsd-kind-icon">RenVMUTXO<span class="tsd-signature-symbol">:</span> <a href="interfaces/renvmoutpututxo.html" class="tsd-signature-type">RenVMOutputUTXO</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/renvminpututxo.html" class="tsd-signature-type">RenVMInputUTXO</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-interfaces/build/main/renVM.d.ts:85</li>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:93</li>
 						</ul>
 					</aside>
 				</section>
@@ -752,7 +760,7 @@
 					<div class="tsd-signature tsd-kind-icon">RenVMValue&lt;Type&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeAddress</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeStr</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">Base64String</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeB32</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">Base64String</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeB</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">Base64String</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeI8</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">DecimalString</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeI16</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">DecimalString</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeI32</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">DecimalString</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeI64</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">DecimalString</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeI128</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">DecimalString</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeI256</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">DecimalString</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeU8</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">DecimalString</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeU16</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">DecimalString</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeU32</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">DecimalString</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeU64</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">DecimalString</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeU128</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">DecimalString</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeU256</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">DecimalString</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeRecord</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">TypeList</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">ExtTypeEthCompatAddress</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">HexString</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">ExtTypeBtcCompatUTXO</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">RenVMUTXO</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">ExtTypeBtcCompatUTXOs</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">RenVMUTXO</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">ExtTypeEthCompatTx</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">ExtEthCompatPayload</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">ExtEthCompatPayload</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-interfaces/build/main/renVM.d.ts:94</li>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:102</li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1004,6 +1012,16 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="assets" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Assets</h3>
+					<div class="tsd-signature tsd-kind-icon">Assets<span class="tsd-signature-symbol">:</span> <a href="enums/asset.html" class="tsd-signature-type">Asset</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:24</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="bchunits" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> BCHUnits</h3>
 					<div class="tsd-signature tsd-kind-icon">BCHUnits<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>bch<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BigNumber</span><span class="tsd-signature-symbol">; </span>mbch<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BigNumber</span><span class="tsd-signature-symbol">; </span>sats<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BigNumber</span><span class="tsd-signature-symbol">; </span>ubch<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BigNumber</span><span class="tsd-signature-symbol"> }</span></div>
@@ -1074,6 +1092,16 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in ren-utils/build/main/ethereumUtils.d.ts:3</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="chains" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Chains</h3>
+					<div class="tsd-signature tsd-kind-icon">Chains<span class="tsd-signature-symbol">:</span> <a href="enums/chain.html" class="tsd-signature-type">Chain</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:16</li>
 						</ul>
 					</aside>
 				</section>
@@ -1230,6 +1258,16 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="rencontracts" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Ren<wbr>Contracts</h3>
+					<div class="tsd-signature tsd-kind-icon">Ren<wbr>Contracts<span class="tsd-signature-symbol">:</span> <a href="enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:34</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="renelementhtml" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> Ren<wbr>ElementHTML</h3>
 					<div class="tsd-signature tsd-kind-icon">Ren<wbr>ElementHTML<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>uniqueID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, frameUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, paused<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></div>
@@ -1326,6 +1364,16 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="rennetworks" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Ren<wbr>Networks</h3>
+					<div class="tsd-signature tsd-kind-icon">Ren<wbr>Networks<span class="tsd-signature-symbol">:</span> <a href="enums/rennetwork.html" class="tsd-signature-type">RenNetwork</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:8</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="seconds" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> SECONDS</h3>
 					<div class="tsd-signature tsd-kind-icon">SECONDS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">1000</span><span class="tsd-signature-symbol"> = 1000</span></div>
@@ -1370,7 +1418,7 @@
 					<div class="tsd-signature tsd-kind-icon">Tokens<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>BCH<span class="tsd-signature-symbol">: </span><a href="interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">CommonTokens</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"BCH"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>BTC<span class="tsd-signature-symbol">: </span><a href="interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">CommonTokens</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"BTC"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>ZEC<span class="tsd-signature-symbol">: </span><a href="interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">CommonTokens</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"ZEC"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-interfaces/build/main/renVM.d.ts:28</li>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:36</li>
 							<li>Defined in ren-utils/build/main/chains.d.ts:30</li>
 						</ul>
 					</aside>
@@ -2953,6 +3001,130 @@
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="isasset" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Asset</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Asset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>maybeAsset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">maybeAsset</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Asset</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:25</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>maybeAsset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">maybeAsset</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Asset</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>maybeAsset: <span class="tsd-signature-type">any</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">maybeAsset</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Asset</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="ischain" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Chain</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Chain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>maybeChain<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">maybeChain</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Chain</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:17</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>maybeChain<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">maybeChain</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Chain</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>maybeChain: <span class="tsd-signature-type">any</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">maybeChain</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Chain</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="isrencontract" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Ren<wbr>Contract</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Ren<wbr>Contract<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>maybeRenContract<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">maybeRenContract</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">RenContract</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:35</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>maybeRenContract<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">maybeRenContract</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">RenContract</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>maybeRenContract: <span class="tsd-signature-type">any</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">maybeRenContract</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">RenContract</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="isrennetwork" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Ren<wbr>Network</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Ren<wbr>Network<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>maybeRenNetwork<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">maybeRenNetwork</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">RenNetwork</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-interfaces/build/main/renVM.d.ts:9</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>maybeRenNetwork<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">maybeRenNetwork</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">RenNetwork</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>maybeRenNetwork: <span class="tsd-signature-type">any</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">maybeRenNetwork</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">RenNetwork</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -4994,6 +5166,9 @@
 						<a href="globals.html#provider" class="tsd-kind-icon">provider</a>
 					</li>
 					<li class=" tsd-kind-variable">
+						<a href="globals.html#assets" class="tsd-kind-icon">Assets</a>
+					</li>
+					<li class=" tsd-kind-variable">
 						<a href="globals.html#bchunits" class="tsd-kind-icon">BCHUnits</a>
 					</li>
 					<li class=" tsd-kind-variable">
@@ -5004,6 +5179,9 @@
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#burn_topic" class="tsd-kind-icon">BURN_<wbr>TOPIC</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#chains" class="tsd-kind-icon">Chains</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#ethunits" class="tsd-kind-icon">ETHUnits</a>
@@ -5024,6 +5202,9 @@
 						<a href="globals.html#ox" class="tsd-kind-icon">Ox</a>
 					</li>
 					<li class=" tsd-kind-variable">
+						<a href="globals.html#rencontracts" class="tsd-kind-icon">Ren<wbr>Contracts</a>
+					</li>
+					<li class=" tsd-kind-variable">
 						<a href="globals.html#renelementhtml" class="tsd-kind-icon">Ren<wbr>ElementHTML</a>
 					</li>
 					<li class=" tsd-kind-variable">
@@ -5031,6 +5212,9 @@
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#reniframe" class="tsd-kind-icon">RenIFrame</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#rennetworks" class="tsd-kind-icon">Ren<wbr>Networks</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#seconds" class="tsd-kind-icon">SECONDS</a>
@@ -5163,6 +5347,18 @@
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#ignorepromieventerror" class="tsd-kind-icon">ignore<wbr>Promi<wbr>Event<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#isasset" class="tsd-kind-icon">is<wbr>Asset</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#ischain" class="tsd-kind-icon">is<wbr>Chain</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#isrencontract" class="tsd-kind-icon">is<wbr>Ren<wbr>Contract</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#isrennetwork" class="tsd-kind-icon">is<wbr>Ren<wbr>Network</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#manualpromievent" class="tsd-kind-icon">manual<wbr>Promi<wbr>Event</a>
