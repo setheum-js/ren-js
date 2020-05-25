@@ -86,6 +86,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="lockandmint.html#generatedgatewayaddress" class="tsd-kind-icon">generated<wbr>Gateway<wbr>Address</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="lockandmint.html#logger" class="tsd-kind-icon">logger</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="lockandmint.html#network" class="tsd-kind-icon">network</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="lockandmint.html#params" class="tsd-kind-icon">params</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="lockandmint.html#renvm" class="tsd-kind-icon">renVM</a></li>
@@ -119,13 +120,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Lock<wbr>And<wbr>Mint<span class="tsd-signature-symbol">(</span>_renVM<span class="tsd-signature-symbol">: </span><a href="renvmprovider.html" class="tsd-signature-type">RenVMProvider</a>, _network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RenNetworkDetails</span>, _params<span class="tsd-signature-symbol">: </span><a href="../interfaces/lockandmintparams.html" class="tsd-signature-type">LockAndMintParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lockandmint.html" class="tsd-signature-type">LockAndMint</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Lock<wbr>And<wbr>Mint<span class="tsd-signature-symbol">(</span>_renVM<span class="tsd-signature-symbol">: </span><a href="renvmprovider.html" class="tsd-signature-type">RenVMProvider</a>, _network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RenNetworkDetails</span>, _params<span class="tsd-signature-symbol">: </span><a href="../interfaces/lockandmintparams.html" class="tsd-signature-type">LockAndMintParams</a>, _logger<span class="tsd-signature-symbol">: </span><a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lockandmint.html" class="tsd-signature-type">LockAndMint</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L28">ren/src/lockAndMint.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L29">ren/src/lockAndMint.ts:29</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -138,6 +139,9 @@
 								</li>
 								<li>
 									<h5>_params: <a href="../interfaces/lockandmintparams.html" class="tsd-signature-type">LockAndMintParams</a></h5>
+								</li>
+								<li>
+									<h5>_logger: <a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="lockandmint.html" class="tsd-signature-type">LockAndMint</a></h4>
@@ -153,7 +157,17 @@
 					<div class="tsd-signature tsd-kind-icon">generated<wbr>Gateway<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L22">ren/src/lockAndMint.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L22">ren/src/lockAndMint.ts:22</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="logger" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> logger</h3>
+					<div class="tsd-signature tsd-kind-icon">logger<span class="tsd-signature-symbol">:</span> <a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L27">ren/src/lockAndMint.ts:27</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -163,7 +177,7 @@
 					<div class="tsd-signature tsd-kind-icon">network<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RenNetworkDetails</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L23">ren/src/lockAndMint.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L23">ren/src/lockAndMint.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -173,7 +187,7 @@
 					<div class="tsd-signature tsd-kind-icon">params<span class="tsd-signature-symbol">:</span> <a href="../interfaces/lockandmintparams.html" class="tsd-signature-type">LockAndMintParams</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L25">ren/src/lockAndMint.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L25">ren/src/lockAndMint.ts:25</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -183,7 +197,7 @@
 					<div class="tsd-signature tsd-kind-icon">renVM<span class="tsd-signature-symbol">:</span> <a href="renvmprovider.html" class="tsd-signature-type">RenVMProvider</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L24">ren/src/lockAndMint.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L24">ren/src/lockAndMint.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -193,7 +207,7 @@
 					<div class="tsd-signature tsd-kind-icon">renVMResponse<span class="tsd-signature-symbol">:</span> <a href="../interfaces/unmarshalledminttx.html" class="tsd-signature-type">UnmarshalledMintTx</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L26">ren/src/lockAndMint.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L26">ren/src/lockAndMint.ts:26</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -203,7 +217,7 @@
 					<div class="tsd-signature tsd-kind-icon">signature<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L21">ren/src/lockAndMint.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L21">ren/src/lockAndMint.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -213,7 +227,7 @@
 					<div class="tsd-signature tsd-kind-icon">third<wbr>Party<wbr>Transaction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L28">ren/src/lockAndMint.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L29">ren/src/lockAndMint.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -223,7 +237,7 @@
 					<div class="tsd-signature tsd-kind-icon">utxo<span class="tsd-signature-symbol">:</span> <a href="../interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L20">ren/src/lockAndMint.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L20">ren/src/lockAndMint.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -240,7 +254,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L510">ren/src/lockAndMint.ts:510</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L525">ren/src/lockAndMint.ts:525</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -268,7 +282,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L395">ren/src/lockAndMint.ts:395</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L406">ren/src/lockAndMint.ts:406</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -291,7 +305,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L65">ren/src/lockAndMint.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L69">ren/src/lockAndMint.ts:69</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -314,7 +328,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L244">ren/src/lockAndMint.ts:244</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L254">ren/src/lockAndMint.ts:254</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -342,7 +356,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L255">ren/src/lockAndMint.ts:255</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L265">ren/src/lockAndMint.ts:265</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -374,7 +388,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L415">ren/src/lockAndMint.ts:415</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L426">ren/src/lockAndMint.ts:426</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -400,7 +414,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L208">ren/src/lockAndMint.ts:208</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L218">ren/src/lockAndMint.ts:218</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -423,7 +437,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L46">ren/src/lockAndMint.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L50">ren/src/lockAndMint.ts:50</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>contractCalls<span class="tsd-signature-symbol">: </span><a href="../interfaces/contractcall.html" class="tsd-signature-type">ContractCall</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>nonce<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>sendToken<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html#btc2eth" class="tsd-signature-type">Btc2Eth</a><span class="tsd-signature-symbol"> | </span><a href="../enums/rencontract.html#eth2btc" class="tsd-signature-type">Eth2Btc</a><span class="tsd-signature-symbol"> | </span><a href="../enums/rencontract.html#zec2eth" class="tsd-signature-type">Zec2Eth</a><span class="tsd-signature-symbol"> | </span><a href="../enums/rencontract.html#eth2zec" class="tsd-signature-type">Eth2Zec</a><span class="tsd-signature-symbol"> | </span><a href="../enums/rencontract.html#bch2eth" class="tsd-signature-type">Bch2Eth</a><span class="tsd-signature-symbol"> | </span><a href="../enums/rencontract.html#eth2bch" class="tsd-signature-type">Eth2Bch</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BTC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ZEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BCH"</span><span class="tsd-signature-symbol"> }</span></h4>
@@ -451,7 +465,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L89">ren/src/lockAndMint.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L95">ren/src/lockAndMint.ts:95</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -477,7 +491,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0959f2d/packages/lib/ren/src/lockAndMint.ts#L389">ren/src/lockAndMint.ts:389</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/d904972/packages/lib/ren/src/lockAndMint.ts#L400">ren/src/lockAndMint.ts:400</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -521,6 +535,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="lockandmint.html#generatedgatewayaddress" class="tsd-kind-icon">generated<wbr>Gateway<wbr>Address</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="lockandmint.html#logger" class="tsd-kind-icon">logger</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="lockandmint.html#network" class="tsd-kind-icon">network</a>
@@ -592,11 +609,12 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>

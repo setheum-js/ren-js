@@ -91,9 +91,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="renvmprovider.html#logger" class="tsd-kind-icon">logger</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="renvmprovider.html#provider" class="tsd-kind-icon">provider</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="renvmprovider.html#queryblock" class="tsd-kind-icon">query<wbr>Block</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="renvmprovider.html#queryblocks" class="tsd-kind-icon">query<wbr>Blocks</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="renvmprovider.html#queryfees" class="tsd-kind-icon">query<wbr>Fees</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="renvmprovider.html#querymintorburn" class="tsd-kind-icon">query<wbr>Mint<wbr>OrBurn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="renvmprovider.html#querynumpeers" class="tsd-kind-icon">query<wbr>Num<wbr>Peers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="renvmprovider.html#querypeers" class="tsd-kind-icon">query<wbr>Peers</a></li>
@@ -117,19 +119,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>RenVMProvider<span class="tsd-signature-symbol">(</span>provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/provider.html" class="tsd-signature-type">Provider</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#renvmparams" class="tsd-signature-type">RenVMParams</a><span class="tsd-signature-symbol">, </span><a href="../globals.html#renvmresponses" class="tsd-signature-type">RenVMResponses</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="renvmprovider.html" class="tsd-signature-type">RenVMProvider</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>RenVMProvider<span class="tsd-signature-symbol">(</span>provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/provider.html" class="tsd-signature-type">Provider</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#renvmparams" class="tsd-signature-type">RenVMParams</a><span class="tsd-signature-symbol">, </span><a href="../globals.html#renvmresponses" class="tsd-signature-type">RenVMResponses</a><span class="tsd-signature-symbol">&gt;</span>, logger<span class="tsd-signature-symbol">?: </span><a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="renvmprovider.html" class="tsd-signature-type">RenVMProvider</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in ren-rpc/build/main/index.d.ts:11</li>
+									<li>Defined in ren-rpc/build/main/index.d.ts:12</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>provider: <a href="../interfaces/provider.html" class="tsd-signature-type">Provider</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#renvmparams" class="tsd-signature-type">RenVMParams</a><span class="tsd-signature-symbol">, </span><a href="../globals.html#renvmresponses" class="tsd-signature-type">RenVMResponses</a><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> logger: <a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="renvmprovider.html" class="tsd-signature-type">RenVMProvider</a></h4>
@@ -139,6 +144,16 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="logger" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> logger</h3>
+					<div class="tsd-signature tsd-kind-icon">logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-rpc/build/main/index.d.ts:12</li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="provider" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> provider</h3>
@@ -155,7 +170,7 @@
 					<div class="tsd-signature tsd-kind-icon">query<wbr>Block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>blockHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsQueryBlock</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"blockHeight"</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryblock.html" class="tsd-signature-type">ResponseQueryBlock</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-rpc/build/main/index.d.ts:13</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:14</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -189,7 +204,7 @@
 					<div class="tsd-signature tsd-kind-icon">query<wbr>Blocks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>blockHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsQueryBlocks</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"blockHeight"</span><span class="tsd-signature-symbol">]</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsQueryBlocks</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"n"</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryblocks.html" class="tsd-signature-type">ResponseQueryBlocks</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-rpc/build/main/index.d.ts:14</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:15</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -221,12 +236,43 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="queryfees" class="tsd-anchor"></a>
+					<h3>query<wbr>Fees</h3>
+					<div class="tsd-signature tsd-kind-icon">query<wbr>Fees<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryfees.html" class="tsd-signature-type">ResponseQueryFees</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ren-rpc/build/main/index.d.ts:22</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryfees.html" class="tsd-signature-type">ResponseQueryFees</a><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> retry: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryfees.html" class="tsd-signature-type">ResponseQueryFees</a><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="querymintorburn" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> query<wbr>Mint<wbr>OrBurn</h3>
 					<div class="tsd-signature tsd-kind-icon">query<wbr>Mint<wbr>OrBurn<span class="tsd-signature-symbol">:</span> &lt;T&gt;<span class="tsd-signature-symbol">(</span>utxoTxHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-rpc/build/main/index.d.ts:23</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:25</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -263,7 +309,7 @@
 					<div class="tsd-signature tsd-kind-icon">query<wbr>Num<wbr>Peers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerynumpeers.html" class="tsd-signature-type">ResponseQueryNumPeers</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-rpc/build/main/index.d.ts:17</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:18</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -294,7 +340,7 @@
 					<div class="tsd-signature tsd-kind-icon">query<wbr>Peers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerypeers.html" class="tsd-signature-type">ResponseQueryPeers</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-rpc/build/main/index.d.ts:18</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:19</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -325,7 +371,7 @@
 					<div class="tsd-signature tsd-kind-icon">query<wbr>Shards<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryshards.html" class="tsd-signature-type">ResponseQueryShards</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-rpc/build/main/index.d.ts:19</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:20</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -356,7 +402,7 @@
 					<div class="tsd-signature tsd-kind-icon">query<wbr>Stat<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerystat.html" class="tsd-signature-type">ResponseQueryStat</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-rpc/build/main/index.d.ts:20</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:21</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -387,7 +433,7 @@
 					<div class="tsd-signature tsd-kind-icon">query<wbr>Tx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsQueryTx</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"txHash"</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerytx.html" class="tsd-signature-type">ResponseQueryTx</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-rpc/build/main/index.d.ts:16</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -418,10 +464,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="selectpublickey" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> select<wbr>Public<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">select<wbr>Public<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">select<wbr>Public<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a>, logger<span class="tsd-signature-symbol">?: </span><a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-rpc/build/main/index.d.ts:33</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -444,7 +490,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a>, logger<span class="tsd-signature-symbol">?: </span><a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -452,6 +498,9 @@
 										<ul class="tsd-parameters">
 											<li>
 												<h5>renContract: <a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> logger: <a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -478,7 +527,7 @@
 					<div class="tsd-signature tsd-kind-icon">submit<wbr>Burn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a>, ref<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-rpc/build/main/index.d.ts:22</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:24</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -512,7 +561,7 @@
 					<div class="tsd-signature tsd-kind-icon">submit<wbr>Mint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, nonce<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, utxoTxHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, utxoVout<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RenNetworkDetails</span>, fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fnABI<span class="tsd-signature-symbol">: </span><a href="../interfaces/abiitem.html" class="tsd-signature-type">AbiItem</a><span class="tsd-signature-symbol">[]</span>, encodedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-rpc/build/main/index.d.ts:21</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -567,7 +616,7 @@
 					<div class="tsd-signature tsd-kind-icon">submit<wbr>Tx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>tx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsSubmitBurn</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"tx"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ParamsSubmitMint</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"tx"</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsesubmittx.html" class="tsd-signature-type">ResponseSubmitTx</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-rpc/build/main/index.d.ts:15</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:16</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -601,7 +650,7 @@
 					<div class="tsd-signature tsd-kind-icon">wait<wbr>ForTX<span class="tsd-signature-symbol">:</span> &lt;T&gt;<span class="tsd-signature-symbol">(</span>utxoTxHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, onStatus<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>status<span class="tsd-signature-symbol">: </span><a href="../enums/txstatus.html" class="tsd-signature-type">TxStatus</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, _cancelRequested<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ren-rpc/build/main/index.d.ts:24</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:26</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -658,6 +707,9 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="renvmprovider.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="renvmprovider.html#logger" class="tsd-kind-icon">logger</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="renvmprovider.html#provider" class="tsd-kind-icon">provider</a>
 							</li>
@@ -666,6 +718,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="renvmprovider.html#queryblocks" class="tsd-kind-icon">query<wbr>Blocks</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="renvmprovider.html#queryfees" class="tsd-kind-icon">query<wbr>Fees</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="renvmprovider.html#querymintorburn" class="tsd-kind-icon">query<wbr>Mint<wbr>OrBurn</a>
@@ -722,11 +777,12 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>

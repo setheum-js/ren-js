@@ -86,7 +86,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="gatewayjs.html#burnandrelease" class="tsd-kind-icon">burn<wbr>And<wbr>Release</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="gatewayjs.html#endpoint" class="tsd-kind-icon">endpoint</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="gatewayjs.html#config" class="tsd-kind-icon">config</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="gatewayjs.html#getgatewayaddress" class="tsd-kind-icon">get<wbr>Gateway<wbr>Address</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="gatewayjs.html#getgateways" class="tsd-kind-icon">get<wbr>Gateways</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="gatewayjs.html#gettokenaddress" class="tsd-kind-icon">get<wbr>Token<wbr>Address</a></li>
@@ -112,13 +112,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>GatewayJS<span class="tsd-signature-symbol">(</span>network<span class="tsd-signature-symbol">?: </span><a href="../enums/rennetwork.html" class="tsd-signature-type">RenNetwork</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>endpoint<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="gatewayjs.html" class="tsd-signature-type">GatewayJS</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>GatewayJS<span class="tsd-signature-symbol">(</span>network<span class="tsd-signature-symbol">?: </span><a href="../enums/rennetwork.html" class="tsd-signature-type">RenNetwork</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, config<span class="tsd-signature-symbol">?: </span><a href="../interfaces/gatewayjsconfig.html" class="tsd-signature-type">GatewayJSConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="gatewayjs.html" class="tsd-signature-type">GatewayJS</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in gateway/build/main/index.d.ts:72</li>
+									<li>Defined in gateway/build/main/index.d.ts:78</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -127,7 +127,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> network: <a href="../enums/rennetwork.html" class="tsd-signature-type">RenNetwork</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>endpoint<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> config: <a href="../interfaces/gatewayjsconfig.html" class="tsd-signature-type">GatewayJSConfig</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="gatewayjs.html" class="tsd-signature-type">GatewayJS</a></h4>
@@ -143,7 +143,7 @@
 					<div class="tsd-signature tsd-kind-icon">burn<wbr>And<wbr>Release<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="../interfaces/burnandreleaseparams.html" class="tsd-signature-type">BurnAndReleaseParams</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/burnandreleaseparamssimple.html" class="tsd-signature-type">BurnAndReleaseParamsSimple</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/sendparams.html" class="tsd-signature-type">SendParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Gateway</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:97</li>
+							<li>Defined in gateway/build/main/index.d.ts:101</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -182,12 +182,12 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="endpoint" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> endpoint</h3>
-					<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<a name="config" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> config</h3>
+					<div class="tsd-signature tsd-kind-icon">config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:72</li>
+							<li>Defined in gateway/build/main/index.d.ts:78</li>
 						</ul>
 					</aside>
 				</section>
@@ -197,7 +197,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Gateway<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>web3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Web3</span>, token<span class="tsd-signature-symbol">: </span><a href="../enums/rentokens.html" class="tsd-signature-type">RenTokens</a><span class="tsd-signature-symbol"> | </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> | </span><a href="../enums/asset.html" class="tsd-signature-type">Asset</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">"BTC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ZEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BCH"</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:102</li>
+							<li>Defined in gateway/build/main/index.d.ts:106</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -231,7 +231,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Gateways<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>all<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="../globals.html#historyevent" class="tsd-signature-type">HistoryEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:79</li>
+							<li>Defined in gateway/build/main/index.d.ts:83</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -267,7 +267,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Token<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>web3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Web3</span>, token<span class="tsd-signature-symbol">: </span><a href="../enums/rentokens.html" class="tsd-signature-type">RenTokens</a><span class="tsd-signature-symbol"> | </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> | </span><a href="../enums/asset.html" class="tsd-signature-type">Asset</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">"BTC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ZEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BCH"</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:101</li>
+							<li>Defined in gateway/build/main/index.d.ts:105</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -301,7 +301,7 @@
 					<div class="tsd-signature tsd-kind-icon">lock<wbr>And<wbr>Mint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="../interfaces/lockandmintparams.html" class="tsd-signature-type">LockAndMintParams</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/lockandmintparamssimple.html" class="tsd-signature-type">LockAndMintParamsSimple</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/sendparams.html" class="tsd-signature-type">SendParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Gateway</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:89</li>
+							<li>Defined in gateway/build/main/index.d.ts:93</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -345,7 +345,7 @@
 					<div class="tsd-signature tsd-kind-icon">network<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:71</li>
+							<li>Defined in gateway/build/main/index.d.ts:77</li>
 						</ul>
 					</aside>
 				</section>
@@ -355,7 +355,7 @@
 					<div class="tsd-signature tsd-kind-icon">open<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="../interfaces/lockandmintparams.html" class="tsd-signature-type">LockAndMintParams</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/burnandreleaseparams.html" class="tsd-signature-type">BurnAndReleaseParams</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/lockandmintparamssimple.html" class="tsd-signature-type">LockAndMintParamsSimple</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/burnandreleaseparamssimple.html" class="tsd-signature-type">BurnAndReleaseParamsSimple</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/sendparams.html" class="tsd-signature-type">SendParams</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/lockandmintevent.html" class="tsd-signature-type">LockAndMintEvent</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/burnandreleaseevent.html" class="tsd-signature-type">BurnAndReleaseEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Gateway</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:98</li>
+							<li>Defined in gateway/build/main/index.d.ts:102</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -386,7 +386,7 @@
 					<div class="tsd-signature tsd-kind-icon">recover<wbr>Transfer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>web3Provider<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Web3Provider</span>, params<span class="tsd-signature-symbol">: </span><a href="../interfaces/lockandmintevent.html" class="tsd-signature-type">LockAndMintEvent</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/burnandreleaseevent.html" class="tsd-signature-type">BurnAndReleaseEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Gateway</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:100</li>
+							<li>Defined in gateway/build/main/index.d.ts:104</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -420,7 +420,7 @@
 					<div class="tsd-signature tsd-kind-icon">send<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="../interfaces/sendparams.html" class="tsd-signature-type">SendParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Gateway</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:99</li>
+							<li>Defined in gateway/build/main/index.d.ts:103</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -451,7 +451,7 @@
 					<div class="tsd-signature tsd-kind-icon">Burn<wbr>And<wbr>Release<wbr>Status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">BurnAndReleaseStatus</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:67</li>
+							<li>Defined in gateway/build/main/index.d.ts:73</li>
 						</ul>
 					</aside>
 				</section>
@@ -461,7 +461,7 @@
 					<div class="tsd-signature tsd-kind-icon">Chains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">Chain</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:65</li>
+							<li>Defined in gateway/build/main/index.d.ts:71</li>
 						</ul>
 					</aside>
 				</section>
@@ -471,7 +471,7 @@
 					<div class="tsd-signature tsd-kind-icon">Lock<wbr>And<wbr>Mint<wbr>Status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">LockAndMintStatus</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:66</li>
+							<li>Defined in gateway/build/main/index.d.ts:72</li>
 						</ul>
 					</aside>
 				</section>
@@ -481,7 +481,7 @@
 					<div class="tsd-signature tsd-kind-icon">Networks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">RenNetwork</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:64</li>
+							<li>Defined in gateway/build/main/index.d.ts:70</li>
 						</ul>
 					</aside>
 				</section>
@@ -491,7 +491,7 @@
 					<div class="tsd-signature tsd-kind-icon">Tokens<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>BCH<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Bch2Eth<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Burn<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Eth2Bch<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Mint<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>BTC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Btc2Eth<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Burn<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Eth2Btc<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Mint<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>ZEC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Burn<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Eth2Zec<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Mint<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Zec2Eth<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:44</li>
+							<li>Defined in gateway/build/main/index.d.ts:50</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -554,10 +554,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="utils" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> utils</h3>
-					<div class="tsd-signature tsd-kind-icon">utils<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>BCH<span class="tsd-signature-symbol">: </span><a href="../interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol">; </span>BTC<span class="tsd-signature-symbol">: </span><a href="../interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol">; </span>Ox<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BNImport</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>ZEC<span class="tsd-signature-symbol">: </span><a href="../interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol">; </span>bch<span class="tsd-signature-symbol">: </span><a href="../interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol">; </span>btc<span class="tsd-signature-symbol">: </span><a href="../interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol">; </span>randomNonce<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>strip0x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span>&lt;Unit&gt;<span class="tsd-signature-symbol">(</span>valueIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BigNumber</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span>, unitIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">; </span>zec<span class="tsd-signature-symbol">: </span><a href="../interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>useBrowserWeb3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#usebrowserweb3.__type" class="tsd-signature-type">__type</a><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">utils<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>BCH<span class="tsd-signature-symbol">: </span><a href="../interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol">; </span>BTC<span class="tsd-signature-symbol">: </span><a href="../interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol">; </span>Ox<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>toString<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>ZEC<span class="tsd-signature-symbol">: </span><a href="../interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol">; </span>bch<span class="tsd-signature-symbol">: </span><a href="../interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol">; </span>btc<span class="tsd-signature-symbol">: </span><a href="../interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol">; </span>randomNonce<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>strip0x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span>&lt;Unit&gt;<span class="tsd-signature-symbol">(</span>valueIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BigNumber</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>toString<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span>, unitIn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Unit</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">; </span>zec<span class="tsd-signature-symbol">: </span><a href="../interfaces/assetutils.html" class="tsd-signature-type">AssetUtils</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>useBrowserWeb3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#usebrowserweb3.__type" class="tsd-signature-type">__type</a><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in gateway/build/main/index.d.ts:68</li>
+							<li>Defined in gateway/build/main/index.d.ts:74</li>
 						</ul>
 					</aside>
 				</section>
@@ -585,7 +585,7 @@
 								<a href="gatewayjs.html#burnandrelease" class="tsd-kind-icon">burn<wbr>And<wbr>Release</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="gatewayjs.html#endpoint" class="tsd-kind-icon">endpoint</a>
+								<a href="gatewayjs.html#config" class="tsd-kind-icon">config</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="gatewayjs.html#getgatewayaddress" class="tsd-kind-icon">get<wbr>Gateway<wbr>Address</a>
@@ -648,11 +648,12 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
