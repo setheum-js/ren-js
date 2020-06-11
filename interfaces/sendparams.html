@@ -99,6 +99,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sendparams.html#sendto" class="tsd-kind-icon">send<wbr>To</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="sendparams.html#sendtoken" class="tsd-kind-icon">send<wbr>Token</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sendparams.html#suggestedamount" class="tsd-kind-icon">suggested<wbr>Amount</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="sendparams.html#tags" class="tsd-kind-icon">tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sendparams.html#txconfig" class="tsd-kind-icon">tx<wbr>Config</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="sendparams.html#txhash" class="tsd-kind-icon">tx<wbr>Hash</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="sendparams.html#web3provider" class="tsd-kind-icon">web3<wbr>Provider</a></li>
@@ -115,7 +116,7 @@
 					<div class="tsd-signature tsd-kind-icon">confirmations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:176</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:188</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -134,7 +135,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#nonce">nonce</a></p>
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:68</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -149,7 +150,7 @@
 					<div class="tsd-signature tsd-kind-icon">send<wbr>Amount<span class="tsd-signature-symbol">:</span> <a href="../globals.html#numbervalue" class="tsd-signature-type">NumberValue</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:164</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:176</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -166,7 +167,7 @@
 					<div class="tsd-signature tsd-kind-icon">send<wbr>To<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:158</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:170</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -184,7 +185,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#sendtoken">sendToken</a></p>
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:54</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:54</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -199,9 +200,26 @@
 					<div class="tsd-signature tsd-kind-icon">suggested<wbr>Amount<span class="tsd-signature-symbol">:</span> <a href="../globals.html#numbervalue" class="tsd-signature-type">NumberValue</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:165</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:177</li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="tags" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tags</h3>
+					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#tags">tags</a></p>
+						<ul>
+							<li>Defined in interfaces/build/main/parameters.d.ts:73</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Provide optional tags which can be used to look up transfers in the
+							lightnodes.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="txconfig" class="tsd-anchor"></a>
@@ -209,7 +227,7 @@
 					<div class="tsd-signature tsd-kind-icon">tx<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">TransactionConfig</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:169</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:181</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -225,7 +243,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#txhash">txHash</a></p>
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:64</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:64</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -242,7 +260,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#web3provider">web3Provider</a></p>
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:59</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:59</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -286,6 +304,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="sendparams.html#suggestedamount" class="tsd-kind-icon">suggested<wbr>Amount</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="sendparams.html#tags" class="tsd-kind-icon">tags</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="sendparams.html#txconfig" class="tsd-kind-icon">tx<wbr>Config</a>

@@ -94,9 +94,11 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lockandmintparams.html#confirmations" class="tsd-kind-icon">confirmations</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lockandmintparams.html#contractcalls" class="tsd-kind-icon">contract<wbr>Calls</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lockandmintparams.html#deposit" class="tsd-kind-icon">deposit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lockandmintparams.html#gatewayaddress" class="tsd-kind-icon">gateway<wbr>Address</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lockandmintparams.html#nonce" class="tsd-kind-icon">nonce</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lockandmintparams.html#sendtoken" class="tsd-kind-icon">send<wbr>Token</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lockandmintparams.html#suggestedamount" class="tsd-kind-icon">suggested<wbr>Amount</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lockandmintparams.html#tags" class="tsd-kind-icon">tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lockandmintparams.html#txhash" class="tsd-kind-icon">tx<wbr>Hash</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lockandmintparams.html#web3provider" class="tsd-kind-icon">web3<wbr>Provider</a></li>
 							</ul>
@@ -112,7 +114,7 @@
 					<div class="tsd-signature tsd-kind-icon">confirmations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:84</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:89</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -130,7 +132,7 @@
 					<div class="tsd-signature tsd-kind-icon">contract<wbr>Calls<span class="tsd-signature-symbol">:</span> <a href="contractcall.html" class="tsd-signature-type">ContractCall</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:90</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:95</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -147,7 +149,7 @@
 					<div class="tsd-signature tsd-kind-icon">deposit<span class="tsd-signature-symbol">:</span> <a href="utxoindex.html" class="tsd-signature-type">UTXOIndex</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:96</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:101</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -158,6 +160,24 @@
 						</div>
 					</div>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="gatewayaddress" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> gateway<wbr>Address</h3>
+					<div class="tsd-signature tsd-kind-icon">gateway<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in interfaces/build/main/parameters.d.ts:108</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Specify a gateway address. Gateway addresses are based on the RenVM shard
+								selected to process the transfer. Currently there is only one RenVM
+								shard, but once sharding is live, this parameter will ensure that the
+							same address can be used to resume the transfer.</p>
+						</div>
+					</div>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="nonce" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> nonce</h3>
@@ -165,7 +185,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#nonce">nonce</a></p>
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:68</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -181,7 +201,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#sendtoken">sendToken</a></p>
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:54</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:54</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -196,12 +216,29 @@
 					<div class="tsd-signature tsd-kind-icon">suggested<wbr>Amount<span class="tsd-signature-symbol">:</span> <a href="../globals.html#numbervalue" class="tsd-signature-type">NumberValue</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:77</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:82</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The amount of <code>sendToken</code> that should be sent.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="tags" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tags</h3>
+					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#tags">tags</a></p>
+						<ul>
+							<li>Defined in interfaces/build/main/parameters.d.ts:73</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Provide optional tags which can be used to look up transfers in the
+							lightnodes.</p>
 						</div>
 					</div>
 				</section>
@@ -212,7 +249,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#txhash">txHash</a></p>
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:64</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:64</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -229,7 +266,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#web3provider">web3Provider</a></p>
 						<ul>
-							<li>Defined in packages/lib/ren-interfaces/build/main/parameters.d.ts:59</li>
+							<li>Defined in interfaces/build/main/parameters.d.ts:59</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -265,6 +302,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="lockandmintparams.html#deposit" class="tsd-kind-icon">deposit</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="lockandmintparams.html#gatewayaddress" class="tsd-kind-icon">gateway<wbr>Address</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="lockandmintparams.html#nonce" class="tsd-kind-icon">nonce</a>
 							</li>
@@ -273,6 +313,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="lockandmintparams.html#suggestedamount" class="tsd-kind-icon">suggested<wbr>Amount</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="lockandmintparams.html#tags" class="tsd-kind-icon">tags</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="lockandmintparams.html#txhash" class="tsd-kind-icon">tx<wbr>Hash</a>

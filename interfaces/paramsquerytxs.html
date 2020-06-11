@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>RenVMInputUTXO | RenJS Types Documentation</title>
+	<title>ParamsQueryTxs | RenJS Types Documentation</title>
 	<meta name="description" content="Documentation for RenJS Types Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="renvminpututxo.html">RenVMInputUTXO</a>
+					<a href="paramsquerytxs.html">ParamsQueryTxs</a>
 				</li>
 			</ul>
-			<h1>Interface RenVMInputUTXO</h1>
+			<h1>Interface ParamsQueryTxs</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">RenVMInputUTXO</span>
+						<span class="target">ParamsQueryTxs</span>
 					</li>
 				</ul>
 			</section>
@@ -79,10 +79,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="renvminpututxo.html#amount" class="tsd-kind-icon">amount</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="renvminpututxo.html#scriptpubkey" class="tsd-kind-icon">script<wbr>Pub<wbr>Key</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="renvminpututxo.html#txhash" class="tsd-kind-icon">tx<wbr>Hash</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="renvminpututxo.html#vout" class="tsd-kind-icon">v<wbr>Out</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="paramsquerytxs.html#page" class="tsd-kind-icon">page</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="paramsquerytxs.html#pagesize" class="tsd-kind-icon">page<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="paramsquerytxs.html#tags" class="tsd-kind-icon">tags</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="paramsquerytxs.html#txstatus" class="tsd-kind-icon">tx<wbr>Status</a></li>
 							</ul>
 						</section>
 					</div>
@@ -91,42 +91,42 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="amount" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> amount</h3>
-					<div class="tsd-signature tsd-kind-icon">amount<span class="tsd-signature-symbol">:</span> <a href="../globals.html#renvmvalue" class="tsd-signature-type">RenVMValue</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/renvmtype.html#typeu64" class="tsd-signature-type">TypeU64</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="page" class="tsd-anchor"></a>
+					<h3>page</h3>
+					<div class="tsd-signature tsd-kind-icon">page<span class="tsd-signature-symbol">:</span> <a href="../globals.html#renvmvalue" class="tsd-signature-type">RenVMValue</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/renvmtype.html#typeu64" class="tsd-signature-type">TypeU64</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in interfaces/build/main/renVM.d.ts:91</li>
+							<li>Defined in rpc/build/main/renVMTypes.d.ts:17</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="scriptpubkey" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> script<wbr>Pub<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">script<wbr>Pub<wbr>Key<span class="tsd-signature-symbol">:</span> <a href="../globals.html#renvmvalue" class="tsd-signature-type">RenVMValue</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/renvmtype.html#typeb" class="tsd-signature-type">TypeB</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="pagesize" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> page<wbr>Size</h3>
+					<div class="tsd-signature tsd-kind-icon">page<wbr>Size<span class="tsd-signature-symbol">:</span> <a href="../globals.html#renvmvalue" class="tsd-signature-type">RenVMValue</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/renvmtype.html#typeu64" class="tsd-signature-type">TypeU64</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in interfaces/build/main/renVM.d.ts:90</li>
+							<li>Defined in rpc/build/main/renVMTypes.d.ts:18</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="txhash" class="tsd-anchor"></a>
-					<h3>tx<wbr>Hash</h3>
-					<div class="tsd-signature tsd-kind-icon">tx<wbr>Hash<span class="tsd-signature-symbol">:</span> <a href="../globals.html#renvmvalue" class="tsd-signature-type">RenVMValue</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/renvmtype.html#typeb32" class="tsd-signature-type">TypeB32</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="tags" class="tsd-anchor"></a>
+					<h3>tags</h3>
+					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#renvmvalue" class="tsd-signature-type">RenVMValue</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/renvmtype.html#typeb32" class="tsd-signature-type">TypeB32</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in interfaces/build/main/renVM.d.ts:88</li>
+							<li>Defined in rpc/build/main/renVMTypes.d.ts:19</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="vout" class="tsd-anchor"></a>
-					<h3>v<wbr>Out</h3>
-					<div class="tsd-signature tsd-kind-icon">v<wbr>Out<span class="tsd-signature-symbol">:</span> <a href="../globals.html#renvmvalue" class="tsd-signature-type">RenVMValue</a><span class="tsd-signature-symbol">&lt;</span><a href="../enums/renvmtype.html#typeu32" class="tsd-signature-type">TypeU32</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="txstatus" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tx<wbr>Status</h3>
+					<div class="tsd-signature tsd-kind-icon">tx<wbr>Status<span class="tsd-signature-symbol">:</span> <a href="../enums/txstatus.html" class="tsd-signature-type">TxStatus</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in interfaces/build/main/renVM.d.ts:89</li>
+							<li>Defined in rpc/build/main/renVMTypes.d.ts:16</li>
 						</ul>
 					</aside>
 				</section>
@@ -145,19 +145,19 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="renvminpututxo.html" class="tsd-kind-icon">RenVMInputUTXO</a>
+						<a href="paramsquerytxs.html" class="tsd-kind-icon">Params<wbr>Query<wbr>Txs</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="renvminpututxo.html#amount" class="tsd-kind-icon">amount</a>
+								<a href="paramsquerytxs.html#page" class="tsd-kind-icon">page</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="renvminpututxo.html#scriptpubkey" class="tsd-kind-icon">script<wbr>Pub<wbr>Key</a>
+								<a href="paramsquerytxs.html#pagesize" class="tsd-kind-icon">page<wbr>Size</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="renvminpututxo.html#txhash" class="tsd-kind-icon">tx<wbr>Hash</a>
+								<a href="paramsquerytxs.html#tags" class="tsd-kind-icon">tags</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="renvminpututxo.html#vout" class="tsd-kind-icon">v<wbr>Out</a>
+								<a href="paramsquerytxs.html#txstatus" class="tsd-kind-icon">tx<wbr>Status</a>
 							</li>
 						</ul>
 					</li>
