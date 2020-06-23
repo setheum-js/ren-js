@@ -57,7 +57,7 @@
 					<a href="provider.html">Provider</a>
 				</li>
 			</ul>
-			<h1>Interface Provider&lt;Requests, Responses&gt;</h1>
+			<h1>Interface Provider&lt;Requests, Responses, Requests, Responses&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -67,6 +67,12 @@
 			<section class="tsd-panel tsd-type-parameters">
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
+					<li>
+						<h4>Requests<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span></h4>
+					</li>
+					<li>
+						<h4>Responses<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span></h4>
+					</li>
 					<li>
 						<h4>Requests<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span></h4>
 					</li>
@@ -88,6 +94,7 @@
 				<ul class="tsd-hierarchy">
 					<li><a href="../classes/httpprovider.html" class="tsd-signature-type">HttpProvider</a></li>
 					<li><a href="../classes/multiprovider.html" class="tsd-signature-type">MultiProvider</a></li>
+					<li><a href="../classes/renvmprovider.html" class="tsd-signature-type">RenVMProvider</a></li>
 					<li><a href="../classes/renvmprovider.html" class="tsd-signature-type">RenVMProvider</a></li>
 				</ul>
 			</section>
@@ -111,12 +118,39 @@
 					<h3>send<wbr>Message</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
 						<li class="tsd-signature tsd-kind-icon">send<wbr>Message&lt;Method&gt;<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Method</span>, request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Requests</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">Method</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Method</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">Responses</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">Responses</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">Method</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Message&lt;Method&gt;<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Method</span>, request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Requests</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">Method</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Method</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">Responses</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">Responses</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">Method</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
 									<li>Defined in provider/build/main/jsonRPC.d.ts:19</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>Method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">Requests</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>method: <span class="tsd-signature-type">Method</span></h5>
+								</li>
+								<li>
+									<h5>request: <span class="tsd-signature-type">Requests</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">Method</span><span class="tsd-signature-symbol">]</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> retry: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Method</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">Responses</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">Responses</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">Method</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in ren-provider/build/main/jsonRPC.d.ts:19</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>

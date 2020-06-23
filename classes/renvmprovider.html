@@ -76,6 +76,7 @@
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
 					<li><a href="../interfaces/provider.html" class="tsd-signature-type">Provider</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#renvmparams" class="tsd-signature-type">RenVMParams</a><span class="tsd-signature-symbol">, </span><a href="../globals.html#renvmresponses" class="tsd-signature-type">RenVMResponses</a><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><a href="../interfaces/provider.html" class="tsd-signature-type">Provider</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#renvmparams" class="tsd-signature-type">RenVMParams</a><span class="tsd-signature-symbol">, </span><a href="../globals.html#renvmresponses" class="tsd-signature-type">RenVMResponses</a><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -121,12 +122,30 @@
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>RenVMProvider<span class="tsd-signature-symbol">(</span>provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/provider.html" class="tsd-signature-type">Provider</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#renvmparams" class="tsd-signature-type">RenVMParams</a><span class="tsd-signature-symbol">, </span><a href="../globals.html#renvmresponses" class="tsd-signature-type">RenVMResponses</a><span class="tsd-signature-symbol">&gt;</span>, logger<span class="tsd-signature-symbol">?: </span><a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="renvmprovider.html" class="tsd-signature-type">RenVMProvider</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>RenVMProvider<span class="tsd-signature-symbol">(</span>provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/provider.html" class="tsd-signature-type">Provider</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#renvmparams" class="tsd-signature-type">RenVMParams</a><span class="tsd-signature-symbol">, </span><a href="../globals.html#renvmresponses" class="tsd-signature-type">RenVMResponses</a><span class="tsd-signature-symbol">&gt;</span>, logger<span class="tsd-signature-symbol">?: </span><a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="renvmprovider.html" class="tsd-signature-type">RenVMProvider</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
 									<li>Defined in rpc/build/main/index.d.ts:12</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>provider: <a href="../interfaces/provider.html" class="tsd-signature-type">Provider</a><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#renvmparams" class="tsd-signature-type">RenVMParams</a><span class="tsd-signature-symbol">, </span><a href="../globals.html#renvmresponses" class="tsd-signature-type">RenVMResponses</a><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> logger: <a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="renvmprovider.html" class="tsd-signature-type">RenVMProvider</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in ren-rpc/build/main/index.d.ts:12</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -152,6 +171,7 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in rpc/build/main/index.d.ts:12</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:12</li>
 						</ul>
 					</aside>
 				</section>
@@ -162,16 +182,18 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in rpc/build/main/index.d.ts:10</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:10</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="queryblock" class="tsd-anchor"></a>
 					<h3>query<wbr>Block</h3>
-					<div class="tsd-signature tsd-kind-icon">query<wbr>Block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>blockHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsQueryBlock</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"blockHeight"</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryblock.html" class="tsd-signature-type">ResponseQueryBlock</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">query<wbr>Block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>blockHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryBlock</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in rpc/build/main/index.d.ts:14</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:14</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -179,20 +201,20 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>blockHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsQueryBlock</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"blockHeight"</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryblock.html" class="tsd-signature-type">ResponseQueryBlock</a><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>blockHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryBlock</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>blockHeight: <span class="tsd-signature-type">ParamsQueryBlock</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"blockHeight"</span><span class="tsd-signature-symbol">]</span></h5>
+												<h5>blockHeight: <span class="tsd-signature-type">number</span></h5>
 											</li>
 											<li>
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> retry: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryblock.html" class="tsd-signature-type">ResponseQueryBlock</a><span class="tsd-signature-symbol">&gt;</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryBlock</span><span class="tsd-signature-symbol">&gt;</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -202,10 +224,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="queryblocks" class="tsd-anchor"></a>
 					<h3>query<wbr>Blocks</h3>
-					<div class="tsd-signature tsd-kind-icon">query<wbr>Blocks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>blockHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsQueryBlocks</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"blockHeight"</span><span class="tsd-signature-symbol">]</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsQueryBlocks</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"n"</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryblocks.html" class="tsd-signature-type">ResponseQueryBlocks</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">query<wbr>Blocks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>blockHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryBlocks</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in rpc/build/main/index.d.ts:15</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:15</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -213,23 +236,23 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>blockHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsQueryBlocks</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"blockHeight"</span><span class="tsd-signature-symbol">]</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsQueryBlocks</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"n"</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryblocks.html" class="tsd-signature-type">ResponseQueryBlocks</a><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>blockHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryBlocks</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>blockHeight: <span class="tsd-signature-type">ParamsQueryBlocks</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"blockHeight"</span><span class="tsd-signature-symbol">]</span></h5>
+												<h5>blockHeight: <span class="tsd-signature-type">number</span></h5>
 											</li>
 											<li>
-												<h5>n: <span class="tsd-signature-type">ParamsQueryBlocks</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"n"</span><span class="tsd-signature-symbol">]</span></h5>
+												<h5>n: <span class="tsd-signature-type">number</span></h5>
 											</li>
 											<li>
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> retry: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryblocks.html" class="tsd-signature-type">ResponseQueryBlocks</a><span class="tsd-signature-symbol">&gt;</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryBlocks</span><span class="tsd-signature-symbol">&gt;</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -239,10 +262,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="queryfees" class="tsd-anchor"></a>
 					<h3>query<wbr>Fees</h3>
-					<div class="tsd-signature tsd-kind-icon">query<wbr>Fees<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryfees.html" class="tsd-signature-type">ResponseQueryFees</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">query<wbr>Fees<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryFees</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rpc/build/main/index.d.ts:23</li>
+							<li>Defined in rpc/build/main/index.d.ts:29</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:28</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -250,7 +274,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryfees.html" class="tsd-signature-type">ResponseQueryFees</a><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryFees</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -260,7 +284,7 @@
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> retry: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryfees.html" class="tsd-signature-type">ResponseQueryFees</a><span class="tsd-signature-symbol">&gt;</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryFees</span><span class="tsd-signature-symbol">&gt;</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -273,7 +297,8 @@
 					<div class="tsd-signature tsd-kind-icon">query<wbr>Mint<wbr>OrBurn<span class="tsd-signature-symbol">:</span> &lt;T&gt;<span class="tsd-signature-symbol">(</span>utxoTxHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rpc/build/main/index.d.ts:26</li>
+							<li>Defined in rpc/build/main/index.d.ts:32</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -288,7 +313,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/responsequeryminttx.html" class="tsd-signature-type">ResponseQueryMintTx</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/responsequeryburntx.html" class="tsd-signature-type">ResponseQueryBurnTx</a></h4>
+												<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ResponseQueryMintTx</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ResponseQueryBurnTx</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -307,10 +332,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="querynumpeers" class="tsd-anchor"></a>
 					<h3>query<wbr>Num<wbr>Peers</h3>
-					<div class="tsd-signature tsd-kind-icon">query<wbr>Num<wbr>Peers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerynumpeers.html" class="tsd-signature-type">ResponseQueryNumPeers</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">query<wbr>Num<wbr>Peers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryNumPeers</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rpc/build/main/index.d.ts:19</li>
+							<li>Defined in rpc/build/main/index.d.ts:25</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:24</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -318,7 +344,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerynumpeers.html" class="tsd-signature-type">ResponseQueryNumPeers</a><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryNumPeers</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -328,7 +354,7 @@
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> retry: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerynumpeers.html" class="tsd-signature-type">ResponseQueryNumPeers</a><span class="tsd-signature-symbol">&gt;</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryNumPeers</span><span class="tsd-signature-symbol">&gt;</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -338,10 +364,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="querypeers" class="tsd-anchor"></a>
 					<h3>query<wbr>Peers</h3>
-					<div class="tsd-signature tsd-kind-icon">query<wbr>Peers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerypeers.html" class="tsd-signature-type">ResponseQueryPeers</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">query<wbr>Peers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryPeers</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rpc/build/main/index.d.ts:20</li>
+							<li>Defined in rpc/build/main/index.d.ts:26</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:25</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -349,7 +376,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerypeers.html" class="tsd-signature-type">ResponseQueryPeers</a><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryPeers</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -359,7 +386,7 @@
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> retry: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerypeers.html" class="tsd-signature-type">ResponseQueryPeers</a><span class="tsd-signature-symbol">&gt;</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryPeers</span><span class="tsd-signature-symbol">&gt;</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -369,10 +396,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="queryshards" class="tsd-anchor"></a>
 					<h3>query<wbr>Shards</h3>
-					<div class="tsd-signature tsd-kind-icon">query<wbr>Shards<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryshards.html" class="tsd-signature-type">ResponseQueryShards</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">query<wbr>Shards<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryShards</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rpc/build/main/index.d.ts:21</li>
+							<li>Defined in rpc/build/main/index.d.ts:27</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:26</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -380,7 +408,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryshards.html" class="tsd-signature-type">ResponseQueryShards</a><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryShards</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -390,7 +418,7 @@
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> retry: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequeryshards.html" class="tsd-signature-type">ResponseQueryShards</a><span class="tsd-signature-symbol">&gt;</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryShards</span><span class="tsd-signature-symbol">&gt;</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -400,10 +428,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="querystat" class="tsd-anchor"></a>
 					<h3>query<wbr>Stat</h3>
-					<div class="tsd-signature tsd-kind-icon">query<wbr>Stat<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerystat.html" class="tsd-signature-type">ResponseQueryStat</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">query<wbr>Stat<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryStat</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rpc/build/main/index.d.ts:22</li>
+							<li>Defined in rpc/build/main/index.d.ts:28</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:27</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -411,7 +440,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerystat.html" class="tsd-signature-type">ResponseQueryStat</a><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryStat</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -421,7 +450,7 @@
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> retry: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerystat.html" class="tsd-signature-type">ResponseQueryStat</a><span class="tsd-signature-symbol">&gt;</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryStat</span><span class="tsd-signature-symbol">&gt;</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -431,10 +460,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="querytx" class="tsd-anchor"></a>
 					<h3>query<wbr>Tx</h3>
-					<div class="tsd-signature tsd-kind-icon">query<wbr>Tx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsQueryTx</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"txHash"</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerytx.html" class="tsd-signature-type">ResponseQueryTx</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">query<wbr>Tx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryTx</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rpc/build/main/index.d.ts:17</li>
+							<li>Defined in rpc/build/main/index.d.ts:23</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -442,20 +472,20 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsQueryTx</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"txHash"</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerytx.html" class="tsd-signature-type">ResponseQueryTx</a><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryTx</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>txHash: <span class="tsd-signature-type">ParamsQueryTx</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"txHash"</span><span class="tsd-signature-symbol">]</span></h5>
+												<h5>txHash: <span class="tsd-signature-type">string</span></h5>
 											</li>
 											<li>
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> retry: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerytx.html" class="tsd-signature-type">ResponseQueryTx</a><span class="tsd-signature-symbol">&gt;</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseQueryTx</span><span class="tsd-signature-symbol">&gt;</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -465,10 +495,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="querytxs" class="tsd-anchor"></a>
 					<h3>query<wbr>Txs</h3>
-					<div class="tsd-signature tsd-kind-icon">query<wbr>Txs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>tags<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsQueryTxs</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"tags"</span><span class="tsd-signature-symbol">]</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, pageSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, txStatus<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ParamsQueryTxs</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"txStatus"</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerytxs.html" class="tsd-signature-type">ResponseQueryTxs</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">query<wbr>Txs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>tags<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, pageSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, txStatus<span class="tsd-signature-symbol">?: </span><a href="../enums/txstatus.html" class="tsd-signature-type">TxStatus</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerytxs.html" class="tsd-signature-type">ResponseQueryTxs</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rpc/build/main/index.d.ts:18</li>
+							<li>Defined in rpc/build/main/index.d.ts:24</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -476,14 +506,14 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>tags<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsQueryTxs</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"tags"</span><span class="tsd-signature-symbol">]</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, pageSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, txStatus<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ParamsQueryTxs</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"txStatus"</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerytxs.html" class="tsd-signature-type">ResponseQueryTxs</a><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>tags<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, pageSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, txStatus<span class="tsd-signature-symbol">?: </span><a href="../enums/txstatus.html" class="tsd-signature-type">TxStatus</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsequerytxs.html" class="tsd-signature-type">ResponseQueryTxs</a><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>tags: <span class="tsd-signature-type">ParamsQueryTxs</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"tags"</span><span class="tsd-signature-symbol">]</span></h5>
+												<h5>tags: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
 											</li>
 											<li>
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> page: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
@@ -492,7 +522,7 @@
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> pageSize: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 											</li>
 											<li>
-												<h5><span class="tsd-flag ts-flagOptional">Optional</span> txStatus: <span class="tsd-signature-type">ParamsQueryTxs</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"txStatus"</span><span class="tsd-signature-symbol">]</span></h5>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> txStatus: <a href="../enums/txstatus.html" class="tsd-signature-type">TxStatus</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 											</li>
 											<li>
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> retry: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
@@ -511,15 +541,25 @@
 					<div class="tsd-signature tsd-kind-icon">select<wbr>Public<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a>, logger<span class="tsd-signature-symbol">?: </span><a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rpc/build/main/index.d.ts:36</li>
+							<li>Defined in rpc/build/main/index.d.ts:42</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>selectPublicKey fetches the public key for the RenVM shard handling
+								the provided contract.
+								selectPublicKey fetches the public key for the RenVM shard handling
 							the provided contract.</p>
 						</div>
 						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>The Ren Contract for which the public
+								key should be fetched.</p>
+							</dd>
+							<dt>returns</dt>
+							<dd><p>The public key hash (20 bytes) as a string.</p>
+							</dd>
 							<dt>param</dt>
 							<dd><p>The Ren Contract for which the public
 								key should be fetched.</p>
@@ -562,16 +602,18 @@
 						<p>Implementation of <a href="../interfaces/provider.html">Provider</a>.<a href="../interfaces/provider.html#sendmessage">sendMessage</a></p>
 						<ul>
 							<li>Defined in rpc/build/main/index.d.ts:11</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:11</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="submitburn" class="tsd-anchor"></a>
 					<h3>submit<wbr>Burn</h3>
-					<div class="tsd-signature tsd-kind-icon">submit<wbr>Burn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a>, ref<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tags<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">submit<wbr>Burn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a>, ref<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rpc/build/main/index.d.ts:25</li>
+							<li>Defined in rpc/build/main/index.d.ts:31</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:30</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -579,7 +621,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a>, ref<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tags<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a>, ref<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -590,9 +632,6 @@
 											</li>
 											<li>
 												<h5>ref: <span class="tsd-signature-type">string</span></h5>
-											</li>
-											<li>
-												<h5>tags: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span></h5>
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -605,10 +644,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="submitmint" class="tsd-anchor"></a>
 					<h3>submit<wbr>Mint</h3>
-					<div class="tsd-signature tsd-kind-icon">submit<wbr>Mint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, nonce<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, utxoTxHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, utxoVout<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RenNetworkDetails</span>, fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fnABI<span class="tsd-signature-symbol">: </span><a href="../interfaces/abiitem.html" class="tsd-signature-type">AbiItem</a><span class="tsd-signature-symbol">[]</span>, encodedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tags<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">submit<wbr>Mint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, nonce<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, utxoTxHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, utxoVout<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RenNetworkDetails</span>, fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fnABI<span class="tsd-signature-symbol">: </span><a href="../interfaces/abiitem.html" class="tsd-signature-type">AbiItem</a><span class="tsd-signature-symbol">[]</span>, encodedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rpc/build/main/index.d.ts:24</li>
+							<li>Defined in rpc/build/main/index.d.ts:30</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -616,7 +656,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, nonce<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, utxoTxHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, utxoVout<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RenNetworkDetails</span>, fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fnABI<span class="tsd-signature-symbol">: </span><a href="../interfaces/abiitem.html" class="tsd-signature-type">AbiItem</a><span class="tsd-signature-symbol">[]</span>, encodedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tags<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>renContract<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, nonce<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, utxoTxHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, utxoVout<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RenNetworkDetails</span>, fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fnABI<span class="tsd-signature-symbol">: </span><a href="../interfaces/abiitem.html" class="tsd-signature-type">AbiItem</a><span class="tsd-signature-symbol">[]</span>, encodedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -649,9 +689,6 @@
 											<li>
 												<h5>encodedParameters: <span class="tsd-signature-type">string</span></h5>
 											</li>
-											<li>
-												<h5>tags: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span></h5>
-											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
 									</li>
@@ -663,10 +700,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="submittx" class="tsd-anchor"></a>
 					<h3>submit<wbr>Tx</h3>
-					<div class="tsd-signature tsd-kind-icon">submit<wbr>Tx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>tx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsSubmitBurn</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"tx"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ParamsSubmitMint</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"tx"</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsesubmittx.html" class="tsd-signature-type">ResponseSubmitTx</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">submit<wbr>Tx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>tx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>in<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"ref"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#typeu64" class="tsd-signature-type">TypeU64</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>to<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>in<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"p"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#extethcompatpayload" class="tsd-signature-type">ExtEthCompatPayload</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/extethcompatpayload.html" class="tsd-signature-type">ExtEthCompatPayload</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"token"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#exttypeethcompataddress" class="tsd-signature-type">ExtTypeEthCompatAddress</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"to"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#exttypeethcompataddress" class="tsd-signature-type">ExtTypeEthCompatAddress</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"n"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#typeb32" class="tsd-signature-type">TypeB32</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"utxo"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#exttypebtccompatutxo" class="tsd-signature-type">ExtTypeBtcCompatUTXO</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvminpututxo.html" class="tsd-signature-type">RenVMInputUTXO</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>to<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> }</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseSubmitTx</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in rpc/build/main/index.d.ts:16</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:16</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -674,20 +712,20 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>tx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ParamsSubmitBurn</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"tx"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ParamsSubmitMint</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"tx"</span><span class="tsd-signature-symbol">]</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsesubmittx.html" class="tsd-signature-type">ResponseSubmitTx</a><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>tx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>in<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"ref"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#typeu64" class="tsd-signature-type">TypeU64</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>to<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>in<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"p"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#extethcompatpayload" class="tsd-signature-type">ExtEthCompatPayload</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/extethcompatpayload.html" class="tsd-signature-type">ExtEthCompatPayload</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"token"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#exttypeethcompataddress" class="tsd-signature-type">ExtTypeEthCompatAddress</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"to"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#exttypeethcompataddress" class="tsd-signature-type">ExtTypeEthCompatAddress</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"n"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#typeb32" class="tsd-signature-type">TypeB32</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"utxo"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#exttypebtccompatutxo" class="tsd-signature-type">ExtTypeBtcCompatUTXO</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvminpututxo.html" class="tsd-signature-type">RenVMInputUTXO</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>to<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> }</span>, retry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseSubmitTx</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>tx: <span class="tsd-signature-type">ParamsSubmitBurn</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"tx"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ParamsSubmitMint</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"tx"</span><span class="tsd-signature-symbol">]</span></h5>
+												<h5>tx: <span class="tsd-signature-symbol">{ </span>in<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"ref"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#typeu64" class="tsd-signature-type">TypeU64</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>to<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>in<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"p"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#extethcompatpayload" class="tsd-signature-type">ExtEthCompatPayload</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/extethcompatpayload.html" class="tsd-signature-type">ExtEthCompatPayload</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"token"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#exttypeethcompataddress" class="tsd-signature-type">ExtTypeEthCompatAddress</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"to"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#exttypeethcompataddress" class="tsd-signature-type">ExtTypeEthCompatAddress</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"n"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#typeb32" class="tsd-signature-type">TypeB32</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvmarg.html" class="tsd-signature-type">RenVMArg</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"utxo"</span><span class="tsd-signature-symbol">, </span><a href="../enums/renvmtype.html#exttypebtccompatutxo" class="tsd-signature-type">ExtTypeBtcCompatUTXO</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/renvminpututxo.html" class="tsd-signature-type">RenVMInputUTXO</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>to<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> }</span></h5>
 											</li>
 											<li>
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> retry: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/responsesubmittx.html" class="tsd-signature-type">ResponseSubmitTx</a><span class="tsd-signature-symbol">&gt;</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ResponseSubmitTx</span><span class="tsd-signature-symbol">&gt;</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -700,7 +738,8 @@
 					<div class="tsd-signature tsd-kind-icon">wait<wbr>ForTX<span class="tsd-signature-symbol">:</span> &lt;T&gt;<span class="tsd-signature-symbol">(</span>utxoTxHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, onStatus<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>status<span class="tsd-signature-symbol">: </span><a href="../enums/txstatus.html" class="tsd-signature-type">TxStatus</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, _cancelRequested<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rpc/build/main/index.d.ts:27</li>
+							<li>Defined in rpc/build/main/index.d.ts:33</li>
+							<li>Defined in ren-rpc/build/main/index.d.ts:32</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -715,7 +754,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/responsequeryminttx.html" class="tsd-signature-type">ResponseQueryMintTx</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/responsequeryburntx.html" class="tsd-signature-type">ResponseQueryBurnTx</a></h4>
+												<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ResponseQueryMintTx</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ResponseQueryBurnTx</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
