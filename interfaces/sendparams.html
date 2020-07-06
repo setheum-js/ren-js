@@ -69,9 +69,6 @@
 					<div class="lead">
 						<p>The parameters for the <code>send</code> function - a common interface that aims to
 							abstract away minting and burning into a single cross-chain transfer
-							function.
-							The parameters for the <code>send</code> function - a common interface that aims to
-							abstract away minting and burning into a single cross-chain transfer
 						function.</p>
 					</div>
 				</div>
@@ -81,9 +78,6 @@
 				<ul class="tsd-hierarchy">
 					<li>
 						<a href="transferparamscommon.html" class="tsd-signature-type">TransferParamsCommon</a>
-					</li>
-					<li>
-						<span class="tsd-signature-type">TransferParamsCommon</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">SendParams</span>
@@ -100,15 +94,15 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sendparams.html#confirmations" class="tsd-kind-icon">confirmations</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited"><a href="sendparams.html#nonce" class="tsd-kind-icon">nonce</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="sendparams.html#nonce" class="tsd-kind-icon">nonce</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sendparams.html#sendamount" class="tsd-kind-icon">send<wbr>Amount</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sendparams.html#sendto" class="tsd-kind-icon">send<wbr>To</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited"><a href="sendparams.html#sendtoken" class="tsd-kind-icon">send<wbr>Token</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="sendparams.html#sendtoken" class="tsd-kind-icon">send<wbr>Token</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sendparams.html#suggestedamount" class="tsd-kind-icon">suggested<wbr>Amount</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="sendparams.html#tags" class="tsd-kind-icon">tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sendparams.html#txconfig" class="tsd-kind-icon">tx<wbr>Config</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited"><a href="sendparams.html#txhash" class="tsd-kind-icon">tx<wbr>Hash</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited"><a href="sendparams.html#web3provider" class="tsd-kind-icon">web3<wbr>Provider</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="sendparams.html#txhash" class="tsd-kind-icon">tx<wbr>Hash</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="sendparams.html#web3provider" class="tsd-kind-icon">web3<wbr>Provider</a></li>
 							</ul>
 						</section>
 					</div>
@@ -123,7 +117,6 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:188</li>
-							<li>Defined in ren-interfaces/build/main/parameters.d.ts:176</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -131,21 +124,16 @@
 							<p>For minting, the number of confirmations to wait before submitting the
 								signature to Ethereum. If this number is less than the default, the RenVM
 								transaction is returned when those confirmations have passed, before
-								the signature is available, and will not be submitted to Ethereum.
-								For minting, the number of confirmations to wait before submitting the
-								signature to Ethereum. If this number is less than the default, the RenVM
-								transaction is returned when those confirmations have passed, before
 							the signature is available, and will not be submitted to Ethereum.</p>
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="nonce" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> nonce</h3>
 					<div class="tsd-signature tsd-kind-icon">nonce<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#nonce">nonce</a></p>
-						<p>Overrides TransferParamsCommon.nonce</p>
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:68</li>
 						</ul>
@@ -163,15 +151,11 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:176</li>
-							<li>Defined in ren-interfaces/build/main/parameters.d.ts:164</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The amount being transferred cross-chain. For sending to an Ethereum
-								address, this is a suggested amount only. The transfer will continue
-								even if a different amount is sent to the Gateway address.
-								The amount being transferred cross-chain. For sending to an Ethereum
 								address, this is a suggested amount only. The transfer will continue
 							even if a different amount is sent to the Gateway address.</p>
 						</div>
@@ -184,27 +168,22 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:170</li>
-							<li>Defined in ren-interfaces/build/main/parameters.d.ts:158</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The receiving address. If this address is an Ethereum address, then the
 								transfer will be a lock and mint - and will be a burn and release
-								otherwise.
-								The receiving address. If this address is an Ethereum address, then the
-								transfer will be a lock and mint - and will be a burn and release
 							otherwise.</p>
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="sendtoken" class="tsd-anchor"></a>
 					<h3>send<wbr>Token</h3>
 					<div class="tsd-signature tsd-kind-icon">send<wbr>Token<span class="tsd-signature-symbol">:</span> <a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BTC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ZEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BCH"</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#sendtoken">sendToken</a></p>
-						<p>Overrides TransferParamsCommon.sendToken</p>
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:54</li>
 						</ul>
@@ -222,7 +201,6 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:177</li>
-							<li>Defined in ren-interfaces/build/main/parameters.d.ts:165</li>
 						</ul>
 					</aside>
 				</section>
@@ -250,23 +228,20 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:181</li>
-							<li>Defined in ren-interfaces/build/main/parameters.d.ts:169</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Set Ethereum transaction options, including the gasPrice.
-							Set Ethereum transaction options, including the gasPrice.</p>
+							<p>Set Ethereum transaction options, including the gasPrice.</p>
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="txhash" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tx<wbr>Hash</h3>
 					<div class="tsd-signature tsd-kind-icon">tx<wbr>Hash<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#txhash">txHash</a></p>
-						<p>Overrides TransferParamsCommon.txHash</p>
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:64</li>
 						</ul>
@@ -278,13 +253,12 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="web3provider" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> web3<wbr>Provider</h3>
 					<div class="tsd-signature tsd-kind-icon">web3<wbr>Provider<span class="tsd-signature-symbol">:</span> <a href="../globals.html#provider" class="tsd-signature-type">provider</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#web3provider">web3Provider</a></p>
-						<p>Overrides TransferParamsCommon.web3Provider</p>
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:59</li>
 						</ul>
@@ -316,7 +290,7 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="sendparams.html#confirmations" class="tsd-kind-icon">confirmations</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="sendparams.html#nonce" class="tsd-kind-icon">nonce</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -325,7 +299,7 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="sendparams.html#sendto" class="tsd-kind-icon">send<wbr>To</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="sendparams.html#sendtoken" class="tsd-kind-icon">send<wbr>Token</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -337,10 +311,10 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="sendparams.html#txconfig" class="tsd-kind-icon">tx<wbr>Config</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="sendparams.html#txhash" class="tsd-kind-icon">tx<wbr>Hash</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="sendparams.html#web3provider" class="tsd-kind-icon">web3<wbr>Provider</a>
 							</li>
 						</ul>

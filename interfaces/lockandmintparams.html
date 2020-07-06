@@ -67,8 +67,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The parameters for a cross-chain transfer onto Ethereum.
-						The parameters for a cross-chain transfer onto Ethereum.</p>
+						<p>The parameters for a cross-chain transfer onto Ethereum.</p>
 					</div>
 				</div>
 			</section>
@@ -77,9 +76,6 @@
 				<ul class="tsd-hierarchy">
 					<li>
 						<a href="transferparamscommon.html" class="tsd-signature-type">TransferParamsCommon</a>
-					</li>
-					<li>
-						<span class="tsd-signature-type">TransferParamsCommon</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">LockAndMintParams</span>
@@ -99,12 +95,12 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lockandmintparams.html#contractcalls" class="tsd-kind-icon">contract<wbr>Calls</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lockandmintparams.html#deposit" class="tsd-kind-icon">deposit</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lockandmintparams.html#gatewayaddress" class="tsd-kind-icon">gateway<wbr>Address</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited"><a href="lockandmintparams.html#nonce" class="tsd-kind-icon">nonce</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited"><a href="lockandmintparams.html#sendtoken" class="tsd-kind-icon">send<wbr>Token</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lockandmintparams.html#nonce" class="tsd-kind-icon">nonce</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lockandmintparams.html#sendtoken" class="tsd-kind-icon">send<wbr>Token</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lockandmintparams.html#suggestedamount" class="tsd-kind-icon">suggested<wbr>Amount</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lockandmintparams.html#tags" class="tsd-kind-icon">tags</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited"><a href="lockandmintparams.html#txhash" class="tsd-kind-icon">tx<wbr>Hash</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited"><a href="lockandmintparams.html#web3provider" class="tsd-kind-icon">web3<wbr>Provider</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lockandmintparams.html#txhash" class="tsd-kind-icon">tx<wbr>Hash</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lockandmintparams.html#web3provider" class="tsd-kind-icon">web3<wbr>Provider</a></li>
 							</ul>
 						</section>
 					</div>
@@ -119,16 +115,11 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:89</li>
-							<li>Defined in ren-interfaces/build/main/parameters.d.ts:84</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The number of confirmations to wait before submitting the signature
-								to Ethereum. If this number is less than the default, the RenVM
-								transaction is returned when those confirmations have passed, before
-								the signature is available, and will not be submitted to Ethereum.
-								The number of confirmations to wait before submitting the signature
 								to Ethereum. If this number is less than the default, the RenVM
 								transaction is returned when those confirmations have passed, before
 							the signature is available, and will not be submitted to Ethereum.</p>
@@ -138,19 +129,15 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="contractcalls" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> contract<wbr>Calls</h3>
-					<div class="tsd-signature tsd-kind-icon">contract<wbr>Calls<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ContractCall</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">contract<wbr>Calls<span class="tsd-signature-symbol">:</span> <a href="contractcall.html" class="tsd-signature-type">ContractCall</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:95</li>
-							<li>Defined in ren-interfaces/build/main/parameters.d.ts:90</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Details for submitting one or more Ethereum transactions. The last one
-								will be augmented with the three required parameters for minting - the
-								amount, nHash and RenVM signature.
-								Details for submitting one or more Ethereum transactions. The last one
 								will be augmented with the three required parameters for minting - the
 							amount, nHash and RenVM signature.</p>
 						</div>
@@ -163,15 +150,11 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:101</li>
-							<li>Defined in ren-interfaces/build/main/parameters.d.ts:96</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specify which deposit should be send to RenVM instead of waiting for one
-								to be observed. This deposit must have been sent to the gateway address
-								of the transfer.
-								Specify which deposit should be send to RenVM instead of waiting for one
 								to be observed. This deposit must have been sent to the gateway address
 							of the transfer.</p>
 						</div>
@@ -195,13 +178,12 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="nonce" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> nonce</h3>
 					<div class="tsd-signature tsd-kind-icon">nonce<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#nonce">nonce</a></p>
-						<p>Overrides TransferParamsCommon.nonce</p>
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:68</li>
 						</ul>
@@ -212,13 +194,12 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="sendtoken" class="tsd-anchor"></a>
 					<h3>send<wbr>Token</h3>
 					<div class="tsd-signature tsd-kind-icon">send<wbr>Token<span class="tsd-signature-symbol">:</span> <a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BTC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ZEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BCH"</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#sendtoken">sendToken</a></p>
-						<p>Overrides TransferParamsCommon.sendToken</p>
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:54</li>
 						</ul>
@@ -236,13 +217,11 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:82</li>
-							<li>Defined in ren-interfaces/build/main/parameters.d.ts:77</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The amount of <code>sendToken</code> that should be sent.
-							The amount of <code>sendToken</code> that should be sent.</p>
+							<p>The amount of <code>sendToken</code> that should be sent.</p>
 						</div>
 					</div>
 				</section>
@@ -263,13 +242,12 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="txhash" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tx<wbr>Hash</h3>
 					<div class="tsd-signature tsd-kind-icon">tx<wbr>Hash<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#txhash">txHash</a></p>
-						<p>Overrides TransferParamsCommon.txHash</p>
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:64</li>
 						</ul>
@@ -281,13 +259,12 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="web3provider" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> web3<wbr>Provider</h3>
 					<div class="tsd-signature tsd-kind-icon">web3<wbr>Provider<span class="tsd-signature-symbol">:</span> <a href="../globals.html#provider" class="tsd-signature-type">provider</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="transferparamscommon.html">TransferParamsCommon</a>.<a href="transferparamscommon.html#web3provider">web3Provider</a></p>
-						<p>Overrides TransferParamsCommon.web3Provider</p>
 						<ul>
 							<li>Defined in interfaces/build/main/parameters.d.ts:59</li>
 						</ul>
@@ -328,10 +305,10 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="lockandmintparams.html#gatewayaddress" class="tsd-kind-icon">gateway<wbr>Address</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="lockandmintparams.html#nonce" class="tsd-kind-icon">nonce</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="lockandmintparams.html#sendtoken" class="tsd-kind-icon">send<wbr>Token</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -340,10 +317,10 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="lockandmintparams.html#tags" class="tsd-kind-icon">tags</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="lockandmintparams.html#txhash" class="tsd-kind-icon">tx<wbr>Hash</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="lockandmintparams.html#web3provider" class="tsd-kind-icon">web3<wbr>Provider</a>
 							</li>
 						</ul>
