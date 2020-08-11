@@ -67,18 +67,16 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>This is the main exported class from <code>@renproject/ren</code>.</p>
+						<p>This is the main exported class.</p>
 					</div>
 					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> RenJS <span class="hljs-keyword">from</span> <span class="hljs-string">"@renproject/ren"</span>;</code></pre>
 					<p>It&#39;s initialized with a network, which controls both the RenVM network and
 					Ethereum chain to use:</p>
 					<pre><code class="language-typescript"><span class="hljs-keyword">new</span> RenJS(); <span class="hljs-comment">// Same as `new RenJS("mainnet");`</span>
 <span class="hljs-keyword">new</span> RenJS(<span class="hljs-string">"testnet"</span>);
-
-<span class="hljs-keyword">import</span> { renMainnet } <span class="hljs-keyword">from</span> <span class="hljs-string">"@renproject/networks"</span>;
-<span class="hljs-keyword">new</span> RenJS({ ...renMainnet, lightnodeURL: <span class="hljs-string">"custom lightnode URL"</span> });</code></pre>
+<span class="hljs-keyword">new</span> RenJS({ ...NetworkMainnet, lightnodeURL: <span class="hljs-string">"custom lightnode URL"</span> });</code></pre>
 					<p>A second optional parameter lets you provide a RenVM RPC provider or a
-					lightnode URL. See the <a href="renjs.html#constructor">constructor</a> for more details.</p>
+					lightnode URL.</p>
 					<p>It then exposes two main functions:</p>
 					<ol>
 						<li><a href="renjs.html#lockandmint">lockAndMint</a> - for transferring assets to Ethereum.</li>
@@ -137,37 +135,33 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>RenJS<span class="tsd-signature-symbol">(</span>network<span class="tsd-signature-symbol">?: </span><a href="../globals.html#rennetworkdetails" class="tsd-signature-type">RenNetworkDetails</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, providerOrConfig<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/provider.html" class="tsd-signature-type">Provider</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/renjsconfig.html" class="tsd-signature-type">RenJSConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="renjs.html" class="tsd-signature-type">RenJS</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>RenJS<span class="tsd-signature-symbol">(</span>network<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">RenNetworkDetails</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, providerOrConfig<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/provider.html" class="tsd-signature-type">Provider</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/renjsconfig.html" class="tsd-signature-type">RenJSConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="renjs.html" class="tsd-signature-type">RenJS</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L79">ren/src/index.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L59">ren/src/index.ts:59</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Accepts the name of a network, or a network object.</p>
+									<p>Takes a Network object that contains relevant addresses.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> network: <a href="../globals.html#rennetworkdetails" class="tsd-signature-type">RenNetworkDetails</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> network: <span class="tsd-signature-type">RenNetworkDetails</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>Provide the name of a network - <code>&quot;mainnet&quot;</code> or <code>&quot;testnet&quot;</code> - or a network object.</p>
+											<p>One of &quot;mainnet&quot; (or empty), &quot;testnet&quot; or a custom
+											Network object.</p>
 										</div>
 									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> providerOrConfig: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/provider.html" class="tsd-signature-type">Provider</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/renjsconfig.html" class="tsd-signature-type">RenJSConfig</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<div class="lead">
-											<p>Provide a custom RPC provider, or provide RenJS configuration settings.</p>
-										</div>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="renjs.html" class="tsd-signature-type">RenJS</a></h4>
@@ -183,17 +177,17 @@
 					<div class="tsd-signature tsd-kind-icon">logger<span class="tsd-signature-symbol">:</span> <a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L79">ren/src/index.ts:79</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L59">ren/src/index.ts:59</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="network" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> network</h3>
-					<div class="tsd-signature tsd-kind-icon">network<span class="tsd-signature-symbol">:</span> <a href="../globals.html#rennetworkdetails" class="tsd-signature-type">RenNetworkDetails</a></div>
+					<div class="tsd-signature tsd-kind-icon">network<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RenNetworkDetails</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L77">ren/src/index.ts:77</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L57">ren/src/index.ts:57</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -203,7 +197,7 @@
 					<div class="tsd-signature tsd-kind-icon">renVM<span class="tsd-signature-symbol">:</span> <a href="renvmprovider.html" class="tsd-signature-type">RenVMProvider</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L76">ren/src/index.ts:76</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L56">ren/src/index.ts:56</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -213,7 +207,7 @@
 					<div class="tsd-signature tsd-kind-icon">utils<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><a href="../globals.html#utils.__type" class="tsd-signature-type">__type</a><span class="tsd-signature-symbol"> = utils</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L75">ren/src/index.ts:75</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L55">ren/src/index.ts:55</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -223,7 +217,7 @@
 					<div class="tsd-signature tsd-kind-icon">Chains<span class="tsd-signature-symbol">:</span> <a href="../enums/chain.html" class="tsd-signature-type">Chain</a><span class="tsd-signature-symbol"> = Chain</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L67">ren/src/index.ts:67</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L51">ren/src/index.ts:51</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -233,15 +227,9 @@
 					<div class="tsd-signature tsd-kind-icon">Network<wbr>Details<span class="tsd-signature-symbol">:</span> <a href="../interfaces/networkdetails.html" class="tsd-signature-type">NetworkDetails</a><span class="tsd-signature-symbol"> = NetworkDetails</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L65">ren/src/index.ts:65</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L50">ren/src/index.ts:50</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p><code>NetworkDetails</code> exposes the network details for each network.
-							<code>NetworkDetails.Mainnet</code> resolves to <code>require(&quot;@renproject/networks&quot;).renMainnet</code>.</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="networks" class="tsd-anchor"></a>
@@ -249,15 +237,9 @@
 					<div class="tsd-signature tsd-kind-icon">Networks<span class="tsd-signature-symbol">:</span> <a href="../enums/rennetwork.html" class="tsd-signature-type">RenNetwork</a><span class="tsd-signature-symbol"> = RenNetwork</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L59">ren/src/index.ts:59</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L49">ren/src/index.ts:49</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p><code>Networks</code> exposes the network options that can be passed in to the RenJS
-							constructor. <code>Networks.Mainnet</code> resolves to the string <code>&quot;mainnet&quot;</code>.</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="tokens" class="tsd-anchor"></a>
@@ -265,15 +247,9 @@
 					<div class="tsd-signature tsd-kind-icon">Tokens<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>BCH<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Bch2Eth<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Burn<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Eth2Bch<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Mint<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>BTC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Btc2Eth<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Burn<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Eth2Btc<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Mint<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>ZEC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Burn<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Eth2Zec<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Mint<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol">; </span>Zec2Eth<span class="tsd-signature-symbol">: </span><a href="../enums/rencontract.html" class="tsd-signature-type">RenContract</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = Tokens</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L53">ren/src/index.ts:53</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L48">ren/src/index.ts:48</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p><code>Tokens</code> exposes the tokens that can be passed in to the lockAndMint and
-							burnAndRelease methods.</p>
-						</div>
-					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -337,14 +313,9 @@
 					<div class="tsd-signature tsd-kind-icon">utils<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><a href="../globals.html#utils.__type" class="tsd-signature-type">__type</a><span class="tsd-signature-symbol"> = utils</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L72">ren/src/index.ts:72</a></li>
+							<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L52">ren/src/index.ts:52</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p><code>utils</code> exposes helper functions, including helpers for BTC, BCH and ZEC.</p>
-						</div>
-					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -359,7 +330,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L159">ren/src/index.ts:159</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L116">ren/src/index.ts:116</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -393,7 +364,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L172">ren/src/index.ts:172</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L129">ren/src/index.ts:129</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/unmarshalledfees.html" class="tsd-signature-type">UnmarshalledFees</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -410,7 +381,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L170">ren/src/index.ts:170</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L127">ren/src/index.ts:127</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -436,7 +407,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L169">ren/src/index.ts:169</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L126">ren/src/index.ts:126</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -462,34 +433,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/886105c/packages/lib/ren/src/index.ts#L143">ren/src/index.ts:143</a></li>
+									<li>Defined in <a href="https://github.com/renproject/ren-js/blob/0bf6743/packages/lib/ren/src/index.ts#L100">ren/src/index.ts:100</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p><code>lockAndMint</code> initiates the process of bridging an asset from its native
-									chain to a host chain.</p>
+									<p>Submits the commitment and transaction to RenVM, and then submits the
+									signature to the adapter address.</p>
 								</div>
-								<p>Example initialization:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> lockAndMint = renJS.lockAndMint({
-    <span class="hljs-comment">// Bridge BTC from Bitcoin to Ethereum</span>
-    <span class="hljs-attr">sendToken</span>: RenJS.Tokens.BTC.Btc2Eth,
-
-    <span class="hljs-comment">// Unique value to generate unique deposit address.</span>
-    <span class="hljs-attr">nonce</span>: RenJS.utils.randomNonce(),
-
-    <span class="hljs-comment">// Contract to be called for Ethereum</span>
-    <span class="hljs-attr">contractCalls</span>: [{
-        <span class="hljs-attr">sendTo</span>: <span class="hljs-string">"0xb2731C04610C10f2eB6A26ad14E607d44309FC10"</span>,
-        <span class="hljs-attr">contractFn</span>: <span class="hljs-string">"deposit"</span>,
-        <span class="hljs-attr">contractParams</span>: [{
-            <span class="hljs-attr">name</span>: <span class="hljs-string">"_msg"</span>,
-            <span class="hljs-attr">type</span>: <span class="hljs-string">"bytes"</span>,
-            <span class="hljs-attr">value</span>: web3.utils.fromAscii(<span class="hljs-string">`Depositing BTC`</span>),
-        }],
-        <span class="hljs-attr">txConfig</span>: { <span class="hljs-attr">gas</span>: <span class="hljs-number">500000</span> }
-    }],
-});</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -503,6 +454,7 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="lockandmint.html" class="tsd-signature-type">LockAndMint</a></h4>
+							<p>An instance of <a href="../enums/eventtype.html#lockandmint">LockAndMint</a>.</p>
 						</li>
 					</ul>
 				</section>
