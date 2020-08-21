@@ -284,8 +284,10 @@
 								<li class="tsd-kind-variable"><a href="globals.html#generatephash" class="tsd-kind-icon">generatePHash</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#generatesighash" class="tsd-kind-icon">generate<wbr>Sighash</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#getbitcoincashconfirmations" class="tsd-kind-icon">get<wbr>Bitcoin<wbr>Cash<wbr>Confirmations</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#getbitcoincashutxo" class="tsd-kind-icon">get<wbr>Bitcoin<wbr>CashUTXO</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#getbitcoincashutxos" class="tsd-kind-icon">get<wbr>Bitcoin<wbr>CashUTXOs</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#getbitcoinconfirmations" class="tsd-kind-icon">get<wbr>Bitcoin<wbr>Confirmations</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#getbitcoinutxo" class="tsd-kind-icon">get<wbr>BitcoinUTXO</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#getbitcoinutxos" class="tsd-kind-icon">get<wbr>BitcoinUTXOs</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#getelement" class="tsd-kind-icon">get<wbr>Element</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#getgatewayaddress" class="tsd-kind-icon">get<wbr>Gateway<wbr>Address</a></li>
@@ -293,6 +295,7 @@
 								<li class="tsd-kind-variable"><a href="globals.html#gettokenname" class="tsd-kind-icon">get<wbr>Token<wbr>Name</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#gettokenprices" class="tsd-kind-icon">get<wbr>Token<wbr>Prices</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#getzcashconfirmations" class="tsd-kind-icon">get<wbr>Zcash<wbr>Confirmations</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#getzcashutxo" class="tsd-kind-icon">get<wbr>ZcashUTXO</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#getzcashutxos" class="tsd-kind-icon">get<wbr>ZcashUTXOs</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#hash160" class="tsd-kind-icon">hash160</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#ignorepromieventerror" class="tsd-kind-icon">ignore<wbr>Promi<wbr>Event<wbr>Error</a></li>
@@ -317,8 +320,8 @@
 								<li class="tsd-kind-variable"><a href="globals.html#resolveouttoken" class="tsd-kind-icon">resolve<wbr>Out<wbr>Token</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#resolvesendcall" class="tsd-kind-icon">resolve<wbr>Send<wbr>Call</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#resolvesendto" class="tsd-kind-icon">resolve<wbr>Send<wbr>To</a></li>
-								<li class="tsd-kind-variable"><a href="globals.html#retrieveconfirmations" class="tsd-kind-icon">retrieve<wbr>Confirmations</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#retrievedeposits" class="tsd-kind-icon">retrieve<wbr>Deposits</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#retrieveutxo" class="tsd-kind-icon">retrieveUTXO</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#retryntimes" class="tsd-kind-icon">retryNTimes</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#signaturetostring" class="tsd-kind-icon">signature<wbr>ToString</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#sleep" class="tsd-kind-icon">sleep</a></li>
@@ -1166,7 +1169,7 @@
 					<div class="tsd-signature tsd-kind-icon">BURN_<wbr>TOPIC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils/build/main/ethereumUtils.d.ts:4</li>
+							<li>Defined in utils/build/main/ethereumUtils.d.ts:5</li>
 						</ul>
 					</aside>
 				</section>
@@ -1595,7 +1598,7 @@
 					<div class="tsd-signature tsd-kind-icon">any<wbr>Address<wbr>From<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>isAnyAddress<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span>, __namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>decoders<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>encoders<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>buffer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in chains/build/main/btc.d.ts:14</li>
+							<li>Defined in chains/build/main/btc.d.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1707,7 +1710,7 @@
 					<div class="tsd-signature tsd-kind-icon">bch<wbr>Address<wbr>From<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in chains/build/main/bch.d.ts:9</li>
+							<li>Defined in chains/build/main/bch.d.ts:12</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1738,7 +1741,7 @@
 					<div class="tsd-signature tsd-kind-icon">bch<wbr>Address<wbr>ToHex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in chains/build/main/bch.d.ts:8</li>
+							<li>Defined in chains/build/main/bch.d.ts:11</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1779,7 +1782,7 @@
 					<div class="tsd-signature tsd-kind-icon">btc<wbr>Address<wbr>From<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in chains/build/main/btc.d.ts:15</li>
+							<li>Defined in chains/build/main/btc.d.ts:18</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1810,7 +1813,7 @@
 					<div class="tsd-signature tsd-kind-icon">btc<wbr>Address<wbr>ToHex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in chains/build/main/btc.d.ts:9</li>
+							<li>Defined in chains/build/main/btc.d.ts:12</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -2054,7 +2057,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Account<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"No accounts found in Web3 wallet."</span><span class="tsd-signature-symbol"> = &quot;No accounts found in Web3 wallet.&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils/build/main/ethereumUtils.d.ts:17</li>
+							<li>Defined in utils/build/main/ethereumUtils.d.ts:18</li>
 						</ul>
 					</aside>
 				</section>
@@ -2082,7 +2085,7 @@
 					<div class="tsd-signature tsd-kind-icon">extract<wbr>Burn<wbr>Reference<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>web3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Web3</span>, txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils/build/main/ethereumUtils.d.ts:16</li>
+							<li>Defined in utils/build/main/ethereumUtils.d.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -2591,6 +2594,63 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="getbitcoincashutxo" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Bitcoin<wbr>CashUTXO</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>Bitcoin<wbr>CashUTXO<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>isTestnet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vOut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in chains/build/main/bch.d.ts:8</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>isTestnet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vOut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>isTestnet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></h5>
+												<ul class="tsd-parameters">
+													<li class="tsd-parameter">
+														<h5>is<wbr>Testnet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vOut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter-signature">
+												<ul class="tsd-signatures tsd-kind-type-literal">
+													<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vOut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></li>
+												</ul>
+												<ul class="tsd-descriptions">
+													<li class="tsd-description">
+														<h4 class="tsd-parameters-title">Parameters</h4>
+														<ul class="tsd-parameters">
+															<li>
+																<h5>txHash: <span class="tsd-signature-type">string</span></h5>
+															</li>
+															<li>
+																<h5>vOut: <span class="tsd-signature-type">number</span></h5>
+															</li>
+														</ul>
+														<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></h4>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="getbitcoincashutxos" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Bitcoin<wbr>CashUTXOs</h3>
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Bitcoin<wbr>CashUTXOs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>isTestnet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, confirmations<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -2691,6 +2751,63 @@
 															</li>
 														</ul>
 														<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="getbitcoinutxo" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>BitcoinUTXO</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>BitcoinUTXO<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>isTestnet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vOut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in chains/build/main/btc.d.ts:9</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>isTestnet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vOut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>isTestnet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></h5>
+												<ul class="tsd-parameters">
+													<li class="tsd-parameter">
+														<h5>is<wbr>Testnet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vOut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter-signature">
+												<ul class="tsd-signatures tsd-kind-type-literal">
+													<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vOut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></li>
+												</ul>
+												<ul class="tsd-descriptions">
+													<li class="tsd-description">
+														<h4 class="tsd-parameters-title">Parameters</h4>
+														<ul class="tsd-parameters">
+															<li>
+																<h5>txHash: <span class="tsd-signature-type">string</span></h5>
+															</li>
+															<li>
+																<h5>vOut: <span class="tsd-signature-type">number</span></h5>
+															</li>
+														</ul>
+														<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></h4>
 													</li>
 												</ul>
 											</li>
@@ -2972,6 +3089,63 @@
 															</li>
 														</ul>
 														<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="getzcashutxo" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>ZcashUTXO</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>ZcashUTXO<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>isTestnet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vOut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in chains/build/main/zec.d.ts:8</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>isTestnet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vOut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>isTestnet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></h5>
+												<ul class="tsd-parameters">
+													<li class="tsd-parameter">
+														<h5>is<wbr>Testnet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vOut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter-signature">
+												<ul class="tsd-signatures tsd-kind-type-literal">
+													<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>txHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vOut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></li>
+												</ul>
+												<ul class="tsd-descriptions">
+													<li class="tsd-description">
+														<h4 class="tsd-parameters-title">Parameters</h4>
+														<ul class="tsd-parameters">
+															<li>
+																<h5>txHash: <span class="tsd-signature-type">string</span></h5>
+															</li>
+															<li>
+																<h5>vOut: <span class="tsd-signature-type">number</span></h5>
+															</li>
+														</ul>
+														<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">UTXO</span><span class="tsd-signature-symbol">&gt;</span></h4>
 													</li>
 												</ul>
 											</li>
@@ -3644,7 +3818,7 @@
 					<div class="tsd-signature tsd-kind-icon">raw<wbr>Encode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>types<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span>, parameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Buffer</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils/build/main/ethereumUtils.d.ts:19</li>
+							<li>Defined in utils/build/main/ethereumUtils.d.ts:20</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -3880,45 +4054,6 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
-					<a name="retrieveconfirmations" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> retrieve<wbr>Confirmations</h3>
-					<div class="tsd-signature tsd-kind-icon">retrieve<wbr>Confirmations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>_network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RenNetworkDetails</span>, transaction<span class="tsd-signature-symbol">: </span><a href="globals.html#tx" class="tsd-signature-type">Tx</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in utils/build/main/chains.d.ts:19</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Returns the number of confirmations for the specified UTXO.</p>
-						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-signature">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>_network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RenNetworkDetails</span>, transaction<span class="tsd-signature-symbol">: </span><a href="globals.html#tx" class="tsd-signature-type">Tx</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>_network: <span class="tsd-signature-type">RenNetworkDetails</span></h5>
-											</li>
-											<li>
-												<h5>transaction: <a href="globals.html#tx" class="tsd-signature-type">Tx</a></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="retrievedeposits" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> retrieve<wbr>Deposits</h3>
 					<div class="tsd-signature tsd-kind-icon">retrieve<wbr>Deposits<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>_network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RenNetworkDetails</span>, renContract<span class="tsd-signature-symbol">: </span><a href="enums/rencontract.html" class="tsd-signature-type">RenContract</a>, address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, confirmations<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#utxowithchain" class="tsd-signature-type">UTXOWithChain</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -3959,6 +4094,48 @@
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#utxowithchain" class="tsd-signature-type">UTXOWithChain</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="retrieveutxo" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> retrieveUTXO</h3>
+					<div class="tsd-signature tsd-kind-icon">retrieveUTXO<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>_network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RenNetworkDetails</span>, chain<span class="tsd-signature-symbol">: </span><a href="enums/chain.html" class="tsd-signature-type">Chain</a>, transaction<span class="tsd-signature-symbol">: </span><a href="interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/utxo.html" class="tsd-signature-type">UTXO</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in utils/build/main/chains.d.ts:19</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Returns the number of confirmations for the specified UTXO.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>_network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RenNetworkDetails</span>, chain<span class="tsd-signature-symbol">: </span><a href="enums/chain.html" class="tsd-signature-type">Chain</a>, transaction<span class="tsd-signature-symbol">: </span><a href="interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/utxo.html" class="tsd-signature-type">UTXO</a><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>_network: <span class="tsd-signature-type">RenNetworkDetails</span></h5>
+											</li>
+											<li>
+												<h5>chain: <a href="enums/chain.html" class="tsd-signature-type">Chain</a></h5>
+											</li>
+											<li>
+												<h5>transaction: <a href="interfaces/utxoindex.html" class="tsd-signature-type">UTXOIndex</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/utxo.html" class="tsd-signature-type">UTXO</a><span class="tsd-signature-symbol">&gt;</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -4737,10 +4914,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="waitforreceipt" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> wait<wbr>For<wbr>Receipt</h3>
-					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Receipt<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>web3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Web3</span>, transactionHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionReceipt</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Receipt<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>web3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Web3</span>, transactionHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, blocknative<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">BlocknativeSdk</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionReceipt</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils/build/main/ethereumUtils.d.ts:15</li>
+							<li>Defined in utils/build/main/ethereumUtils.d.ts:16</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -4766,7 +4943,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>web3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Web3</span>, transactionHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionReceipt</span><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>web3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Web3</span>, transactionHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, blocknative<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">BlocknativeSdk</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionReceipt</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -4777,6 +4954,9 @@
 											</li>
 											<li>
 												<h5>transactionHash: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> blocknative: <span class="tsd-signature-type">BlocknativeSdk</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionReceipt</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -4792,7 +4972,7 @@
 					<div class="tsd-signature tsd-kind-icon">with<wbr>Default<wbr>Account<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>web3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Web3</span>, config<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TransactionConfig</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionConfig</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils/build/main/ethereumUtils.d.ts:18</li>
+							<li>Defined in utils/build/main/ethereumUtils.d.ts:19</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -4826,7 +5006,7 @@
 					<div class="tsd-signature tsd-kind-icon">zec<wbr>Address<wbr>From<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in chains/build/main/zec.d.ts:9</li>
+							<li>Defined in chains/build/main/zec.d.ts:12</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -4857,7 +5037,7 @@
 					<div class="tsd-signature tsd-kind-icon">zec<wbr>Address<wbr>ToHex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in chains/build/main/zec.d.ts:8</li>
+							<li>Defined in chains/build/main/zec.d.ts:11</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -5475,10 +5655,16 @@
 						<a href="globals.html#getbitcoincashconfirmations" class="tsd-kind-icon">get<wbr>Bitcoin<wbr>Cash<wbr>Confirmations</a>
 					</li>
 					<li class=" tsd-kind-variable">
+						<a href="globals.html#getbitcoincashutxo" class="tsd-kind-icon">get<wbr>Bitcoin<wbr>CashUTXO</a>
+					</li>
+					<li class=" tsd-kind-variable">
 						<a href="globals.html#getbitcoincashutxos" class="tsd-kind-icon">get<wbr>Bitcoin<wbr>CashUTXOs</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#getbitcoinconfirmations" class="tsd-kind-icon">get<wbr>Bitcoin<wbr>Confirmations</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getbitcoinutxo" class="tsd-kind-icon">get<wbr>BitcoinUTXO</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#getbitcoinutxos" class="tsd-kind-icon">get<wbr>BitcoinUTXOs</a>
@@ -5500,6 +5686,9 @@
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#getzcashconfirmations" class="tsd-kind-icon">get<wbr>Zcash<wbr>Confirmations</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getzcashutxo" class="tsd-kind-icon">get<wbr>ZcashUTXO</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#getzcashutxos" class="tsd-kind-icon">get<wbr>ZcashUTXOs</a>
@@ -5574,10 +5763,10 @@
 						<a href="globals.html#resolvesendto" class="tsd-kind-icon">resolve<wbr>Send<wbr>To</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#retrieveconfirmations" class="tsd-kind-icon">retrieve<wbr>Confirmations</a>
+						<a href="globals.html#retrievedeposits" class="tsd-kind-icon">retrieve<wbr>Deposits</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#retrievedeposits" class="tsd-kind-icon">retrieve<wbr>Deposits</a>
+						<a href="globals.html#retrieveutxo" class="tsd-kind-icon">retrieveUTXO</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#retryntimes" class="tsd-kind-icon">retryNTimes</a>
@@ -5695,5 +5884,6 @@
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
