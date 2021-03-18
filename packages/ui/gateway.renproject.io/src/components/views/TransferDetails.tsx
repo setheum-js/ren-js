@@ -83,6 +83,7 @@ export const TransferDetails: React.FC<Props> = ({ transfer, fees }) => {
     );
 
     let feeString: React.ReactNode = "";
+    let tooltipString = <>25 BPS (0.25%)</>;
     try {
         const transferFee =
             fees &&
@@ -107,6 +108,11 @@ export const TransferDetails: React.FC<Props> = ({ transfer, fees }) => {
                 {asset.toUpperCase()}
             </>
         );
+        if (darknodeFee) {
+            tooltipString = (
+                <>{darknodeFee} BPS ({(darknodeFee / 10000) * 100}%)</>
+            );
+        }
     } catch (error) {
         console.error(error);
     }
@@ -150,7 +156,7 @@ export const TransferDetails: React.FC<Props> = ({ transfer, fees }) => {
                         width={300}
                         contents={
                             <>
-                                A 10 BPS (0.1%) fee is applied per mint or
+                                A {tooltipString} fee is applied per mint or
                                 release and is distributed to all active
                                 Darknodes. There is also a 16K{" "}
                                 {asset === Asset.ZEC ? "Zats" : "Sats"} fee for
