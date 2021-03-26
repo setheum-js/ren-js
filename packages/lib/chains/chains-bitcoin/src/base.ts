@@ -17,7 +17,6 @@ import {
     utilsWithChainNetwork,
 } from "@renproject/utils";
 import BigNumber from "bignumber.js";
-import { Networks, Opcode, Script } from "bitcore-lib";
 import base58 from "bs58";
 import { APIWithPriority, BitcoinAPI, CombinedAPI, UTXO } from "./APIs/API";
 import { Blockchair, BlockchairNetwork } from "./APIs/blockchair";
@@ -89,8 +88,8 @@ export abstract class BitcoinBaseChain
     // Utils
     public static utils = {
         p2shPrefix: {} as { [network: string]: Buffer },
-        createAddress: createAddress(base58.encode, Networks, Opcode, Script),
-        calculatePubKeyScript: calculatePubKeyScript(Networks, Opcode, Script),
+        createAddress: createAddress(base58.encode),
+        calculatePubKeyScript: calculatePubKeyScript,
         addressIsValid: (
             _address: BtcAddress | string,
             _network:
@@ -254,7 +253,6 @@ export abstract class BitcoinBaseChain
         this.assertAssetIsSupported(asset);
         const isTestnet = this.chainNetwork === "testnet";
         return this.utils.createAddress(
-            isTestnet,
             hash160(publicKey),
             gHash,
             this.utils.p2shPrefix[isTestnet ? "testnet" : "mainnet"],

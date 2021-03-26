@@ -5,7 +5,6 @@ import {
     RenNetworkString,
 } from "@renproject/interfaces";
 import { Callable, utilsWithChainNetwork } from "@renproject/utils";
-import { Networks, Opcode, Script } from "@CoinSpace/bitcore-lib-dogecoin";
 import base58 from "bs58";
 import { Blockchair, BlockchairNetwork } from "./APIs/blockchair";
 import { SoChain, SoChainNetwork } from "./APIs/sochain";
@@ -46,8 +45,8 @@ export class DogecoinClass extends BitcoinClass {
             mainnet: Buffer.from([0x16]),
             testnet: Buffer.from([0xc4]),
         },
-        createAddress: createAddress(base58.encode, Networks, Opcode, Script),
-        calculatePubKeyScript: pubKeyScript(Networks, Opcode, Script),
+        createAddress: createAddress(base58.encode),
+        calculatePubKeyScript: pubKeyScript,
         addressIsValid: (
             address: BtcAddress | string,
             network:

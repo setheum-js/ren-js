@@ -5,7 +5,6 @@ import {
     RenNetworkString,
 } from "@renproject/interfaces";
 import { Callable, utilsWithChainNetwork } from "@renproject/utils";
-import { Networks, Opcode, Script } from "bitcore-lib-zcash";
 import base58 from "bs58";
 import { Insight } from "./APIs/insight";
 import { SoChain, SoChainNetwork } from "./APIs/sochain";
@@ -59,8 +58,8 @@ export class ZcashClass extends BitcoinClass {
             mainnet: Buffer.from([0x1c, 0xbd]),
             testnet: Buffer.from([0x1c, 0xba]),
         },
-        createAddress: createAddress(base58.encode, Networks, Opcode, Script),
-        calculatePubKeyScript: pubKeyScript(Networks, Opcode, Script),
+        createAddress: createAddress(base58.encode),
+        calculatePubKeyScript: pubKeyScript,
         addressIsValid: (
             address: BtcAddress | string,
             network:

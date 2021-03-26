@@ -7,7 +7,6 @@ import {
 } from "@renproject/interfaces";
 import { Callable, utilsWithChainNetwork } from "@renproject/utils";
 import { createAddress, pubKeyScript as calculatePubKeyScript } from "./script";
-import { Networks, Opcode, Script } from "bitcore-lib";
 
 import {
     BtcAddress,
@@ -65,8 +64,8 @@ export class BitcoinClass
             mainnet: Buffer.from([0x05]),
             testnet: Buffer.from([0xc4]),
         },
-        createAddress: createAddress(base58.encode, Networks, Opcode, Script),
-        calculatePubKeyScript: calculatePubKeyScript(Networks, Opcode, Script),
+        createAddress: createAddress(base58.encode),
+        calculatePubKeyScript: calculatePubKeyScript,
         addressIsValid: (
             address: BtcAddress | string,
             network:

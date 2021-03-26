@@ -46,7 +46,7 @@ export class DigiByteClass extends BitcoinClass {
             testnet: Buffer.from([0x8c]),
         },
         createAddress: createAddress(base58.encode),
-        calculatePubKeyScript: pubKeyScript(),
+        calculatePubKeyScript: pubKeyScript,
         addressIsValid: (
             address: BtcAddress | string,
             network:
