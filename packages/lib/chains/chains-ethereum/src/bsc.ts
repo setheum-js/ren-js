@@ -9,8 +9,8 @@ import { provider } from "web3-providers";
 import { EthAddress, EthTransaction, NetworkInput } from "./base";
 
 import { EthereumClass } from "./ethereum";
-import { EthereumConfig } from "./networks";
-import { addressIsValid, findTransactionBySigHash } from "./utils";
+import { EthereumConfig } from "./utils/networks";
+import { addressIsValid, findTransactionBySigHash } from "./utils/utils";
 
 export const renBscTestnet: EthereumConfig = {
     name: "BSC Testnet",

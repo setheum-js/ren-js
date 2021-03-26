@@ -31,7 +31,7 @@ import { EventEmitter } from "events";
 import Web3 from "web3";
 import { Log, TransactionConfig, TransactionReceipt } from "web3-core";
 import { keccak256 as web3Keccak256 } from "web3-utils";
-import { EthAddress, EthTransaction } from "./base";
+import { EthAddress, EthTransaction } from "../base";
 
 import { EthereumConfig } from "./networks";
 

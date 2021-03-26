@@ -14,7 +14,7 @@ import { TransactionConfig } from "web3-core";
 import { provider } from "web3-providers";
 
 import { EthAddress, EthereumBaseChain, EthTransaction } from "./base";
-import { EthereumConfig } from "./networks";
+import { EthereumConfig } from "./utils/networks";
 
 export class EthereumClass
     extends EthereumBaseChain

@@ -32,7 +32,7 @@ import {
     renMainnetVDot3,
     renTestnet,
     renTestnetVDot3,
-} from "./networks";
+} from "./utils/networks";
 import {
     addressIsValid,
     extractBurnDetails,
@@ -45,7 +45,7 @@ import {
     manualPromiEvent,
     submitToEthereum,
     withDefaultAccount,
-} from "./utils";
+} from "./utils/utils";
 
 export const EthereumConfigMap = {
     [RenNetwork.Mainnet]: renMainnet,
