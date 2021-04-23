@@ -13,7 +13,7 @@ import {
     TxStatus,
     TxStatusIndex,
 } from "@renproject/interfaces";
-import { AbstractRenVMProvider } from "@renproject/rpc";
+import { ProviderInterface } from "@renproject/provider";
 import {
     assertObject,
     assertType,
@@ -51,7 +51,7 @@ interface MintState {
 }
 
 interface MintStatePartial {
-    renNetwork: RenNetworkDetails;
+    renNetwork: string;
     gPubKey: Buffer;
     gHash: Buffer;
     pHash: Buffer;
@@ -138,7 +138,7 @@ export class LockAndMint<
     >;
 
     /** See [[RenJS.renVM]]. */
-    public renVM: AbstractRenVMProvider;
+    public renVM: ProviderInterface;
 
     /**
      * Internal state of the mint object, including the `gHash` and `pHash`.
@@ -167,7 +167,7 @@ export class LockAndMint<
      * @hidden - should be created using [[RenJS.lockAndMint]] instead.
      */
     constructor(
-        renVM: AbstractRenVMProvider,
+        renVM: ProviderInterface,
         params: LockAndMintParams<
             LockTransaction,
             LockDeposit,
@@ -619,7 +619,7 @@ export class LockAndMintDeposit<
     public status: DepositStatus;
 
     /** See [[RenJS.renVM]]. */
-    public renVM: AbstractRenVMProvider;
+    public renVM: ProviderInterface;
 
     public mintTransaction?: MintTransaction;
     public revertReason?: string;
@@ -640,7 +640,7 @@ export class LockAndMintDeposit<
             MintTransaction,
             MintAddress
         >,
-        renVM: AbstractRenVMProvider,
+        renVM: ProviderInterface,
         state: MintState & MintStatePartial,
     ) {
         assertObject(

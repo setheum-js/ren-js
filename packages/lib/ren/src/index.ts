@@ -1,6 +1,7 @@
 import {
     BurnAndReleaseParams,
     DepositCommon,
+    getRenNetworkDetails,
     LockAndMintParams,
     LockChain,
     Logger,
@@ -11,7 +12,7 @@ import {
     RenNetworkString,
     SimpleLogger,
 } from "@renproject/interfaces";
-import { AbstractRenVMProvider, CombinedProvider } from "@renproject/rpc";
+import { ProviderInterface, RenVMProvider } from "@renproject/provider";
 import {
     fromSmallestUnit,
     randomNonce,
@@ -96,13 +97,13 @@ export default class RenJS {
 
     /**
      * RenVM provider exposing `sendMessage` and other helper functions for
-     * interacting with RenVM. See [[AbstractRenVMProvider]].
+     * interacting with RenVM. See [[ProviderInterface]].
      *
      * ```ts
      * renJS.renVM.sendMessage("ren_queryNumPeers", {});
      * ```
      */
-    public readonly renVM: AbstractRenVMProvider;
+    public readonly renVM: ProviderInterface;
 
     private readonly _logger: Logger;
 
@@ -119,7 +120,7 @@ export default class RenJS {
             | RenNetwork
             | RenNetworkString
             | RenNetworkDetails
-            | AbstractRenVMProvider
+            | ProviderInterface
             | null
             | undefined,
         config?: RenJSConfig,
@@ -143,18 +144,25 @@ export default class RenJS {
 
         this._config.logger = this._logger;
 
+        const network = (providerOrNetwork || RenNetwork.Mainnet) as
+            | RenNetwork
+            | RenNetworkString
+            | RenNetworkDetails;
+
+        const isProvider = (p: any): p is ProviderInterface => {
+            return p.sendMessage;
+        };
+
         // Use provided provider, provider URL or default lightnode URL.
         this.renVM =
             providerOrNetwork &&
             typeof providerOrNetwork !== "string" &&
-            (providerOrNetwork as AbstractRenVMProvider).sendMessage
-                ? (providerOrNetwork as AbstractRenVMProvider)
-                : new CombinedProvider(
+            isProvider(providerOrNetwork)
+                ? (providerOrNetwork as ProviderInterface)
+                : new RenVMProvider(
                       // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
-                      (providerOrNetwork || RenNetwork.Mainnet) as
-                          | RenNetwork
-                          | RenNetworkString
-                          | RenNetworkDetails,
+                      providerOrNetwork || RenNetwork.Mainnet,
+                      getRenNetworkDetails(network).lightnode,
                       this._logger,
                   );
     }

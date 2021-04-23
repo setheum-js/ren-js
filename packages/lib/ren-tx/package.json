@@ -47,7 +47,7 @@
     "devDependencies": {
         "@renproject/interfaces": "^2.1.7",
         "@renproject/ren": "^2.1.7",
-        "@renproject/rpc": "^2.1.7",
+        "@renproject/provider": "^2.1.7",
         "dotenv": "^8.2.0",
         "xstate": "^4.16.0"
     },

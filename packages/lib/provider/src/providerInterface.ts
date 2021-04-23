@@ -11,9 +11,9 @@ import {
     TxStatus,
 } from "@renproject/interfaces";
 import BigNumber from "bignumber.js";
-import { Provider } from "@renproject/provider";
+import { Provider } from "./jsonRPC";
 
-export interface AbstractRenVMProvider<
+export interface ProviderInterface<
     Requests extends {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         [event: string]: any;
@@ -127,9 +127,7 @@ export interface AbstractRenVMProvider<
      * Used to query what network a custom provider is connected to. LockAndMint
      * and BurnAndRelease use this to configure their chain parameters.
      */
-    getNetwork: (
-        selector: string,
-    ) => SyncOrPromise<RenNetwork | RenNetworkString | RenNetworkDetails>;
+    getNetwork: (selector: string) => SyncOrPromise<string>;
 
     /**
      * Look up the number of confirmations required by RenVM.

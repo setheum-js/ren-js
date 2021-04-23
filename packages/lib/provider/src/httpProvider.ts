@@ -20,19 +20,17 @@ export class HttpProvider<
     public readonly nodeURL: string;
     public readonly logger: Logger;
 
-    constructor(ipOrMultiaddress: string, logger: Logger = NullLogger) {
+    constructor(rpcUrl: string, logger: Logger = NullLogger) {
         this.logger = logger;
 
-        if (typeof ipOrMultiaddress !== "string") {
-            throw new Error(`Invalid node URL ${String(ipOrMultiaddress)}`);
+        if (typeof rpcUrl !== "string") {
+            throw new Error(`Invalid node URL ${String(rpcUrl)}`);
         }
 
-        if (ipOrMultiaddress.indexOf("://") === -1) {
-            throw new Error(
-                `Invalid node URL without protocol: ${ipOrMultiaddress}.`,
-            );
+        if (rpcUrl.indexOf("://") === -1) {
+            throw new Error(`Invalid node URL without protocol: ${rpcUrl}.`);
         }
-        this.nodeURL = ipOrMultiaddress;
+        this.nodeURL = rpcUrl;
     }
 
     public sendMessage = async <Method extends keyof Requests & string>(

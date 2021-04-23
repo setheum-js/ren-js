@@ -29,35 +29,9 @@ const ethereumConfig = {
         infura: "https://kovan.infura.io",
         etherscan: "https://kovan.etherscan.io",
     },
-    rinkeby: {
-        chain: "rinkeby",
-        isTestnet: true,
-        chainLabel: "Rinkeby",
-        networkID: 4,
-        infura: "https://rinkeby.infura.io",
-        etherscan: "https://rinkeby.etherscan.io",
-    },
 };
 
-export const renMainnet: EthereumConfig = {
-    name: "Mainnet",
-    ...ethereumConfig.mainnet,
-    addresses: {
-        GatewayRegistry: "0xe80d347DF1209a76DD9d2319d62912ba98C54DDD",
-        BasicAdapter: "0x32666B64e9fD0F44916E1378Efb2CFa3B3B96e80",
-    },
-};
-
-export const renTestnet: EthereumConfig = {
-    name: "Testnet",
-    ...ethereumConfig.kovan,
-    addresses: {
-        GatewayRegistry: "0x557e211EC5fc9a6737d2C6b7a1aDe3e0C11A8D5D",
-        BasicAdapter: "0x7DDFA2e5435027f6e13Ca8Db2f32ebd5551158Bb",
-    },
-};
-
-export const renDevnetVDot3: EthereumConfig = {
+export const renDevnet: EthereumConfig = {
     name: "Devnet v0.3",
     ...ethereumConfig.kovan,
     addresses: {
@@ -66,7 +40,7 @@ export const renDevnetVDot3: EthereumConfig = {
     },
 };
 
-export const renTestnetVDot3: EthereumConfig = {
+export const renTestnet: EthereumConfig = {
     name: "Testnet v0.3",
     ...ethereumConfig.kovan,
     addresses: {
@@ -75,7 +49,7 @@ export const renTestnetVDot3: EthereumConfig = {
     },
 };
 
-export const renMainnetVDot3: EthereumConfig = {
+export const renMainnet: EthereumConfig = {
     name: "Mainnet v0.3",
     ...ethereumConfig.mainnet,
     addresses: {

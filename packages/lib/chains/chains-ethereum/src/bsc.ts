@@ -50,9 +50,9 @@ export const renBscMainnet: EthereumConfig = {
 };
 
 export const BscConfigMap = {
-    [RenNetwork.TestnetVDot3]: renBscTestnet,
-    [RenNetwork.MainnetVDot3]: renBscMainnet,
-    [RenNetwork.DevnetVDot3]: renBscDevnet,
+    [RenNetwork.Testnet]: renBscTestnet,
+    [RenNetwork.Mainnet]: renBscMainnet,
+    [RenNetwork.Devnet]: renBscDevnet,
 };
 
 const resolveBSCNetwork = (
@@ -69,7 +69,7 @@ const resolveBSCNetwork = (
             renNetwork as RenNetwork | RenNetworkString | RenNetworkDetails,
         );
         return details.isTestnet
-            ? details.name === RenNetwork.DevnetVDot3
+            ? details.name === RenNetwork.Devnet
                 ? renBscDevnet
                 : renBscTestnet
             : renBscMainnet;

@@ -26,7 +26,7 @@ describe("Refactor - Burning", () => {
     it.skip("burning from contract", async function () {
         this.timeout(100000000000);
 
-        const network = RenNetwork.TestnetVDot3;
+        const network = RenNetwork.Testnet;
         // const ethNetwork = EthereumConfigMap[network];
         const ethNetwork = BscConfigMap[network];
 
@@ -141,7 +141,7 @@ describe("Refactor - Burning", () => {
     longIt("burning from address", async function () {
         this.timeout(100000000000);
 
-        const infuraURL = `${Chains.renTestnetVDot3.infura}/v3/${process.env.INFURA_KEY}`; // renBscTestnet.infura
+        const infuraURL = `${Chains.renTestnet.infura}/v3/${process.env.INFURA_KEY}`; // renBscTestnet.infura
         const provider = new HDWalletProvider(MNEMONIC, infuraURL, 0, 10);
 
         const asset = "BTC";
@@ -149,7 +149,7 @@ describe("Refactor - Burning", () => {
         const account = new CryptoAccount(PRIVATE_KEY, { network: "testnet" });
         const recipient = await account.address(asset);
 
-        const from = Chains.Ethereum(provider, Chains.renTestnetVDot3);
+        const from = Chains.Ethereum(provider, Chains.renTestnet);
         const to = Chains.Bitcoin().Address(recipient);
 
         const renJS = new RenJS("testnet");

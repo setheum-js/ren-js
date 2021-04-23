@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { Filecoin } from "@renproject/chains-filecoin";
-import { Ethereum, renTestnetVDot3 } from "@renproject/chains-ethereum";
+import { Ethereum, renTestnet } from "@renproject/chains-ethereum";
 import RenJS from "@renproject/ren";
 import { blue } from "chalk";
 import HDWalletProvider from "truffle-hdwallet-provider";
@@ -14,12 +14,10 @@ const MNEMONIC = process.env.MNEMONIC;
 const logLevel = LogLevel.Log;
 
 const main = async () => {
-    const renJS = new RenJS(RenNetwork.TestnetVDot3, { logLevel });
+    const renJS = new RenJS(RenNetwork.Testnet, { logLevel });
 
     // Initialize Ethereum provider.
-    const infuraURL = `${renTestnetVDot3.infura}/v3/${
-        process.env.INFURA_KEY || ""
-    }`; // renBscTestnet.infura
+    const infuraURL = `${renTestnet.infura}/v3/${process.env.INFURA_KEY || ""}`; // renBscTestnet.infura
     const provider = new HDWalletProvider(MNEMONIC, infuraURL, 0, 10);
 
     const burnAndRelease = await renJS.burnAndRelease({

@@ -36,7 +36,7 @@ describe("Refactor: mint", () => {
     longIt("mint to contract", async function () {
         this.timeout(100000000000);
 
-        const network = RenNetwork.TestnetVDot3;
+        const network = RenNetwork.Testnet;
         const asset = "BTC" as string;
         const from = Chains.Bitcoin();
         const ToClass = Chains.BinanceSmartChain;

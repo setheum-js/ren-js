@@ -64,90 +64,9 @@ export interface ChainCommon<
      */
     legacyName?: string;
 
-    /**
-     * Should be set by `constructor` or `initialize`.
-     */
-    renNetwork?: RenNetworkDetails;
-
-    // Class Initialization
-
-    /**
-     * `initialize` allows RenJS to pass in parameters after the user has
-     * initialized the Chain. This allows the user to pass in network
-     * parameters such as the network only once.
-     *
-     * If the Chain's constructor has an optional network parameter and the
-     * user has explicitly initialized it, the Chain should ignore the
-     * network passed in to `initialize`. This is to allow different network
-     * combinations, such as working with testnet Bitcoin and a local Ethereum
-     * chain - whereas the default `testnet` configuration would use testnet
-     * Bitcoin and Ethereum's Kovan testnet.
-     */
-    initialize: (
-        network: RenNetwork | RenNetworkString | RenNetworkDetails,
-    ) => SyncOrPromise<this>;
+    supportsRenNetwork(renNetwork: RenNetworkDetails): SyncOrPromise<boolean>;
 
     withProvider?: (...args: any[]) => SyncOrPromise<this>;
-
-    // Supported assets
-
-    /**
-     * `assetIsNative` should return true if the asset is native to the Chain.
-     * Mint-chains should return `false` for assets that have been bridged to
-     * it.
-     *
-     * ```ts
-     * ethereum.assetIsNative = asset => asset === "ETH" ||;
-     * ```
-     */
-    assetIsNative: (asset: string) => SyncOrPromise<boolean>;
-
-    /**
-     * `assetIsSupported` should return true if the the asset is native to the
-     * chain or if the asset can be minted onto the chain.
-     *
-     * ```ts
-     * ethereum.assetIsSupported = asset => asset === "ETH" || asset === "BTC" || ...;
-     * ```
-     */
-    assetIsSupported: (asset: string) => SyncOrPromise<boolean>;
-
-    /**
-     * `assetDecimals` should return the number of decimals of the asset.
-     *
-     * If the asset is not supported, an error should be thrown.
-     *
-     * ```ts
-     * bitcoin.assetDecimals = asset => {
-     *     if (asset === "BTC") { return 8; }
-     *     throw new Error(`Unsupported asset ${asset}.`);
-     * }
-     * ```
-     */
-    assetDecimals: (asset: string) => SyncOrPromise<number>;
-
-    // Transaction helpers
-
-    /**
-     * `transactionID` should return a string that uniquely represents the
-     * transaction.
-     */
-    transactionID: (transaction: Transaction) => string;
-
-    /**
-     * `transactionConfidence` should return a target and a current
-     * confidence that the deposit is irreversible. For most chains, this will
-     * be represented by the number of blocks that have passed.
-     *
-     * For example, a Bitcoin transaction with 2 confirmations will return
-     * `{ current: 2, target: 6 }` on mainnet, where the target is currently 6
-     * confirmations.
-     *
-     * @dev Must be compatible with the matching RenVM multichain LockChain.
-     */
-    transactionConfidence: (
-        transaction: Transaction,
-    ) => SyncOrPromise<{ current: number; target: number }>;
 
     transactionRPCFormat: (
         transaction: Transaction,
@@ -157,11 +76,89 @@ export interface ChainCommon<
         txindex: string;
     };
 
-    transactionFromID: (
-        txid: string | Buffer,
-        txindex: string,
-        reversed?: boolean,
-    ) => SyncOrPromise<Transaction>;
+    transactionConfidenceTarget: (
+        // Optionally accept transaction in case the target depends on the
+        // value of the transaction or some other factor.
+        transaction?: Transaction,
+    ) => SyncOrPromise<number>;
+
+    // Supported assets
+
+    utils: ChainStatic<Transaction, Address, Network>["utils"] & {
+        /**
+         * `assetIsNative` should return true if the asset is native to the Chain.
+         * Mint-chains should return `false` for assets that have been bridged to
+         * it.
+         *
+         * ```ts
+         * ethereum.assetIsNative = asset => asset === "ETH" ||;
+         * ```
+         */
+        assetIsNative: (asset: string) => SyncOrPromise<boolean>;
+
+        /**
+         * `assetIsSupported` should return true if the the asset is native to the
+         * chain or if the asset can be minted onto the chain.
+         *
+         * ```ts
+         * ethereum.assetIsSupported = asset => asset === "ETH" || asset === "BTC" || ...;
+         * ```
+         */
+        assetIsSupported: (asset: string) => SyncOrPromise<boolean>;
+
+        /**
+         * `assetDecimals` should return the number of decimals of the asset.
+         *
+         * If the asset is not supported, an error should be thrown.
+         *
+         * ```ts
+         * bitcoin.assetDecimals = asset => {
+         *     if (asset === "BTC") { return 8; }
+         *     throw new Error(`Unsupported asset ${asset}.`);
+         * }
+         * ```
+         */
+        assetDecimals: (asset: string) => SyncOrPromise<number>;
+
+        // Transaction helpers
+
+        /**
+         * `transactionID` should return a string that uniquely represents the
+         * transaction.
+         */
+        transactionID: (transaction: Transaction) => string;
+
+        /**
+         * `transactionConfidence` should return a target and a current
+         * confidence that the deposit is irreversible. For most chains, this will
+         * be represented by the number of blocks that have passed.
+         *
+         * For example, a Bitcoin transaction with 2 confirmations will return
+         * `{ current: 2, target: 6 }` on mainnet, where the target is currently 6
+         * confirmations.
+         *
+         * @dev Must be compatible with the matching RenVM multichain LockChain.
+         */
+        transactionConfidence: (
+            transaction: Transaction,
+        ) => SyncOrPromise<number>;
+
+        transactionFromID: (
+            txid: string | Buffer,
+            txindex: string,
+            config?: { reversed?: boolean },
+        ) => SyncOrPromise<Transaction>;
+
+        balanceOf: (
+            address: Address,
+            asset: string,
+        ) => SyncOrPromise<BigNumber>;
+
+        // Optionally provide utils for resolving and reverse-lookup of the,
+        // chain's native domain name system.
+        addressToLabel?: (address: Address) => SyncOrPromise<string>;
+        labelToAddress?: (label: string) => SyncOrPromise<Address>;
+    };
 }
 
 export type DepositCommon<Transaction = any> = {
@@ -345,9 +342,12 @@ export interface MintChain<
  */
 export interface ChainStatic<
     Transaction = any,
-    DepositAddress extends string | { address: string } = any,
+    Address extends string | { address: string } = any,
     Network = any
 > {
+    // To help with Intellisense, anything that a user might need to call should
+    // go in `utils`.
+
     utils: {
         // Map from a RenVM network to the chain's network.
         resolveChainNetwork(
@@ -366,13 +366,13 @@ export interface ChainStatic<
          * @param network
          */
         addressIsValid(
-            address: DepositAddress | string,
+            address: Address | string,
             network?:
                 | RenNetwork
                 | RenNetworkString
                 | RenNetworkDetails
                 | Network,
-        ): boolean;
+        ): SyncOrPromise<boolean>;
 
         /**
          * `addressExplorerLink` should return a URL that can be shown to a user
@@ -382,14 +382,14 @@ export interface ChainStatic<
          * It's up to the chain implementation to choose how to interpret this.
          */
         addressExplorerLink?: (
-            address: DepositAddress | string,
+            address: Address | string,
             network?:
                 | RenNetwork
                 | RenNetworkString
                 | RenNetworkDetails
                 | Network,
             explorer?: string,
-        ) => string | undefined;
+        ) => SyncOrPromise<string | undefined>;
 
         /**
          * `transactionExplorerLink` should return a URL that can be shown to a user
@@ -406,6 +406,6 @@ export interface ChainStatic<
                 | RenNetworkDetails
                 | Network,
             explorer?: string,
-        ) => string | undefined;
+        ) => SyncOrPromise<string | undefined>;
     };
 }

@@ -11,7 +11,7 @@ import {
     RenNetworkDetails,
     TxStatus,
 } from "@renproject/interfaces";
-import { AbstractRenVMProvider } from "@renproject/rpc";
+import { ProviderInterface } from "@renproject/provider";
 import {
     assertObject,
     assertType,
@@ -75,7 +75,7 @@ export class BurnAndRelease<
     public status: BurnAndReleaseStatus;
 
     /** See [[RenJS.renVM]]. */
-    public readonly renVM: AbstractRenVMProvider;
+    public readonly renVM: ProviderInterface;
 
     /**
      * Internal state of the burn object. Interface may change across minor and
@@ -96,7 +96,7 @@ export class BurnAndRelease<
 
     /** @hidden */
     constructor(
-        renVM: AbstractRenVMProvider,
+        renVM: ProviderInterface,
         params: BurnAndReleaseParams<
             LockTransaction,
             LockDeposit,

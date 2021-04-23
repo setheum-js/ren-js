@@ -25,14 +25,7 @@ import Web3 from "web3";
 import { TransactionConfig } from "web3-core";
 import { provider } from "web3-providers";
 
-import {
-    EthereumConfig,
-    renDevnetVDot3,
-    renMainnet,
-    renMainnetVDot3,
-    renTestnet,
-    renTestnetVDot3,
-} from "./networks";
+import { EthereumConfig, renMainnet, renTestnet, EthereumNetwork } from "./networks";
 import {
     addressIsValid,
     extractBurnDetails,
@@ -50,9 +43,7 @@ import {
 export const EthereumConfigMap = {
     [RenNetwork.Mainnet]: renMainnet,
     [RenNetwork.Testnet]: renTestnet,
-    [RenNetwork.MainnetVDot3]: renMainnetVDot3,
-    [RenNetwork.TestnetVDot3]: renTestnetVDot3,
-    [RenNetwork.DevnetVDot3]: renDevnetVDot3,
+    [RenNetwork.Testnet]: renDevnet,
 };
 
 export type EthTransaction = string | null;
@@ -175,18 +166,9 @@ export class EthereumBaseChain
         return gatewayAddress;
     };
 
-    constructor(
-        web3Provider: provider,
-        renNetwork?:
-            | RenNetwork
-            | RenNetworkString
-            | RenNetworkDetails
-            | EthereumConfig,
-    ) {
+    constructor(web3Provider: provider, { network: "mainnet" | "testnet" | EthereumNetwork | EthereumConfig) {
         this.web3 = new Web3(web3Provider);
-        if (renNetwork) {
-            this.renNetworkDetails = resolveNetwork(renNetwork);
-        }
+        this.renNetworkDetails = resolveNetwork(renNetwork);
     }
 
     public withProvider = (web3Provider: provider) => {

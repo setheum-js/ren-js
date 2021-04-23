@@ -1,1 +1,1 @@
-# `@renproject/provider`
+# `@renproject/rpc`

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
 import { Filecoin } from "@renproject/chains-filecoin";
-import { Ethereum, renTestnetVDot3 } from "@renproject/chains-ethereum";
+import { Ethereum, renTestnet } from "@renproject/chains-ethereum";
 import { LogLevel, RenNetwork, SimpleLogger } from "@renproject/interfaces";
 import RenJS from "@renproject/ren";
 import { retryNTimes, SECONDS } from "@renproject/utils";
@@ -16,18 +16,16 @@ const MNEMONIC = process.env.MNEMONIC;
 const logLevel = LogLevel.Log;
 
 const main = async () => {
-    const renJS = new RenJS(RenNetwork.TestnetVDot3, { logLevel });
+    const renJS = new RenJS(RenNetwork.Testnet, { logLevel });
 
     // Initialize Ethereum provider.
-    const infuraURL = `${renTestnetVDot3.infura}/v3/${
-        process.env.INFURA_KEY || ""
-    }`;
+    const infuraURL = `${renTestnet.infura}/v3/${process.env.INFURA_KEY || ""}`;
     const provider = new HDWalletProvider(MNEMONIC, infuraURL, 0, 10);
 
     const lockAndMint = await renJS.lockAndMint({
         asset: "FIL",
         from: Filecoin(),
-        to: Ethereum(provider, renTestnetVDot3).Account({
+        to: Ethereum(provider, renTestnet).Account({
             address: "0xFB87bCF203b78d9B67719b7EEa3b6B65A208961B",
         }),
     });

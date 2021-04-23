@@ -46,7 +46,7 @@
         "@glif/filecoin-address": "^1.1.0-beta.18",
         "@glif/filecoin-rpc-client": "^1.1.0-beta.17",
         "@renproject/interfaces": "^2.1.7",
-        "@renproject/rpc": "^2.1.7",
+        "@renproject/provider": "^2.1.7",
         "@renproject/utils": "^2.1.7",
         "@types/elliptic": "^6.4.12",
         "@types/node": ">=10",

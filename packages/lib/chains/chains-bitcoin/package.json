@@ -45,7 +45,7 @@
     "dependencies": {
         "@CoinSpace/bitcore-lib-dogecoin": "CoinSpace/bitcore-lib-dogecoin",
         "@renproject/interfaces": "^2.1.7",
-        "@renproject/rpc": "^2.1.7",
+        "@renproject/provider": "^2.1.7",
         "@renproject/utils": "^2.1.7",
         "@types/bs58": "^4.0.1",
         "@types/cashaddrjs": "^0.3.0",

@@ -1,6 +1,7 @@
 {
     "name": "@renproject/provider",
     "version": "2.1.7",
+    "description": "Official Ren JavaScript client",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/renproject/ren-js.git"
@@ -8,6 +9,15 @@
     "publishConfig": {
         "access": "public"
     },
+    "keywords": [
+        "ren",
+        "ren-js",
+        "renvm",
+        "ren project",
+        "cryptocurrencies",
+        "blockchain",
+        "interoperability"
+    ],
     "author": "Ren",
     "license": "MIT",
     "bugs": {
@@ -44,9 +54,10 @@
     },
     "dependencies": {
         "@renproject/interfaces": "^2.1.7",
+        "@renproject/provider": "^2.1.7",
         "@renproject/utils": "^2.1.7",
         "@types/node": ">=10",
-        "axios": "^0.21.1",
+        "bignumber.js": "^9.0.1",
         "immutable": "^4.0.0-rc.12"
     },
     "resolutions": {

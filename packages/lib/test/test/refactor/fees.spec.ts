@@ -64,23 +64,14 @@ describe("Refactor: fees", () => {
     longIt("fees can be fetched", async function () {
         this.timeout(100000000000);
 
-        const ethTestnetVDot2 = Ethereum(testnetProvider, "testnet");
-        const ethTestnetVDot3 = Ethereum(testnetProvider, "testnet-v0.3");
-        const ethMainnetVDot2 = Ethereum(mainnetProvider, "mainnet");
-        const ethMainnetVDot3 = Ethereum(mainnetProvider, "mainnet-v0.3");
+        const ethTestnet = Ethereum(testnetProvider, "testnet");
+        const ethMainnet = Ethereum(mainnetProvider, "mainnet");
 
         const bscTestnet = BinanceSmartChain(bscTestnetProvider, "testnet");
         const bscMainnet = BinanceSmartChain(bscMainnetProvider, "mainnet");
 
         const lockChains = [Bitcoin(), Zcash(), BitcoinCash()];
-        const mintChains = [
-            ethTestnetVDot2,
-            ethTestnetVDot3,
-            ethMainnetVDot2,
-            ethMainnetVDot3,
-            bscTestnet,
-            bscMainnet,
-        ];
+        const mintChains = [ethTestnet, ethMainnet, bscTestnet, bscMainnet];
 
         for (const mintChain of mintChains) {
             for (const lockChain of lockChains) {

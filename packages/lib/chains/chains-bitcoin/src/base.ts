@@ -50,7 +50,6 @@ export abstract class BitcoinBaseChain
     public name = BitcoinBaseChain.chain;
 
     public legacyName: LockChain["legacyName"] = "Btc";
-    public renNetwork: RenNetworkDetails | undefined;
     public chainNetwork: BtcNetwork | undefined;
 
     // Asset
@@ -91,32 +90,11 @@ export abstract class BitcoinBaseChain
         p2shPrefix: {} as { [network: string]: Buffer },
         createAddress: createAddress(base58.encode, Networks, Opcode, Script),
         calculatePubKeyScript: calculatePubKeyScript(Networks, Opcode, Script),
-        addressIsValid: (
-            _address: BtcAddress | string,
-            _network:
-                | RenNetwork
-                | RenNetworkString
-                | RenNetworkDetails
-                | BtcNetwork = "mainnet",
-        ): boolean => true,
+        addressIsValid: (): boolean => true,
 
-        addressExplorerLink: (
-            _address: BtcAddress | string,
-            _network:
-                | RenNetwork
-                | RenNetworkString
-                | RenNetworkDetails
-                | BtcNetwork = "mainnet",
-        ): string | undefined => undefined,
+        addressExplorerLink: (): string | undefined => undefined,
 
-        transactionExplorerLink: (
-            _tx: BtcTransaction | string,
-            _network:
-                | RenNetwork
-                | RenNetworkString
-                | RenNetworkDetails
-                | BtcNetwork = "mainnet",
-        ): string | undefined => undefined,
+        transactionExplorerLink: (): string | undefined => undefined,
 
         resolveChainNetwork: (
             network:
@@ -138,49 +116,56 @@ export abstract class BitcoinBaseChain
         },
     };
 
-    public utils = utilsWithChainNetwork(
-        BitcoinBaseChain.utils,
-        () => this.chainNetwork,
-    );
+    public utils = {
+        ...utilsWithChainNetwork(
+            BitcoinBaseChain.utils,
+            () => this.chainNetwork,
+        ),
+        /**
+         * See [[LockChain.assetDecimals]].
+         */
+        assetDecimals: (asset: string): number => {
+            if (asset === this.asset) {
+                return 8;
+            }
+            throw new Error(`Unsupported asset ${asset}`);
+        },
 
-    constructor(network?: BtcNetwork) {
+        /**
+         * See [[LockChain.assetIsNative]].
+         */
+        assetIsNative: (asset: string): boolean => asset === this.asset,
+        assetIsSupported: (asset: string): boolean => asset === this.asset,
+
+        transactionConfidence: async (
+            transaction: BtcTransaction,
+        ): Promise<{ current: number; target: number }> => {
+            if (!this.chainNetwork) {
+                throw new Error(`${this.name} object not initialized`);
+            }
+            transaction = await this.api.fetchUTXO(
+                transaction.txHash,
+                transaction.vOut,
+            );
+            return {
+                current: transaction.confirmations,
+                target: this.chainNetwork === "mainnet" ? 6 : 2,
+            };
+        },
+    };
+
+    constructor(network: BtcNetwork = "mainnet") {
         this.chainNetwork = network;
     }
 
-    /**
-     * See [[LockChain.initialize]].
-     */
-    public initialize = (
-        renNetwork: RenNetwork | RenNetworkString | RenNetworkDetails,
-    ) => {
-        this.renNetwork = getRenNetworkDetails(renNetwork);
-        // Prioritize the network passed in to the constructor.
-        this.chainNetwork =
-            this.chainNetwork ||
-            (this.renNetwork.isTestnet ? "testnet" : "mainnet");
-        return this.withDefaultAPIs(this.chainNetwork);
-    };
-
-    /**
-     * See [[LockChain.assetIsNative]].
-     */
-    assetIsNative = (asset: string): boolean => asset === this.asset;
-    assetIsSupported = this.assetIsNative;
-
-    public readonly assertAssetIsSupported = (asset: string) => {
-        if (!this.assetIsNative(asset)) {
+    private readonly assertAssetIsSupported = (asset: string) => {
+        if (!this.utils.assetIsNative(asset)) {
             throw new Error(`Unsupported asset ${asset}.`);
         }
     };
 
-    /**
-     * See [[LockChain.assetDecimals]].
-     */
-    assetDecimals = (asset: string): number => {
-        if (asset === this.asset) {
-            return 8;
-        }
-        throw new Error(`Unsupported asset ${asset}`);
+    transactionConfidenceTarget = async (transaction?: BtcTransaction) => {
+        return this.chainNetwork === "mainnet" ? 6 : 2;
     };
 
     /**
@@ -288,14 +273,14 @@ export abstract class BitcoinBaseChain
     transactionFromID = (
         txid: string | Buffer,
         txindex: string,
-        reversed?: boolean,
+        config?: { reversed?: boolean },
     ) => {
         let txidString;
 
         // RenVM returns TXIDs in the correct byte direction, so they should be
         // reversed when converting to a string.
         // See https://learnmeabitcoin.com/technical/txid#why
-        if (reversed) {
+        if (config && config.reversed) {
             // Reverse bytes.
             const bufferTxid =
                 typeof txid === "string"

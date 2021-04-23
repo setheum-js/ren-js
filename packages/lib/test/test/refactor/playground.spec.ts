@@ -34,17 +34,14 @@ describe("Playground", () => {
     longIt("mint", async function () {
         this.timeout(100000000000);
 
-        const infuraURL = `${Chains.renTestnetVDot3.infura}/v3/${process.env.INFURA_KEY}`; // renBscTestnetVDot3.infura
+        const infuraURL = `${Chains.renTestnet.infura}/v3/${process.env.INFURA_KEY}`; // renBscTestnet.infura
         const provider = new HDWalletProvider(MNEMONIC, infuraURL, 0, 10);
 
         const asset = "BTC";
 
         console.log(
             (
-                await Chains.Ethereum(
-                    provider,
-                    RenNetwork.TestnetVDot3,
-                ).getBalance(
+                await Chains.Ethereum(provider, RenNetwork.Testnet).getBalance(
                     asset,
                     "0xFB87bCF203b78d9B67719b7EEa3b6B65A208961B",
                 )
@@ -72,7 +69,7 @@ describe("Playground", () => {
 
         // // const network = renNetworkToEthereumNetwork(NETWORK as RenNetwork);
 
-        // // const infuraURL = `${Chains.renTestnetVDot3.infura}/v3/${process.env.INFURA_KEY}`; // renBscTestnetVDot3.infura
+        // // const infuraURL = `${Chains.renTestnet.infura}/v3/${process.env.INFURA_KEY}`; // renBscTestnet.infura
         // const infuraURL = Chains.renBscTestnet.infura;
         // const provider = new HDWalletProvider(MNEMONIC, infuraURL, 0, 10);
 

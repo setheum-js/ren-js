@@ -11,7 +11,8 @@ import {
     RenNetworkString,
     TxStatus,
 } from "@renproject/interfaces";
-import { HttpProvider, Provider } from "@renproject/provider";
+import { HttpProvider } from "./httpProvider";
+import { Provider } from "./jsonRPC";
 import {
     assertType,
     fromBase64,
@@ -22,7 +23,7 @@ import {
 } from "@renproject/utils";
 import BigNumber from "bignumber.js";
 
-import { AbstractRenVMProvider } from "../abstract";
+import { ProviderInterface } from "./providerInterface";
 import {
     ParamsQueryBlock,
     ParamsQueryBlocks,
@@ -68,45 +69,19 @@ export const resolveV2Contract = ({
 };
 
 export class RenVMProvider
-    implements AbstractRenVMProvider<RenVMParams, RenVMResponses> {
+    extends HttpProvider<RenVMParams, RenVMResponses>
+    implements ProviderInterface<RenVMParams, RenVMResponses> {
     public version = () => 3;
 
-    private readonly network: RenNetwork;
-
-    public readonly provider: Provider<RenVMParams, RenVMResponses>;
-    sendMessage: RenVMProvider["provider"]["sendMessage"];
-    private readonly logger: Logger;
+    private readonly network: string;
 
     constructor(
         network: RenNetwork | RenNetworkString | RenNetworkDetails,
-        provider?: Provider<RenVMParams, RenVMResponses> | string,
+        rpcUrl: string,
         logger: Logger = NullLogger,
     ) {
-        if (!provider || typeof provider === "string") {
-            const rpcUrl =
-                provider || (getRenNetworkDetails(network) || {}).lightnode;
-            try {
-                provider = new HttpProvider<RenVMParams, RenVMResponses>(
-                    rpcUrl,
-                    logger,
-                );
-            } catch (error) {
-                if (/Invalid node URL/.exec(String(error && error.message))) {
-                    throw new Error(
-                        `Invalid network or provider URL: "${
-                            (getRenNetworkDetails(network) || {}).name ||
-                            String(network)
-                        }"`,
-                    );
-                }
-                throw error;
-            }
-        }
-
-        this.network = network as RenNetwork;
-        this.logger = logger;
-        this.provider = provider;
-        this.sendMessage = this.provider.sendMessage;
+        super(rpcUrl, logger);
+        this.network = getRenNetworkDetails(network).name;
     }
 
     public selector = (params: {
@@ -386,7 +361,7 @@ export class RenVMProvider
     // In the future, this will be asynchronous. It returns a promise for
     // compatibility.
     // eslint-disable-next-line @typescript-eslint/require-await
-    public getNetwork = async (_selector: string): Promise<RenNetwork> => {
+    public getNetwork = async (_selector: string): Promise<string> => {
         return this.network;
     };
 

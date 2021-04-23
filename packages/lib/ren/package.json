@@ -64,7 +64,6 @@
     "dependencies": {
         "@renproject/interfaces": "^2.1.7",
         "@renproject/provider": "^2.1.7",
-        "@renproject/rpc": "^2.1.7",
         "@renproject/utils": "^2.1.7",
         "@types/bn.js": "^5.1.0",
         "@types/node": ">=10",

@@ -2,8 +2,7 @@
 
 import { TxStatus } from "@renproject/interfaces";
 import RenJS from "@renproject/ren";
-import { AbstractRenVMProvider } from "@renproject/rpc";
-import { RenVMProvider } from "@renproject/rpc/build/main/v1";
+import { ProviderInterface, RenVMProvider } from "@renproject/provider";
 import { interpret } from "xstate";
 import { config as loadDotEnv } from "dotenv";
 
@@ -200,9 +199,7 @@ describe("MintMachine", () => {
     });
 
     it("should try to submit once the confirmation target has been met", async () => {
-        const renVMProvider: AbstractRenVMProvider = new RenVMProvider(
-            "testnet",
-        );
+        const renVMProvider: ProviderInterface = new RenVMProvider("testnet");
         let txHash: string;
         let confirmed = false;
 
@@ -304,9 +301,7 @@ describe("MintMachine", () => {
             },
         };
 
-        const renVMProvider: AbstractRenVMProvider = new RenVMProvider(
-            "testnet",
-        );
+        const renVMProvider: ProviderInterface = new RenVMProvider("testnet");
         let txHash: string;
         let confirmed = false;
         renVMProvider.submitMint = async (..._args) =>
@@ -430,9 +425,7 @@ describe("MintMachine", () => {
             },
         };
 
-        const renVMProvider: AbstractRenVMProvider = new RenVMProvider(
-            "testnet",
-        );
+        const renVMProvider: ProviderInterface = new RenVMProvider("testnet");
         let txHash: string;
         let confirmed: { [key: string]: boolean } = {};
         renVMProvider.submitMint = async (..._args) =>
@@ -576,9 +569,7 @@ describe("MintMachine", () => {
             },
         };
 
-        const renVMProvider: AbstractRenVMProvider = new RenVMProvider(
-            "testnet",
-        );
+        const renVMProvider: ProviderInterface = new RenVMProvider("testnet");
         let txHash: string;
         let confirmed = false;
         renVMProvider.submitMint = async (..._args) =>
