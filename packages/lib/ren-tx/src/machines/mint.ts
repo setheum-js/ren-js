@@ -93,12 +93,12 @@ export interface GatewayMachineSchema {
     };
 }
 
-export type DepositEvent<DepositType> = {
+export type DepositEvent<DepositType  = any> = {
     type: "DEPOSIT";
     data: GatewayTransaction<DepositType>;
 };
 
-export type GatewayMachineEvent<DepositType> =
+export type GatewayMachineEvent<DepositType = any> =
     | DepositMachineEvent<DepositType>
     | { type: "CLAIMABLE"; data: AcceptedGatewayTransaction<DepositType> }
     | { type: "ERROR_LISTENING"; data: any }

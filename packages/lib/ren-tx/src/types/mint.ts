@@ -5,7 +5,7 @@ import {
     RenNetwork,
 } from "@renproject/interfaces";
 
-export type AllGatewayTransactions<DepositType> =
+export type AllGatewayTransactions<DepositType = any> =
     | ConfirmingGatewayTransaction<DepositType>
     | AcceptedGatewayTransaction<DepositType>
     | SubmittingGatewayTransaction<DepositType>
@@ -19,7 +19,7 @@ export const isConfirming = <X>(
     return (x as ConfirmingGatewayTransaction<X>).sourceTxConfs !== undefined;
 };
 
-export interface ConfirmingGatewayTransaction<DepositType>
+export interface ConfirmingGatewayTransaction<DepositType = any>
     extends GatewayTransaction<DepositType> {
     /**
      * How many confirmations needed to consider the source tx accepted
@@ -33,7 +33,7 @@ export const isAccepted = <X>(
     return (x as AcceptedGatewayTransaction<X>).renSignature !== undefined;
 };
 
-export interface AcceptedGatewayTransaction<DepositType>
+export interface AcceptedGatewayTransaction<DepositType = any>
     extends ConfirmingGatewayTransaction<DepositType> {
     /**
      * Response to renvm signing request
@@ -52,7 +52,7 @@ export const isSubmitted = <X>(
     return (x as SubmittingGatewayTransaction<X>).contractParams !== undefined;
 };
 
-export interface SubmittingGatewayTransaction<DepositType, CustomParams = {}>
+export interface SubmittingGatewayTransaction<DepositType = any, CustomParams = {}>
     extends AcceptedGatewayTransaction<DepositType> {
     /**
      * Additional parameters for constructing a custom transaction
@@ -67,7 +67,7 @@ export const isMinted = <X>(
     return (x as MintedGatewayTransaction<X>).destTxHash !== undefined;
 };
 
-export interface MintedGatewayTransaction<DepositType>
+export interface MintedGatewayTransaction<DepositType = any>
     extends SubmittingGatewayTransaction<DepositType> {
     /* Hash of output transaction */
     destTxHash: string;
@@ -89,7 +89,7 @@ export const isCompleted = <X>(
     return (x as CompletedGatewayTransaction<X>).completedAt !== undefined;
 };
 
-export interface CompletedGatewayTransaction<DepositType>
+export interface CompletedGatewayTransaction<DepositType = any>
     extends MintedGatewayTransaction<DepositType> {
     /**
      * Unix time when mint was successful
@@ -100,7 +100,7 @@ export interface CompletedGatewayTransaction<DepositType>
 /**
  * A pair of transactions from a sourceChain to a destChain
  */
-export interface GatewayTransaction<DepositType> {
+export interface GatewayTransaction<DepositType = any> {
     /* Hash of renVM transaction */
     renVMHash: string;
     /**
@@ -138,7 +138,7 @@ export interface GatewayTransaction<DepositType> {
  * that can recieve assets to mint on RenVM; or construct the parameters required
  * for burning and releasing from RenVM
  */
-export interface GatewaySession<DepositType, CustomParams = {}> {
+export interface GatewaySession<DepositType = any, CustomParams = {}> {
     /**
      * A unique ID to identify the session
      */
@@ -204,7 +204,7 @@ export const isErroring = <X>(
     return (x as ErroringGatewaySession<X>).error !== undefined;
 };
 
-export interface ErroringGatewaySession<DepositType, CustomParams = {}>
+export interface ErroringGatewaySession<DepositType = any, CustomParams = {}>
     extends GatewaySession<DepositType, CustomParams> {
     /**
      * Latest error detected during processing
@@ -218,7 +218,7 @@ export const isOpen = <X>(
     return (x as OpenedGatewaySession<X>).gatewayAddress !== undefined;
 };
 
-export interface OpenedGatewaySession<DepositType, CustomParams = {}>
+export interface OpenedGatewaySession<DepositType = any, CustomParams = {}>
     extends GatewaySession<DepositType, CustomParams> {
     /**
      * Generated address on the source chain where assets should be sent to for a mint transaction

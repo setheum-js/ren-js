@@ -4,7 +4,7 @@ import {
     RenNetwork,
 } from "@renproject/interfaces";
 
-export type AllBurnTransactions<BurnType, ReleaseType> =
+export type AllBurnTransactions<BurnType = any, ReleaseType = any> =
     | ConfirmedBurnTransaction<BurnType>
     | ReleasedBurnTransaction<BurnType>
     | BurnTransaction
@@ -16,7 +16,7 @@ export const isBurnConfirmed = <X, Y>(
     return (x as ConfirmedBurnTransaction<X>).renVMHash !== undefined;
 };
 
-export interface ConfirmedBurnTransaction<BurnType> extends BurnTransaction {
+export interface ConfirmedBurnTransaction<BurnType = any> extends BurnTransaction {
     /* Hash of renVM transaction */
     renVMHash: string;
 
@@ -33,7 +33,7 @@ export const isReleased = <X, Y>(
     return (x as ReleasedBurnTransaction<X>).renResponse !== undefined;
 };
 
-export interface ReleasedBurnTransaction<BurnType>
+export interface ReleasedBurnTransaction<BurnType = any>
     extends ConfirmedBurnTransaction<BurnType> {
     /**
      * Response to renvm release request
@@ -48,7 +48,7 @@ export const isBurnCompleted = <X, Y>(
     return (x as CompletedBurnTransaction<X, Y>).completedAt !== undefined;
 };
 
-export interface CompletedBurnTransaction<BurnType, ReleaseType>
+export interface CompletedBurnTransaction<BurnType = any, ReleaseType = any>
     extends ReleasedBurnTransaction<BurnType> {
     /**
      * Unix time when mint was successful
@@ -106,7 +106,7 @@ export interface BurnTransaction {
  * that can recieve assets to mint on RenVM; or construct the parameters required
  * for burning and releasing from RenVM
  */
-export interface BurnSession<BurnType, ReleaseType, CustomParams = {}> {
+export interface BurnSession<BurnType = any, ReleaseType = any, CustomParams = {}> {
     /**
      * A unique ID to identify the session
      */
@@ -161,7 +161,7 @@ export interface BurnSession<BurnType, ReleaseType, CustomParams = {}> {
     updatedAt?: number;
 }
 
-export interface ErroringBurnSession<DepositType, CustomParams = {}>
+export interface ErroringBurnSession<DepositType = any, CustomParams = {}>
     extends BurnSession<DepositType, CustomParams> {
     /**
      * Latest error detected during processing
