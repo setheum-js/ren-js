@@ -50,18 +50,21 @@ export const renBscMainnet: EthereumConfig = {
 };
 
 export const BscConfigMap = {
-    [RenNetwork.Testnet]: renBscTestnet,
-    [RenNetwork.Mainnet]: renBscMainnet,
-    [RenNetwork.Devnet]: renBscDevnet,
+    [RenNetwork.MainnetVDot3]: renBscMainnet,
+    [RenNetwork.TestnetVDot3]: renBscTestnet,
+    [RenNetwork.DevnetVDot3]: renBscDevnet,
 };
 
 const resolveBSCNetwork = (
-    renNetwork:
+    renNetwork?:
         | RenNetwork
         | RenNetworkString
         | RenNetworkDetails
         | EthereumConfig,
 ) => {
+    if (!renNetwork) {
+        return BscConfigMap[RenNetwork.MainnetVDot3];
+    }
     if ((renNetwork as EthereumConfig).addresses) {
         return renNetwork as EthereumConfig;
     } else {
@@ -69,7 +72,7 @@ const resolveBSCNetwork = (
             renNetwork as RenNetwork | RenNetworkString | RenNetworkDetails,
         );
         return details.isTestnet
-            ? details.name === RenNetwork.Devnet
+            ? details.name === RenNetwork.DevnetVDot3
                 ? renBscDevnet
                 : renBscTestnet
             : renBscMainnet;
@@ -81,13 +84,14 @@ export class BinanceSmartChainClass extends EthereumClass {
     public chain = BinanceSmartChainClass.chain;
     public name = BinanceSmartChainClass.chain;
     public legacyName = undefined;
+    public logRequestLimit = 5000;
 
     public static utils = {
         resolveChainNetwork: resolveBSCNetwork,
         addressIsValid,
         addressExplorerLink: (
             address: EthAddress,
-            network: NetworkInput = renBscMainnet,
+            network?: NetworkInput,
         ): string =>
             `${
                 (
@@ -98,7 +102,7 @@ export class BinanceSmartChainClass extends EthereumClass {
 
         transactionExplorerLink: (
             transaction: EthTransaction,
-            network: NetworkInput = renBscMainnet,
+            network?: NetworkInput,
         ): string =>
             `${
                 (
@@ -143,26 +147,6 @@ export class BinanceSmartChainClass extends EthereumClass {
             );
         }
         return this;
-    };
-
-    findTransaction = async (
-        asset: string,
-        nHash: Buffer,
-        sigHash?: Buffer,
-    ): Promise<EthTransaction | undefined> => {
-        if (!this.renNetworkDetails || !this.web3) {
-            throw new Error(
-                `${this.name} object not initialized - must provide network to constructor.`,
-            );
-        }
-        return findTransactionBySigHash(
-            this.renNetworkDetails,
-            this.web3,
-            asset,
-            nHash,
-            sigHash,
-            5000,
-        );
     };
 }
 

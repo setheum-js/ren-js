@@ -53,12 +53,18 @@ import {
 import RenJS from "@renproject/ren";
 import { BinanceSmartChain, Ethereum } from "@renproject/chains-ethereum";
 import { Bitcoin, BitcoinCash, Zcash } from "@renproject/chains-bitcoin";
-import HDWalletProvider from "truffle-hdwallet-provider";
+import HDWalletProvider from "@truffle/hdwallet-provider";
 import Web3 from "web3";
+import { provider } from "web3-providers";
 
 const MNEMONIC = process.env.MNEMONIC;
 const INFURA_URL = process.env.INFURA_URL;
-const ethProvider = new HDWalletProvider(MNEMONIC, INFURA_URL, 0, 10);
+const ethProvider: provider = new HDWalletProvider({
+    mnemonic: MNEMONIC || "",
+    providerOrUrl: infuraURL,
+    addressIndex: 0,
+    numberOfAddresses: 10,
+}) as any;
 const web3 = new Web3(ethProvider);
 
 const mintTransaction: GatewaySession = {
@@ -89,7 +95,6 @@ export const toChainMap = {
     ethereum: (context: GatewayMachineContext) => {
         const { destAddress, destChain, network } = context.tx;
         const { providers } = context;
-        console.log(destChain);
 
         return Ethereum(providers[destChain], network).Account({
             address: destAddress,

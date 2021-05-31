@@ -64,8 +64,6 @@ export interface ChainCommon<
      */
     legacyName?: string;
 
-    supportsRenNetwork(renNetwork: RenNetworkDetails): SyncOrPromise<boolean>;
-
     withProvider?: (...args: any[]) => SyncOrPromise<this>;
 
     transactionRPCFormat: (
@@ -75,12 +73,6 @@ export interface ChainCommon<
         txid: Buffer;
         txindex: string;
     };
-
-    transactionConfidenceTarget: (
-        // Optionally accept transaction in case the target depends on the
-        // value of the transaction or some other factor.
-        transaction?: Transaction,
-    ) => SyncOrPromise<number>;
 
     // Supported assets
 

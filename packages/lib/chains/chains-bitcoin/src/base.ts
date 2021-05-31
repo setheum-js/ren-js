@@ -164,10 +164,6 @@ export abstract class BitcoinBaseChain
         }
     };
 
-    transactionConfidenceTarget = async (transaction?: BtcTransaction) => {
-        return this.chainNetwork === "mainnet" ? 6 : 2;
-    };
-
     /**
      * See [[LockChain.getDeposits]].
      */

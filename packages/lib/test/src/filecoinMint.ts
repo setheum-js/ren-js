@@ -1,13 +1,18 @@
 /* eslint-disable no-console */
 
 import { Filecoin } from "@renproject/chains-filecoin";
-import { Ethereum, renTestnet } from "@renproject/chains-ethereum";
+import {
+    Ethereum,
+    renTestnet,
+    renTestnetVDot3,
+} from "@renproject/chains-ethereum";
 import { LogLevel, RenNetwork, SimpleLogger } from "@renproject/interfaces";
 import RenJS from "@renproject/ren";
 import { retryNTimes, SECONDS } from "@renproject/utils";
 import { blue, cyan, green, magenta, red, yellow } from "chalk";
-import HDWalletProvider from "truffle-hdwallet-provider";
+import HDWalletProvider from "@truffle/hdwallet-provider";
 import { config as loadDotEnv } from "dotenv";
+import { provider } from "web3-providers";
 
 // Load environment variables.
 loadDotEnv();
@@ -19,8 +24,15 @@ const main = async () => {
     const renJS = new RenJS(RenNetwork.Testnet, { logLevel });
 
     // Initialize Ethereum provider.
-    const infuraURL = `${renTestnet.infura}/v3/${process.env.INFURA_KEY || ""}`;
-    const provider = new HDWalletProvider(MNEMONIC, infuraURL, 0, 10);
+    const infuraURL = `${renTestnetVDot3.infura}/v3/${
+        process.env.INFURA_KEY || ""
+    }`;
+    const provider: provider = new HDWalletProvider({
+        mnemonic: MNEMONIC || "",
+        providerOrUrl: infuraURL,
+        addressIndex: 0,
+        numberOfAddresses: 10,
+    }) as any;
 
     const lockAndMint = await renJS.lockAndMint({
         asset: "FIL",
