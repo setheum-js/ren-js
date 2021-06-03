@@ -121,21 +121,6 @@ export abstract class BitcoinBaseChain
             BitcoinBaseChain.utils,
             () => this.chainNetwork,
         ),
-        /**
-         * See [[LockChain.assetDecimals]].
-         */
-        assetDecimals: (asset: string): number => {
-            if (asset === this.asset) {
-                return 8;
-            }
-            throw new Error(`Unsupported asset ${asset}`);
-        },
-
-        /**
-         * See [[LockChain.assetIsNative]].
-         */
-        assetIsNative: (asset: string): boolean => asset === this.asset,
-        assetIsSupported: (asset: string): boolean => asset === this.asset,
 
         transactionConfidence: async (
             transaction: BtcTransaction,
@@ -158,10 +143,26 @@ export abstract class BitcoinBaseChain
         this.chainNetwork = network;
     }
 
-    private readonly assertAssetIsSupported = (asset: string) => {
-        if (!this.utils.assetIsNative(asset)) {
+    /**
+     * See [[LockChain.assetIsNative]].
+     */
+    assetIsNative = (asset: string): boolean => asset === this.asset;
+    assetIsSupported = this.assetIsNative;
+
+    public readonly assertAssetIsSupported = (asset: string) => {
+        if (!this.assetIsNative(asset)) {
             throw new Error(`Unsupported asset ${asset}.`);
         }
+    };
+
+    /**
+     * See [[LockChain.assetDecimals]].
+     */
+    public assetDecimals = (asset: string): number => {
+        if (asset === this.asset) {
+            return 8;
+        }
+        throw new Error(`Unsupported asset ${asset}`);
     };
 
     /**

@@ -25,7 +25,12 @@ import Web3 from "web3";
 import { TransactionConfig } from "web3-core";
 import { provider } from "web3-providers";
 
-import { EthereumConfig, renMainnet, renTestnet, EthereumNetwork } from "./networks";
+import {
+    EthereumConfig,
+    EthereumNetwork,
+    EthereumMainnet,
+    EthereumKovan,
+} from "./networks";
 import {
     addressIsValid,
     extractBurnDetails,
@@ -41,56 +46,23 @@ import {
 } from "./utils";
 
 export const EthereumConfigMap = {
-    [RenNetwork.Mainnet]: renMainnet,
-    [RenNetwork.Testnet]: renTestnet,
-    [RenNetwork.Testnet]: renDevnet,
+    [RenNetwork.Mainnet]: EthereumMainnet,
+    [RenNetwork.Testnet]: EthereumKovan,
 };
 
 export type EthTransaction = string | null;
 export type EthAddress = string;
 
-const isEthereumConfig = (
-    renNetwork:
-        | RenNetwork
-        | RenNetworkString
-        | RenNetworkDetails
-        | EthereumConfig,
-): renNetwork is EthereumConfig => {
-    return !!(renNetwork as EthereumConfig).addresses;
-};
+export type NetworkInput = EthereumConfig | EthereumNetwork;
 
 const resolveNetwork = (
-    renNetwork?:
-        | RenNetwork
-        | RenNetworkString
-        | RenNetworkDetails
-        | EthereumConfig,
-): EthereumConfig => {
-    if (!renNetwork) {
-        return EthereumConfigMap[RenNetwork.Mainnet];
-    }
-    let networkConfig: EthereumConfig | undefined;
-    if (renNetwork && isEthereumConfig(renNetwork)) {
-        networkConfig = renNetwork;
-    } else if (renNetwork) {
-        const networkDetails = getRenNetworkDetails(renNetwork);
-        if (EthereumConfigMap[networkDetails.name]) {
-            networkConfig = EthereumConfigMap[networkDetails.name];
-        }
-    }
-
-    if (!networkConfig) {
-        throw new Error(`Unrecognized network ${renNetwork}.`);
-    }
-
-    return networkConfig;
-};
-
-export type NetworkInput =
-    | RenNetwork
-    | RenNetworkString
-    | RenNetworkDetails
-    | EthereumConfig;
+    network: NetworkInput | undefined | null,
+): EthereumConfig =>
+    network
+        ? typeof network === "string"
+            ? EthereumConfigMap[network]
+            : network
+        : EthereumMainnet;
 
 export class EthereumBaseChain
     implements MintChain<EthTransaction, EthAddress, EthereumConfig> {
@@ -99,6 +71,9 @@ export class EthereumBaseChain
     public name = EthereumBaseChain.chain;
     public legacyName: MintChain["legacyName"] = "Eth";
     public logRequestLimit: number | undefined = undefined;
+
+    public static configMap = EthereumConfigMap;
+    public configMap = EthereumBaseChain.configMap;
 
     public static utils = {
         resolveChainNetwork: resolveNetwork,
@@ -110,7 +85,7 @@ export class EthereumBaseChain
             `${
                 (
                     EthereumBaseChain.utils.resolveChainNetwork(network) ||
-                    renMainnet
+                    EthereumMainnet
                 ).etherscan
             }/address/${address}`,
 
@@ -121,7 +96,7 @@ export class EthereumBaseChain
             `${
                 (
                     EthereumBaseChain.utils.resolveChainNetwork(network) ||
-                    renMainnet
+                    EthereumMainnet
                 ).etherscan
             }/tx/${transaction}`,
     };
@@ -162,7 +137,10 @@ export class EthereumBaseChain
         return gatewayAddress;
     };
 
-    constructor(web3Provider: provider, { network: "mainnet" | "testnet" | EthereumNetwork | EthereumConfig) {
+    constructor(
+        web3Provider: provider,
+        renNetwork: "mainnet" | "testnet" | EthereumNetwork | EthereumConfig,
+    ) {
         this.web3 = new Web3(web3Provider);
         this.renNetworkDetails = resolveNetwork(renNetwork);
     }
@@ -196,9 +174,7 @@ export class EthereumBaseChain
 
     // Supported assets
 
-    assetIsNative = (asset: string): boolean => {
-        return asset === "ETH";
-    };
+    assetIsNative = (asset: string): boolean => asset === "ETH";
 
     /**
      * `assetIsSupported` should return true if the asset is native to the

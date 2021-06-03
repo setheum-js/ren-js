@@ -76,81 +76,74 @@ export interface ChainCommon<
 
     // Supported assets
 
-    utils: ChainStatic<Transaction, Address, Network>["utils"] & {
-        /**
-         * `assetIsNative` should return true if the asset is native to the Chain.
-         * Mint-chains should return `false` for assets that have been bridged to
-         * it.
-         *
-         * ```ts
-         * ethereum.assetIsNative = asset => asset === "ETH" ||;
-         * ```
-         */
-        assetIsNative: (asset: string) => SyncOrPromise<boolean>;
+    /**
+     * `assetIsNative` should return true if the asset is native to the Chain.
+     * Mint-chains should return `false` for assets that have been bridged to
+     * it.
+     *
+     * ```ts
+     * ethereum.assetIsNative = asset => asset === "ETH" ||;
+     * ```
+     */
+    assetIsNative: (asset: string) => SyncOrPromise<boolean>;
 
-        /**
-         * `assetIsSupported` should return true if the the asset is native to the
-         * chain or if the asset can be minted onto the chain.
-         *
-         * ```ts
-         * ethereum.assetIsSupported = asset => asset === "ETH" || asset === "BTC" || ...;
-         * ```
-         */
-        assetIsSupported: (asset: string) => SyncOrPromise<boolean>;
+    /**
+     * `assetIsSupported` should return true if the the asset is native to the
+     * chain or if the asset can be minted onto the chain.
+     *
+     * ```ts
+     * ethereum.assetIsSupported = asset => asset === "ETH" || asset === "BTC" || ...;
+     * ```
+     */
+    assetIsSupported: (asset: string) => SyncOrPromise<boolean>;
 
-        /**
-         * `assetDecimals` should return the number of decimals of the asset.
-         *
-         * If the asset is not supported, an error should be thrown.
-         *
-         * ```ts
-         * bitcoin.assetDecimals = asset => {
-         *     if (asset === "BTC") { return 8; }
-         *     throw new Error(`Unsupported asset ${asset}.`);
-         * }
-         * ```
-         */
-        assetDecimals: (asset: string) => SyncOrPromise<number>;
+    /**
+     * `assetDecimals` should return the number of decimals of the asset.
+     *
+     * If the asset is not supported, an error should be thrown.
+     *
+     * ```ts
+     * bitcoin.assetDecimals = asset => {
+     *     if (asset === "BTC") { return 8; }
+     *     throw new Error(`Unsupported asset ${asset}.`);
+     * }
+     * ```
+     */
+    assetDecimals: (asset: string) => SyncOrPromise<number>;
 
-        // Transaction helpers
+    // Transaction helpers
 
-        /**
-         * `transactionID` should return a string that uniquely represents the
-         * transaction.
-         */
-        transactionID: (transaction: Transaction) => string;
+    /**
+     * `transactionID` should return a string that uniquely represents the
+     * transaction.
+     */
+    transactionID: (transaction: Transaction) => string;
 
-        /**
-         * `transactionConfidence` should return a target and a current
-         * confidence that the deposit is irreversible. For most chains, this will
-         * be represented by the number of blocks that have passed.
-         *
-         * For example, a Bitcoin transaction with 2 confirmations will return
-         * `{ current: 2, target: 6 }` on mainnet, where the target is currently 6
-         * confirmations.
-         *
-         * @dev Must be compatible with the matching RenVM multichain LockChain.
-         */
-        transactionConfidence: (
-            transaction: Transaction,
-        ) => SyncOrPromise<number>;
+    /**
+     * `transactionConfidence` should return a target and a current
+     * confidence that the deposit is irreversible. For most chains, this will
+     * be represented by the number of blocks that have passed.
+     *
+     * For example, a Bitcoin transaction with 2 confirmations will return
+     * `{ current: 2, target: 6 }` on mainnet, where the target is currently 6
+     * confirmations.
+     *
+     * @dev Must be compatible with the matching RenVM multichain LockChain.
+     */
+    transactionConfidence: (
+        transaction: Transaction,
+    ) => SyncOrPromise<{ current: number; target: number }>;
 
-        transactionFromID: (
-            txid: string | Buffer,
-            txindex: string,
-            config?: { reversed?: boolean },
-        ) => SyncOrPromise<Transaction>;
+    transactionFromID: (
+        txid: string | Buffer,
+        txindex: string,
+        config?: { reversed?: boolean },
+    ) => SyncOrPromise<Transaction>;
 
-        balanceOf: (
-            address: Address,
-            asset: string,
-        ) => SyncOrPromise<BigNumber>;
-
-        // Optionally provide utils for resolving and reverse-lookup of the,
-        // chain's native domain name system.
-        addressToLabel?: (address: Address) => SyncOrPromise<string>;
-        labelToAddress?: (label: string) => SyncOrPromise<Address>;
-    };
+    // Optionally provide utils for resolving and reverse-lookup of the,
+    // chain's native domain name system.
+    addressToLabel?: (address: Address) => SyncOrPromise<string>;
+    labelToAddress?: (label: string) => SyncOrPromise<Address>;
 }
 
 export type DepositCommon<Transaction = any> = {
