@@ -310,10 +310,7 @@ export class BurnAndRelease<
                     } = await this.params.from.transactionConfidence(
                         this.burnDetails.transaction,
                     ));
-                    if (
-                        this._state.targetConfirmations &&
-                        target < this._state.targetConfirmations
-                    ) {
+                    if (this._state.targetConfirmations) {
                         target = this._state.targetConfirmations;
                     }
 
